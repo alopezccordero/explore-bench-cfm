@@ -1,0 +1,5 @@
+method,map,robots,seed,steps_90,steps_98,final_coverage,total_path,longest_path,overlap,mean_snap_cells,seconds
+cfm,room,2,0,400,465,0.9802,930,465,0.305,16.4,78
+cfm,room,2,0,400,465,0.9802,930,465,0.305,16.4,77
+cost,room,2,0,428,460,0.9801,920,460,0.423,,50
+teacher,room,2,0,626,739,0.9805,1478,739,0.546,,96
