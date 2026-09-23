@@ -64,6 +64,8 @@ p.add_argument('--replan', type=int, default=10,
                help='re-solve the MILP every N steps as well; 0 = only when a goal is used up')
 p.add_argument('--goal-tol', type=float, default=12.0,
                help='cells a goal may recede with its frontier before the MILP is re-solved')
+p.add_argument('--latency', type=float, default=1.0,
+               help='mtsp objective: 1 = minimum arrival time, 0 = minimum distance')
 p.add_argument('--cpp-balance', type=float, default=1.0,
                help='weight of the makespan term in milp_cpp (0 = pure min-sum travel)')
 args = p.parse_args() #arguments used
@@ -93,6 +95,8 @@ for name in args.maps: #we start by iterating the maps
             kw = dict(max_nodes=args.max_nodes, replan=args.replan, goal_tol=args.goal_tol)
             if args.method == 'milp_cpp':
                 kw['balance'] = args.cpp_balance
+            else:
+                kw['latency'] = args.latency
             get_goal = make_teacher(args.method, env, **kw)
             step_env = lambda: env.step_for_cost(get_goal=get_goal)  # noqa: E731
         else:

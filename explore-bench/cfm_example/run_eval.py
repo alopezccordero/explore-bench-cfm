@@ -38,6 +38,7 @@ p.add_argument('--show', action='store_true', help='open the simulator window an
 p.add_argument('--max-nodes', type=int, default=10)
 p.add_argument('--replan', type=int, default=10)
 p.add_argument('--goal-tol', type=float, default=12.0)
+p.add_argument('--latency', type=float, default=1.0)
 p.add_argument('--cpp-balance', type=float, default=1.0)
 args = p.parse_args()
 
@@ -52,6 +53,8 @@ elif args.method in TEACHERS:
     kw = dict(max_nodes=args.max_nodes, replan=args.replan, goal_tol=args.goal_tol)
     if args.method == 'milp_cpp':
         kw['balance'] = args.cpp_balance
+    else:
+        kw['latency'] = args.latency
     planner = make_teacher(args.method, env, **kw)
 else:
     model = VelocityField()

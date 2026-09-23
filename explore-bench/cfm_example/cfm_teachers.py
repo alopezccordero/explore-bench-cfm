@@ -1,10 +1,10 @@
 """Privileged ("cheating") teachers for collect_data.py.
 
-Both teachers plan on the *ground truth* map: travel costs come from A* over the real
-free space (`Astar.AStar`, the benchmark's own planner, run on `env.gt_map`), and the
-value of a goal comes from the simulator's own sensor model, which says exactly how much
-still-unknown area a robot would reveal by standing there. Neither number is computable
-from what the robots have actually seen.
+Both teachers plan on the *ground truth* map. Travel costs come from A* over the real free
+space (`Astar.AStar`, the benchmark's own planner, run on `env.gt_map`), and a frontier is
+valued by `territory()` -- a Voronoi partition of the whole unexplored map over the
+candidate frontiers, so a frontier is worth every cell it gates, however far behind it
+lies. Neither number is computable from what the robots have actually seen.
 
 The learner never gets any of that. `collect_data.py` stores `build_condition(...)` of
 the *partial* team map, so the flow model is trained to reproduce a decision it could not
@@ -13,17 +13,22 @@ student imitates, in the spirit of privileged / learning-by-cheating imitation l
 
 Two methods, both exact MILPs solved with HiGHS through `scipy.optimize.milp`:
 
-`mtsp`      Multi-depot *open* mTSP / VRP over the frontier clusters. Every cluster is
-            visited exactly once, routes start at the robots and never return, total true
-            travel distance is minimised. Subtours are cut with a single-commodity flow.
-            Each robot drives to the first cluster on its own route; the rest is discarded
-            and re-solved when a goal is consumed, so it behaves as a receding-horizon VRP.
+`mtsp`      Multi-depot *open* mTSP / VRP over the frontier clusters, solved for minimum
+            latency: every cluster is visited exactly once, routes start at the robots and
+            never return, and `sum_j territory_j * arrival_j` is minimised. Subtours are
+            cut with a single-commodity flow. Each robot drives to the first cluster on its
+            own route; the rest is discarded and re-solved when a goal is consumed, so it
+            behaves as a receding-horizon VRP.
 
-`milp_cpp`  Coverage path planning as a minimum-cost viewpoint *set cover*. Every unknown
-            cell that any candidate viewpoint can actually see must be seen by somebody;
-            among the covers, minimise total A* travel plus a makespan term that keeps the
-            robots' workloads balanced. Each robot drives to the cheapest viewpoint it was
-            assigned.
+`milp_cpp`  Coverage path planning as a minimum-cost viewpoint *set cover*. Every
+            remaining unknown cell must be behind a frontier somebody has taken; among the
+            covers, minimise total A* travel plus a makespan term over travel *and*
+            sweeping, so the robots get comparable amounts of work rather than comparable
+            drives. Each robot heads for the best area-per-distance frontier in its share.
+
+Both score arrival *time*, not distance. Every plan visits every frontier eventually, so
+total distance is nearly constant and says little about when the map gets uncovered --
+which is exactly what steps-to-90%/98% measure.
 
 The action space of both is the one the student samples on -- frontier cells of the
 partial map (`cfm_policy.frontier_mask`) -- so the recorded goal already lies on a
@@ -36,11 +41,17 @@ from scipy import ndimage, sparse
 from scipy.optimize import Bounds, LinearConstraint, milp
 from scipy.spatial import cKDTree
 
-from cfm_common import FREE, UNKNOWN, WALL, frontier_mask
+from cfm_common import FREE, SENSOR_CELLS, UNKNOWN, WALL, frontier_mask
 
 from Astar import AStar  # noqa: E402  (cfm_common puts grid_simulator on sys.path)
 
-TIME_LIMIT = 10.0    # seconds per MILP solve; HiGHS returns its incumbent after this
+# Seconds per MILP solve and the gap HiGHS may stop at. The latency model below is a
+# big-M formulation, whose LP relaxation is loose enough that proving optimality can take
+# far longer than finding the optimum -- and a 2%-better route is worth nothing here,
+# because the plan is thrown away and re-solved a few steps later anyway.
+TIME_LIMIT = 3.0
+MIP_GAP = 0.02
+MIN_NODES = 4       # never prune below this many candidates, however lopsided the map
 
 
 # ---------------------------------------------------------------- shared privileged view
@@ -53,10 +64,18 @@ class Privileged:
     information gain, reachability -- is read off the ground truth.
     """
 
-    def __init__(self, env, max_nodes=10, min_cluster=3, replan=10, goal_tol=12.0):
+    def __init__(self, env, max_nodes=10, min_cluster=3, replan=10, goal_tol=12.0,
+                 min_share=0.02, latency=1.0):
         self.env = env
         self.max_nodes = max_nodes
         self.min_cluster = min_cluster
+        self.min_share = min_share  # drop frontiers gating less than this share of what is left
+        # How much of mtsp's objective is arrival time rather than distance travelled.
+        # 1.0 is pure minimum latency, 0.0 pure minimum distance. Measured on `corner`:
+        # latency buys a much tidier split (overlap 0.134 -> 0.073) but reaches 98% later
+        # (479 -> 575 steps), because front-loading the big regions strands small pockets
+        # that then need long backtracks. Blend to taste.
+        self.latency = latency
         # Re-solve every N steps as well as on events (0 = events only). 10 measured best
         # for both teachers on `room`: it beats 25 because a plan built on a 25-step-old
         # map sends robots to stale frontiers, and beats 1 on wall clock several times
@@ -105,6 +124,9 @@ class Privileged:
         This is the simulator's own omni-directional scan against the ground truth, so
         occlusion is handled exactly as it will be when the robot arrives. The set does
         not depend on what is known yet, so it is cached for good.
+
+        Only what a robot catches *on arrival* -- see territory() for the region a
+        frontier gates, which is what the planners actually score against.
         """
         v = self._view.get(cell)
         if v is None:
@@ -115,19 +137,59 @@ class Privileged:
             self._view[cell] = v
         return v
 
+    def territory(self, nodes):
+        """Voronoi partition of the unexplored map over the candidate frontiers.
+
+        One multi-source wavefront across the *real* free space, seeded at every candidate
+        at once, so each still-unknown cell ends up owned by the frontier a robot would
+        have to pass through to reach it. A frontier is then worth the whole region behind
+        it, not the slice its sensor happens to catch on arrival.
+
+        That distinction is the whole point of letting the teacher cheat. Scoring by
+        visibility alone throws the map knowledge away: measured on `corner`, only ~36% of
+        the remaining unknown area is visible from any current frontier, so a
+        visibility-scored planner is blind to the other ~64% and behaves myopically.
+
+        Returns (owner, counts): `owner` is a flat map cell -> node index (-1 = nobody),
+        `counts[i]` is how many unknown free cells node i gates.
+        """
+        w = self.env.gt_map.shape[1]
+        passable = (self.astar_map == FREE).ravel().copy()
+        owner = np.full(passable.shape, -1, np.int32)
+        ring = np.array([c[0] * w + c[1] for c in nodes], np.int64)
+        owner[ring] = np.arange(len(nodes), dtype=np.int32)
+        passable[ring] = False
+        while ring.size:
+            # 4-neighbours of the whole frontier at once; the map's border ring is never
+            # passable, so these indices stay inside the array
+            nb = np.concatenate([ring + w, ring - w, ring + 1, ring - 1])
+            src = np.tile(owner[ring], 4)
+            keep = passable[nb]
+            nb, src = nb[keep], src[keep]
+            if nb.size == 0:
+                break
+            nb, first = np.unique(nb, return_index=True)  # ties go to the lowest index
+            owner[nb] = src[first]
+            passable[nb] = False
+            ring = nb
+        unknown = (self.env.complete_map.ravel() == UNKNOWN) & (self.astar_map.ravel() == FREE)
+        lab = owner[unknown]
+        return owner, np.bincount(lab[lab >= 0], minlength=len(nodes))
+
     # ------------------------------------------------------------ candidate goals
 
     def candidates(self):
-        """Frontier clusters of the *partial* map as (cells, gains), best gain first.
+        """Frontier clusters of the *partial* map as (cells, territory, owner map).
 
-        Clusters are pre-filtered by cell count (cheap) before their true gain is measured
-        (one sensor simulation each), then the `max_nodes` most informative survive.
-        Clusters that would reveal nothing are dead frontiers and are dropped.
+        Clusters are pre-filtered by cell count (cheap), then ranked by how much of the
+        unexplored map each one gates, and the `max_nodes` biggest survive. The partition
+        is recomputed over the survivors so the weights the planners see add up to the
+        whole remaining map. Clusters gating nothing are dead frontiers and are dropped.
         """
         m = self.env.complete_map
         lab, n = ndimage.label(frontier_mask(m), structure=np.ones((3, 3)))
         if n == 0:
-            return [], np.zeros(0, int)
+            return [], np.zeros(0, int), None
 
         flat = lab.ravel()
         counts = np.bincount(flat, minlength=n + 1)
@@ -144,11 +206,19 @@ class Privileged:
             # the sensor model writes a 3x3 patch around the viewpoint, so stay off the rim
             cells.append((int(np.clip(rep[0], 2, h - 3)), int(np.clip(rep[1], 2, w - 3))))
 
-        unknown = (m == UNKNOWN).ravel()
-        gains = np.array([int(unknown[self.visible(c)].sum()) for c in cells])
-        keep = list(np.argsort(-gains)[:self.max_nodes])
-        keep = [i for i in keep if gains[i] > 0] or keep
-        return [cells[i] for i in keep], gains[keep]
+        _, gated = self.territory(cells)
+        keep = list(np.argsort(-gated)[:self.max_nodes])
+        # Nearly every frontier gates *something*, so unlike the old zero-gain test this
+        # ranking almost never prunes on its own, and mtsp pays for it quadratically: it
+        # needs an A* between every pair of nodes. Drop the slivers instead. The threshold
+        # is a share of what is left, so as the map fills the survivors' territories
+        # shrink too and the last few pockets stop looking negligible.
+        floor = self.min_share * float(gated.sum())
+        big = [i for i in keep if gated[i] >= floor]
+        keep = big if len(big) >= MIN_NODES else keep[:MIN_NODES]
+        cells = [cells[i] for i in keep]
+        owner, gated = self.territory(cells)  # repartition over the survivors only
+        return cells, gated, owner
 
     # ------------------------------------------------------------ sticky goal interface
 
@@ -180,13 +250,13 @@ class Privileged:
         if self.replan and env.num_step - self._solved_step >= self.replan:
             stale = True
         if stale:
-            nodes, gains = self.candidates()
-            self.goals = list(pos) if not nodes else self.plan(pos, nodes, gains)
+            nodes, gated, owner = self.candidates()
+            self.goals = list(pos) if not nodes else self.plan(pos, nodes, gated, owner)
             self._solved_step = env.num_step
             self.solves += 1
         return np.array(self.goals)
 
-    def plan(self, pos, nodes, gains):
+    def plan(self, pos, nodes, gated, owner):
         raise NotImplementedError
 
     # ------------------------------------------------------------ helpers for subclasses
@@ -221,23 +291,30 @@ def solve(c, rows, integrality, lo, hi):
     res = milp(c=np.asarray(c, float), constraints=LinearConstraint(a, lb, ub),
                integrality=np.asarray(integrality),
                bounds=Bounds(np.asarray(lo, float), np.asarray(hi, float)),
-               options={'time_limit': TIME_LIMIT, 'presolve': True})
+               options={'time_limit': TIME_LIMIT, 'presolve': True, 'mip_rel_gap': MIP_GAP})
     return None if res.x is None else np.asarray(res.x)
 
 
 # ---------------------------------------------------------------- mTSP / VRP teacher
 
 class MtspTeacher(Privileged):
-    """Multi-depot open mTSP: split the frontier clusters into one route per robot.
+    """Multi-depot open mTSP over the frontier clusters, solved for minimum *latency*.
 
     Arc variables x_ij over {robots} u {clusters}: no arc enters a robot and none leaves a
     cluster twice, so a solution is a set of vehicle paths. Subtours are removed by a
     single-commodity flow -- each cluster absorbs one unit and all units are pushed out of
-    the robots -- which is compact enough that HiGHS solves these in milliseconds. The
-    goal handed to the simulator is the head of each robot's route.
+    the robots. The goal handed to the simulator is the head of each robot's route.
+
+    The objective is `sum_j territory_j * arrival_j`, not total distance. Every route
+    visits every cluster either way, so total distance is nearly a constant and optimising
+    it says almost nothing about *when* the map gets uncovered -- which is exactly what
+    steps-to-90%/98% measure. Weighting each cluster's arrival time by the area it gates
+    makes the solver front-load the big unexplored regions: the traveling-repairman
+    objective rather than the traveling-salesman one. Arrival times come from big-M
+    ordering constraints on the arcs that were already in the model.
     """
 
-    def plan(self, pos, nodes, gains):
+    def plan(self, pos, nodes, gated, owner):
         r, m = len(pos), len(nodes)
         cost = self.cost_matrix(pos, nodes)
         inter = np.array([[self.dist(a, b) for b in nodes] for a in nodes])
@@ -257,7 +334,14 @@ class MtspTeacher(Privileged):
             out_of[a].append(k)
             into[b].append(k)
 
-        # columns: x_k in {0,1} for k < na, then the flow f_k in [0, m] on the same arc
+        # columns: x_k in {0,1} for k < na, the flow f_k in [0, m] on the same arc, then
+        # one arrival time a_j per cluster
+        # No arrival can exceed the longest possible open route, which uses at most m arcs:
+        # bounding by the m largest costs rather than m * the largest keeps the big-M
+        # constraints far tighter, and a loose M is what makes this model slow to prove
+        finite = sorted(w for w in weight if np.isfinite(w))
+        big_m = float(sum(finite[-m:])) + 1.0 if finite else 1.0
+        arrive = {j: 2 * na + (j - r) for j in range(r, r + m)}
         rows = []
         for j in range(r, r + m):
             rows.append(({k: 1 for k in into[j]}, 1, 1))            # visited exactly once
@@ -278,10 +362,27 @@ class MtspTeacher(Privileged):
         for k in range(na):
             rows.append(({na + k: 1, k: -m}, -np.inf, 0))           # flow only on used arcs
 
-        x = solve(list(weight) + [0.0] * na, rows, [1] * na + [0] * na,
-                  [0] * (2 * na), [1] * na + [m] * na)
+        # arrival times: taking arc i->j puts a_j at least one hop after a_i (a depot's
+        # own arrival is 0, so it drops out); slack when the arc is unused
+        for k, (a, b) in enumerate(arcs):
+            row = {arrive[b]: 1, k: -big_m}
+            if a >= r:
+                row[arrive[a]] = -1
+            rows.append((row, weight[k] - big_m, np.inf))
+
+        # weights normalised so the objective does not depend on map size; the distance
+        # term is a tie-break between plans that uncover the map equally fast
+        total = float(gated.sum())
+        w_j = (gated / total) if total > 0 else np.ones(m) / m
+        lat = self.latency
+        # both terms are scaled to O(1) so `latency` blends them on comparable footing;
+        # the epsilon keeps distance as a tie-break even at latency = 1
+        eps = 1e-3 / max(big_m, 1.0)
+        c = [((1.0 - lat) / max(big_m, 1.0) + eps) * v for v in weight]             + [0.0] * na + [lat * v for v in w_j]
+        x = solve(c, rows, [1] * na + [0] * (na + m),
+                  [0] * (2 * na + m), [1] * na + [m] * na + [big_m] * m)
         if x is None:                                               # no feasible split
-            return self.greedy(pos, nodes, cost, inter)
+            return self.greedy(pos, nodes, cost, inter, gated)
 
         goals, taken = [], set()
         for i in range(r):
@@ -292,8 +393,11 @@ class MtspTeacher(Privileged):
             taken.add(j)
         return goals
 
-    def greedy(self, pos, nodes, cost, inter):
-        """Nearest-neighbour mTSP, always extending the shortest route. If HiGHS fails."""
+    def greedy(self, pos, nodes, cost, inter, gated):
+        """Best territory per cell travelled, always extending the shortest route.
+
+        The latency objective in miniature, for when HiGHS returns nothing.
+        """
         r, m = len(pos), len(nodes)
         end, length, started = list(range(r)), [0.0] * r, [False] * r
         first, left = [None] * r, set(range(m))
@@ -303,8 +407,11 @@ class MtspTeacher(Privileged):
             d = [inter[end[i], j] if started[i] else cost[i, j] for j in rest]
             if not np.isfinite(min(d)):
                 break
-            j = rest[int(np.argmin(d))]
-            length[i] += min(d)
+            value = [(gated[j] + 1.0) / (dj + 1.0) if np.isfinite(dj) else -1.0
+                     for j, dj in zip(rest, d)]
+            pick = int(np.argmax(value))
+            j, step = rest[pick], d[pick]
+            length[i] += step
             if first[i] is None:
                 first[i] = j
             end[i], started[i] = j, True
@@ -342,22 +449,28 @@ class MilpCppTeacher(Privileged):
         self.balance = balance
 
     def elements(self):
-        """Flat indices of unknown-but-countable cells, thinned to at most max_elements."""
-        u = np.flatnonzero((self.env.complete_map.ravel() == UNKNOWN) & self.countable)
+        """Flat indices of unknown ground-truth-free cells, thinned to max_elements."""
+        u = np.flatnonzero((self.env.complete_map.ravel() == UNKNOWN)
+                           & (self.astar_map.ravel() == FREE))
         if len(u) > self.max_elements:
             u = u[np.linspace(0, len(u) - 1, self.max_elements).astype(int)]
         return u
 
-    def plan(self, pos, nodes, gains):
+    def plan(self, pos, nodes, gated, owner):
         r, m = len(pos), len(nodes)
         cost = self.cost_matrix(pos, nodes)
         usable = [j for j in range(m) if np.isfinite(cost[:, j]).any()]
         if not usable:
             return list(pos)
 
+        # cover sets come from the territory partition, not from what a viewpoint can see
+        # on arrival: every remaining unknown cell belongs to the frontier that gates it,
+        # so the cover ranges over the whole unexplored map instead of the ~36% in sensor
+        # range of some frontier, which is what made this myopic
         elems = self.elements()
-        seen = np.array([_member(self.visible(nodes[j]), elems) for j in usable])
-        seen = seen[:, seen.any(0)]          # unknown cells no viewpoint reaches are dropped
+        own = owner[elems]
+        seen = np.array([own == j for j in usable])
+        seen = seen[:, seen.any(0)]          # cells behind no reachable frontier are dropped
 
         col = {(j, i): len(usable) * i + k for k, j in enumerate(usable) for i in range(r)}
         t = len(usable) * r                  # index of the makespan variable
@@ -372,9 +485,14 @@ class MilpCppTeacher(Privileged):
                           for i in range(r)}, 1, np.inf))
         for j in usable:                     # a viewpoint belongs to one robot, or to none
             rows.append(({col[j, i]: 1 for i in range(r)}, 0, 1))
-        for i in range(r):                   # T >= this robot's assigned travel
+        # a robot's share is the driving plus the sweeping: clearing a region of A cells
+        # with a sensor of this radius takes roughly A / (2 * SENSOR_CELLS) more steps, so
+        # balancing travel alone would hand one robot a corridor and the other a wing
+        work = {j: float(gated[j]) / (2.0 * SENSOR_CELLS) for j in usable}
+        for i in range(r):                   # T >= this robot's assigned travel + sweeping
             row = {t: 1}
-            row.update({col[j, i]: -cost[i, j] for j in usable if np.isfinite(cost[i, j])})
+            row.update({col[j, i]: -(cost[i, j] + work[j]) for j in usable
+                        if np.isfinite(cost[i, j])})
             rows.append((row, 0, np.inf))
             if len(usable) >= r:             # nobody sits idle while work is left
                 rows.append(({col[j, i]: 1 for j in usable}, 1, np.inf))
@@ -390,7 +508,10 @@ class MilpCppTeacher(Privileged):
         goals, taken = [], set()
         for i in range(r):
             mine = [j for j in usable if x[col[j, i]] > 0.5 and nodes[j] != pos[i]]
-            j = min(mine, key=lambda j: cost[i, j]) if mine else self.fallback(i, cost, taken)
+            # within its own share, go for the most area per cell driven, so the big
+            # regions fall early rather than whichever frontier happens to be nearest
+            j = (max(mine, key=lambda j: (gated[j] + 1.0) / (cost[i, j] + 1.0)) if mine
+                 else self.fallback(i, cost, taken))
             goals.append(pos[i] if j is None else nodes[j])
             taken.add(j)
         return goals
