@@ -84,6 +84,9 @@ known_each = [np.sum(b != UNKNOWN) for b in env.built_map]
 snaps = getattr(env, 'snap_dists', [])
 row = {
     'method': args.method, 'map': args.map, 'robots': args.robots, 'seed': args.seed,
+    # two students trained on two teachers are both method=cfm, so the checkpoint is the
+    # only thing telling their rows apart
+    'ckpt': os.path.basename(args.ckpt) if args.method == 'cfm' else '',
     'steps_90': steps_90, 'steps_98': steps_98, 'final_coverage': round(float(cov), 4),
     'total_path': sum(paths), 'longest_path': max(paths),
     'overlap': round(float(sum(known_each) / known_all - 1), 3),  # the paper's definition
@@ -92,6 +95,13 @@ row = {
 }
 print(row)
 new = not os.path.exists(args.csv)
+if not new:
+    with open(args.csv, newline='') as f:
+        old = next(csv.reader(f), [])
+    if old != list(row):
+        raise SystemExit(
+            f'{args.csv} has the columns {old}, but this run writes {list(row)}. Appending '
+            f'would misalign every row -- move the old file aside or pass a different --csv.')
 with open(args.csv, 'a', newline='') as f:
     w = csv.DictWriter(f, fieldnames=list(row))
     if new:
