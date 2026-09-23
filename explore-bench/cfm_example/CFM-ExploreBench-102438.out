@@ -1,0 +1,193 @@
+Running on sxm003
+current directory: /home/alejandrolopezcordero01/explore-bench-cfm/explore-bench/cfm_example
+Python 3.11.15
+scipy 1.15.3 torch 2.6.0+cu124
+HiGHS OK
+Wed Sep 23 01:51:36 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:13:00.0 Off |                    0 |
+| N/A   24C    P0             59W /  400W |       0MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+corridor_asym        episode 0:  166 steps, coverage 98.1%, 332 examples so far, 50s
+corridor_asym        episode 1:  166 steps, coverage 98.4%, 664 examples so far, 51s
+corridor_asym        episode 2:  102 steps, coverage 98.4%, 868 examples so far, 30s
+corridor_asym        episode 3:  127 steps, coverage 98.1%, 1122 examples so far, 45s
+corridor_asym        episode 4:  111 steps, coverage 98.1%, 1344 examples so far, 31s
+corridor_asym        episode 5:  144 steps, coverage 98.1%, 1632 examples so far, 46s
+corridor_asym        episode 6:  153 steps, coverage 98.1%, 1938 examples so far, 49s
+corridor_asym        episode 7:   75 steps, coverage 98.0%, 2088 examples so far, 18s
+corridor_asym        episode 8:  145 steps, coverage 98.1%, 2378 examples so far, 48s
+corridor_asym        episode 9:  151 steps, coverage 98.6%, 2680 examples so far, 46s
+corridor_sym         episode 0:  281 steps, coverage 98.1%, 3242 examples so far, 116s
+corridor_sym         episode 1:  245 steps, coverage 98.1%, 3732 examples so far, 100s
+corridor_sym         episode 2:  214 steps, coverage 98.4%, 4160 examples so far, 69s
+corridor_sym         episode 3:  227 steps, coverage 98.1%, 4614 examples so far, 91s
+corridor_sym         episode 4:  242 steps, coverage 98.0%, 5098 examples so far, 97s
+corridor_sym         episode 5:  254 steps, coverage 98.3%, 5606 examples so far, 99s
+corridor_sym         episode 6:  292 steps, coverage 98.1%, 6190 examples so far, 142s
+corridor_sym         episode 7:  292 steps, coverage 98.1%, 6774 examples so far, 141s
+corridor_sym         episode 8:  267 steps, coverage 98.1%, 7308 examples so far, 114s
+corridor_sym         episode 9:  258 steps, coverage 98.1%, 7824 examples so far, 110s
+room_2               episode 0:  514 steps, coverage 98.1%, 8852 examples so far, 259s
+room_2               episode 1:  417 steps, coverage 98.0%, 9686 examples so far, 213s
+room_2               episode 2:  600 steps, coverage 97.2%, 10876 examples so far, 320s
+room_2               episode 3:  584 steps, coverage 98.1%, 12044 examples so far, 336s
+room_2               episode 4:  550 steps, coverage 98.0%, 13144 examples so far, 269s
+room_2               episode 5:  466 steps, coverage 98.0%, 14076 examples so far, 215s
+room_2               episode 6:  478 steps, coverage 98.1%, 15032 examples so far, 227s
+room_2               episode 7:  465 steps, coverage 98.1%, 15962 examples so far, 253s
+room_2               episode 8:  519 steps, coverage 98.0%, 17000 examples so far, 260s
+room_2               episode 9:  600 steps, coverage 95.8%, 18200 examples so far, 322s
+room_3               episode 0:  600 steps, coverage 94.7%, 19400 examples so far, 464s
+room_3               episode 1:  600 steps, coverage 82.1%, 20600 examples so far, 398s
+room_3               episode 2:  600 steps, coverage 80.4%, 21800 examples so far, 435s
+room_3               episode 3:  600 steps, coverage 86.3%, 23000 examples so far, 446s
+room_3               episode 4:  600 steps, coverage 80.5%, 24200 examples so far, 509s
+room_3               episode 5:  600 steps, coverage 90.4%, 25400 examples so far, 446s
+room_3               episode 6:  600 steps, coverage 90.8%, 26600 examples so far, 454s
+room_3               episode 7:  600 steps, coverage 95.1%, 27800 examples so far, 472s
+room_3               episode 8:  600 steps, coverage 92.7%, 29000 examples so far, 434s
+room_3               episode 9:  600 steps, coverage 97.1%, 30200 examples so far, 530s
+room_with_corridor   episode 0:  600 steps, coverage 92.0%, 31400 examples so far, 314s
+room_with_corridor   episode 1:  456 steps, coverage 98.1%, 32306 examples so far, 231s
+room_with_corridor   episode 2:  600 steps, coverage 93.7%, 33506 examples so far, 322s
+room_with_corridor   episode 3:  600 steps, coverage 91.5%, 34706 examples so far, 301s
+room_with_corridor   episode 4:  600 steps, coverage 94.3%, 35906 examples so far, 316s
+room_with_corridor   episode 5:  600 steps, coverage 89.8%, 37106 examples so far, 304s
+room_with_corridor   episode 6:  452 steps, coverage 98.1%, 38010 examples so far, 231s
+room_with_corridor   episode 7:  574 steps, coverage 98.2%, 39155 examples so far, 301s
+room_with_corridor   episode 8:  600 steps, coverage 89.9%, 40355 examples so far, 299s
+room_with_corridor   episode 9:  458 steps, coverage 98.1%, 41271 examples so far, 251s
+saved 41271 milp_cpp examples to data_cpp.npz (mean snap to frontier 0.00 cells, dropped 19 stalled states)
+corridor_asym        episode 0:  166 steps, coverage 98.1%, 332 examples so far, 50s
+corridor_asym        episode 1:  166 steps, coverage 98.4%, 664 examples so far, 50s
+corridor_asym        episode 2:   91 steps, coverage 98.3%, 846 examples so far, 22s
+corridor_asym        episode 3:  167 steps, coverage 98.1%, 1180 examples so far, 54s
+corridor_asym        episode 4:   78 steps, coverage 98.1%, 1336 examples so far, 19s
+corridor_asym        episode 5:  144 steps, coverage 98.1%, 1624 examples so far, 45s
+corridor_asym        episode 6:  153 steps, coverage 98.1%, 1930 examples so far, 49s
+corridor_asym        episode 7:   75 steps, coverage 98.0%, 2080 examples so far, 19s
+corridor_asym        episode 8:  145 steps, coverage 98.1%, 2370 examples so far, 49s
+corridor_asym        episode 9:  151 steps, coverage 98.6%, 2672 examples so far, 45s
+corridor_sym         episode 0:  281 steps, coverage 98.1%, 3234 examples so far, 115s
+corridor_sym         episode 1:  245 steps, coverage 98.1%, 3724 examples so far, 100s
+corridor_sym         episode 2:  214 steps, coverage 98.4%, 4152 examples so far, 70s
+corridor_sym         episode 3:  224 steps, coverage 98.7%, 4600 examples so far, 71s
+corridor_sym         episode 4:  233 steps, coverage 98.4%, 5066 examples so far, 77s
+corridor_sym         episode 5:  245 steps, coverage 98.3%, 5556 examples so far, 97s
+corridor_sym         episode 6:  292 steps, coverage 98.1%, 6140 examples so far, 140s
+corridor_sym         episode 7:  292 steps, coverage 98.1%, 6724 examples so far, 142s
+corridor_sym         episode 8:  267 steps, coverage 98.1%, 7258 examples so far, 114s
+corridor_sym         episode 9:  288 steps, coverage 98.1%, 7834 examples so far, 137s
+room_2               episode 0:  468 steps, coverage 98.2%, 8770 examples so far, 247s
+room_2               episode 1:  439 steps, coverage 98.0%, 9648 examples so far, 227s
+room_2               episode 2:  555 steps, coverage 98.1%, 10758 examples so far, 282s
+room_2               episode 3:  462 steps, coverage 98.0%, 11682 examples so far, 214s
+room_2               episode 4:  491 steps, coverage 98.0%, 12664 examples so far, 253s
+room_2               episode 5:  481 steps, coverage 98.0%, 13610 examples so far, 255s
+room_2               episode 6:  379 steps, coverage 98.1%, 14368 examples so far, 202s
+room_2               episode 7:  495 steps, coverage 98.0%, 15358 examples so far, 238s
+room_2               episode 8:  512 steps, coverage 98.1%, 16382 examples so far, 271s
+room_2               episode 9:  469 steps, coverage 98.1%, 17320 examples so far, 231s
+room_3               episode 0:  600 steps, coverage 92.6%, 18510 examples so far, 583s
+room_3               episode 1:  600 steps, coverage 72.1%, 19710 examples so far, 400s
+room_3               episode 2:  600 steps, coverage 84.1%, 20910 examples so far, 466s
+room_3               episode 3:  592 steps, coverage 98.0%, 22094 examples so far, 452s
+room_3               episode 4:  600 steps, coverage 93.2%, 23289 examples so far, 465s
+room_3               episode 5:  600 steps, coverage 95.8%, 24489 examples so far, 513s
+room_3               episode 6:  600 steps, coverage 77.5%, 25689 examples so far, 475s
+room_3               episode 7:  600 steps, coverage 97.7%, 26889 examples so far, 596s
+room_3               episode 8:  600 steps, coverage 92.3%, 28088 examples so far, 498s
+room_3               episode 9:  600 steps, coverage 97.0%, 29288 examples so far, 498s
+room_with_corridor   episode 0:  600 steps, coverage 92.2%, 30488 examples so far, 306s
+room_with_corridor   episode 1:  502 steps, coverage 98.2%, 31489 examples so far, 266s
+room_with_corridor   episode 2:  600 steps, coverage 92.9%, 32689 examples so far, 299s
+room_with_corridor   episode 3:  563 steps, coverage 98.1%, 33815 examples so far, 272s
+room_with_corridor   episode 4:  569 steps, coverage 98.1%, 34949 examples so far, 301s
+room_with_corridor   episode 5:  600 steps, coverage 90.0%, 36149 examples so far, 319s
+room_with_corridor   episode 6:  523 steps, coverage 98.3%, 37136 examples so far, 268s
+room_with_corridor   episode 7:  523 steps, coverage 98.0%, 38182 examples so far, 258s
+room_with_corridor   episode 8:  600 steps, coverage 92.1%, 39382 examples so far, 306s
+room_with_corridor   episode 9:  600 steps, coverage 97.5%, 40582 examples so far, 325s
+saved 40582 mtsp examples to data_mtsp.npz (mean snap to frontier 0.00 cells, dropped 98 stalled states)
+training on cuda
+41271 examples, 1 goal samples each
+epoch    1  loss 0.06904
+epoch   10  loss 0.00437
+epoch   20  loss 0.00291
+epoch   30  loss 0.00238
+epoch   40  loss 0.00202
+epoch   50  loss 0.00178
+epoch   60  loss 0.00147
+epoch   70  loss 0.00132
+epoch   80  loss 0.00116
+epoch   90  loss 0.00111
+epoch  100  loss 0.00098
+epoch  110  loss 0.00102
+epoch  120  loss 0.00090
+epoch  130  loss 0.00086
+epoch  140  loss 0.00093
+epoch  150  loss 0.00077
+epoch  160  loss 0.00079
+epoch  170  loss 0.00075
+epoch  180  loss 0.00076
+epoch  190  loss 0.00066
+epoch  200  loss 0.00069
+saved model to cfm_cpp.pt
+training on cuda
+40582 examples, 1 goal samples each
+epoch    1  loss 0.05168
+epoch   10  loss 0.00304
+epoch   20  loss 0.00200
+epoch   30  loss 0.00161
+epoch   40  loss 0.00133
+epoch   50  loss 0.00133
+epoch   60  loss 0.00109
+epoch   70  loss 0.00092
+epoch   80  loss 0.00092
+epoch   90  loss 0.00079
+epoch  100  loss 0.00077
+epoch  110  loss 0.00076
+epoch  120  loss 0.00071
+epoch  130  loss 0.00064
+epoch  140  loss 0.00066
+epoch  150  loss 0.00064
+epoch  160  loss 0.00060
+epoch  170  loss 0.00062
+epoch  180  loss 0.00059
+epoch  190  loss 0.00053
+epoch  200  loss 0.00048
+saved model to cfm_mtsp.pt
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_cpp.pt', 'steps_90': 480, 'steps_98': 943, 'final_coverage': 0.9803, 'total_path': 1886, 'longest_path': 943, 'overlap': 0.779, 'mean_snap_cells': 16.3, 'seconds': 128}
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_cpp.pt', 'steps_90': 398, 'steps_98': 512, 'final_coverage': 0.9801, 'total_path': 1024, 'longest_path': 512, 'overlap': 0.352, 'mean_snap_cells': 16.62, 'seconds': 123}
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_cpp.pt', 'steps_90': 576, 'steps_98': 969, 'final_coverage': 0.9805, 'total_path': 1938, 'longest_path': 969, 'overlap': 0.957, 'mean_snap_cells': 18.82, 'seconds': 246}
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_mtsp.pt', 'steps_90': 475, 'steps_98': 528, 'final_coverage': 0.9802, 'total_path': 1056, 'longest_path': 528, 'overlap': 0.422, 'mean_snap_cells': 18.29, 'seconds': 98}
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_mtsp.pt', 'steps_90': 502, 'steps_98': 820, 'final_coverage': 0.98, 'total_path': 1640, 'longest_path': 820, 'overlap': 0.42, 'mean_snap_cells': 22.48, 'seconds': 177}
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_mtsp.pt', 'steps_90': 730, 'steps_98': 799, 'final_coverage': 0.9803, 'total_path': 1598, 'longest_path': 799, 'overlap': 0.637, 'mean_snap_cells': 17.97, 'seconds': 133}
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': '', 'steps_90': 413, 'steps_98': 513, 'final_coverage': 0.9802, 'total_path': 1026, 'longest_path': 513, 'overlap': 0.049, 'mean_snap_cells': '', 'seconds': 103}
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': '', 'steps_90': 300, 'steps_98': 445, 'final_coverage': 0.9808, 'total_path': 890, 'longest_path': 445, 'overlap': 0.195, 'mean_snap_cells': '', 'seconds': 120}
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': '', 'steps_90': 363, 'steps_98': 480, 'final_coverage': 0.9873, 'total_path': 960, 'longest_path': 480, 'overlap': 0.157, 'mean_snap_cells': '', 'seconds': 96}
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': '', 'steps_90': 383, 'steps_98': 549, 'final_coverage': 0.9988, 'total_path': 1098, 'longest_path': 549, 'overlap': 0.145, 'mean_snap_cells': '', 'seconds': 55}
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': '', 'steps_90': 526, 'steps_98': 563, 'final_coverage': 0.9801, 'total_path': 1126, 'longest_path': 563, 'overlap': 0.04, 'mean_snap_cells': '', 'seconds': 102}
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': '', 'steps_90': 440, 'steps_98': 497, 'final_coverage': 0.9815, 'total_path': 994, 'longest_path': 497, 'overlap': 0.15, 'mean_snap_cells': '', 'seconds': 61}
+{'method': 'cost', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': '', 'steps_90': 654, 'steps_98': 1194, 'final_coverage': 0.9804, 'total_path': 1876, 'longest_path': 1194, 'overlap': 0.759, 'mean_snap_cells': '', 'seconds': 101}
+{'method': 'cost', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': '', 'steps_90': 473, 'steps_98': 761, 'final_coverage': 0.9873, 'total_path': 1326, 'longest_path': 761, 'overlap': 0.377, 'mean_snap_cells': '', 'seconds': 69}
+{'method': 'cost', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': '', 'steps_90': 870, 'steps_98': 1061, 'final_coverage': 0.9826, 'total_path': 2122, 'longest_path': 1061, 'overlap': 0.947, 'mean_snap_cells': '', 'seconds': 86}
+{'method': 'mmpf', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': '', 'steps_90': 395, 'steps_98': 651, 'final_coverage': 0.9802, 'total_path': 1302, 'longest_path': 651, 'overlap': 0.103, 'mean_snap_cells': '', 'seconds': 82}
+{'method': 'mmpf', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': '', 'steps_90': 850, 'steps_98': 943, 'final_coverage': 0.982, 'total_path': 1886, 'longest_path': 943, 'overlap': 0.009, 'mean_snap_cells': '', 'seconds': 194}
+{'method': 'mmpf', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': '', 'steps_90': 328, 'steps_98': 660, 'final_coverage': 0.9929, 'total_path': 1320, 'longest_path': 660, 'overlap': 0.163, 'mean_snap_cells': '', 'seconds': 89}
