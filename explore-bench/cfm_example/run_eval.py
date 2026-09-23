@@ -55,7 +55,7 @@ elif args.method in TEACHERS:
     planner = make_teacher(args.method, env, **kw)
 else:
     model = VelocityField()
-    model.load_state_dict(torch.load(args.ckpt))
+    model.load_state_dict(torch.load(args.ckpt, map_location='cpu'))
     model.eval()
     env = make_env(args.map, args.robots, cfm_goal_fn(model, torch.Generator().manual_seed(args.seed)))
 
