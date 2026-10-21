@@ -155,9 +155,17 @@ def resample(path, k):
 
 conds, starts, goals, snaps = [], [], [], [] #dataset arrays
 paths = []  #geodesic route robot -> goal, for E-A's obstacle-aware interpolation
+# Per-example provenance. 18 of 50 episodes in data_ea.npz hit the 600-step cap (all ten
+# on room_3), so its truncated tails are over-represented and indistinguishable from
+# clean demonstrations. Recording this lets a later run down-weight them instead of
+# discarding whole episodes.
+meta = []        #(episode index, step, coverage at the time)
+ep_rows = []     #(episode index, map index, steps used, final coverage, hit the cap?)
+episode = -1
 dropped = 0 #states where the teacher never reached a frontier
 for name in args.maps: #we start by iterating the maps
     for ep in range(args.episodes): #episodes is per maps
+        episode += 1
         random.seed(args.seed * 1000 + ep)  # GridEnv picks start cells with `random`
         # plain GridEnv: step_for_X() calls get_goal_for_X() itself, so no goal_fn
         env = make_env(name, args.robots) #we create the exploration environment.
@@ -205,10 +213,13 @@ for name in args.maps: #we start by iterating the maps
                         starts.append(pos) #pos of robot during step
                         goals.append(g) #goal of the step
                         snaps.append(snap) #how far the goal moved to land on a frontier
+                        meta.append((episode, step, coverage(env)))
             with quiet():
                 step_env() #take step for mmpf or cost, whichever teacher we are recording
             if coverage(env) >= 0.98: #if civerage is > than 0.98, break all the loop
                 break
+        ep_rows.append((episode, args.maps.index(name), step + 1, coverage(env),
+                        int(step + 1 >= args.max_steps)))
         print(f'{name:20s} episode {ep}: {step + 1:4d} steps, coverage {coverage(env):.1%}, '
               f'{len(conds)} examples so far, {time.time() - t0:.0f}s') #print the episode, step, coverage,
         #length of conditions (how many examples are there) and the time.
@@ -217,6 +228,10 @@ if not conds:
     raise SystemExit('no examples collected')
 
 extra = {}
+if meta:
+    extra['meta'] = np.asarray(meta, np.float32)          # (N, 3) episode, step, coverage
+    extra['episodes'] = np.asarray(ep_rows, np.float32)   # (E, 5) see above
+    extra['map_names'] = np.asarray(args.maps)
 if paths:
     # (N, K, 2) normalised route. train_cfm.py picks this up automatically and
     # interpolates along it instead of along the straight line, which on the previous

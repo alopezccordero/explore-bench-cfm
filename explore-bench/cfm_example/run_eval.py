@@ -57,6 +57,8 @@ p.add_argument('--ckpt', default='cfm.pt')
 p.add_argument('--csv', default='results.csv')
 p.add_argument('--show', action='store_true', help='open the simulator window and update it every step')
 # mtsp / milp_cpp only, same meaning as in collect_data.py
+p.add_argument('--steps', type=int, default=20,
+               help='cfm only: Euler steps when integrating the flow')
 p.add_argument('--nsample', type=int, default=1,
                help='cfm only: draw this many goals from the flow and keep the one nearest a frontier')
 p.add_argument('--exclude', type=float, default=0.0,
@@ -91,7 +93,7 @@ else:
     model = VelocityField()
     model.load_state_dict(torch.load(args.ckpt, map_location='cpu'))
     model.eval()
-    env = make_env(args.map, args.robots, cfm_goal_fn(model, torch.Generator().manual_seed(args.seed), exclude=args.exclude, nsample=args.nsample))
+    env = make_env(args.map, args.robots, cfm_goal_fn(model, torch.Generator().manual_seed(args.seed), exclude=args.exclude, nsample=args.nsample, steps=args.steps))
 
 # step_for_mmpf is a copy of step_for_cost that calls get_goal_for_mmpf() itself:
 # it takes no get_goal hook, so the method is chosen by picking the step function.
@@ -121,6 +123,14 @@ row = {
     # two students trained on two teachers are both method=cfm, so the checkpoint is the
     # only thing telling their rows apart
     'ckpt': os.path.basename(args.ckpt) if args.method == 'cfm' else '',
+    # Record the settings that produced the row. Without these, an arm is identified only
+    # by its filename and a sweep only by row order -- which is how the September config
+    # sweep became unreadable, and how results_eb_sweep.csv ended up encoding nsample
+    # positionally. Any run failing would silently shift every later attribution.
+    'nsample': args.nsample if args.method == 'cfm' else '',
+    'exclude': args.exclude if args.method == 'cfm' else '',
+    'euler_steps': args.steps if args.method == 'cfm' else '',
+    'max_steps': args.max_steps,
     'steps_90': steps_90, 'steps_98': steps_98, 'final_coverage': round(float(cov), 4),
     'total_path': sum(paths), 'longest_path': max(paths),
     'overlap': round(float(sum(known_each) / known_all - 1), 3),  # the paper's definition

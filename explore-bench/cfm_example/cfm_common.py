@@ -157,7 +157,7 @@ def teacher_goal_fn(rng):
 
 # ---------------------------------------------------------------- model
 
-def cfm_goal_fn(model, gen=None, exclude=0.0, nsample=1):
+def cfm_goal_fn(model, gen=None, exclude=0.0, nsample=1, steps=20):
     """Goals from the trained flow.
 
     `exclude` > 0 keeps a robot off frontier cells within that many cells of a goal a
@@ -171,7 +171,7 @@ def cfm_goal_fn(model, gen=None, exclude=0.0, nsample=1):
     """
     def fn(env, i, fmask):
         pos, mates = robot_and_mates(env, i)
-        if exclude <= 0 and nsample == 1:
+        if exclude <= 0 and nsample == 1 and steps == 20:
             goal, snap = choose_goal(model, env.complete_map, pos, mates, gen=gen)
             if goal is not None:
                 env.snap_dists.append(snap)  # how far the flow landed from a real frontier
@@ -182,7 +182,11 @@ def cfm_goal_fn(model, gen=None, exclude=0.0, nsample=1):
         if not valid.any():
             return None
         cells = np.argwhere(valid)
-        taken = [g for j, g in enumerate(env.goals or []) if j != i and g is not None]
+        # only when exclude > 0: with exclude == 0 the test dist**2 > 0 would still
+        # drop a teammate's exact cell, which made the "sampling only" arm of E-B not
+        # quite a clean control
+        taken = ([g for j, g in enumerate(env.goals or []) if j != i and g is not None]
+                 if exclude > 0 else [])
         if taken:
             free = np.ones(len(cells), bool)
             for q in taken:
@@ -194,7 +198,8 @@ def cfm_goal_fn(model, gen=None, exclude=0.0, nsample=1):
         # the strongest predictor of exploration performance we have, and this trades the
         # sampler's variance for accuracy at no training cost. If it does not help, the
         # error is bias rather than variance -- which is itself worth knowing.
-        points = sample_goals(model, build_condition(m, pos, mates), pos, nsample, gen=gen)
+        points = sample_goals(model, build_condition(m, pos, mates), pos, nsample,
+                              steps=steps, gen=gen)
         d, j = cKDTree(cells).query(points)
         best = int(np.argmin(np.atleast_1d(d)))
         env.snap_dists.append(float(np.atleast_1d(d)[best]))
