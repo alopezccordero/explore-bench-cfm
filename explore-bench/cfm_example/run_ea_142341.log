@@ -1,0 +1,621 @@
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[notify] post failed (ignored)
+=== stage: preflight
+Python 3.11.15
+scipy 1.15.3 torch 2.6.0+cu124 cuda True
+Tue Oct 20 19:45:03 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000000:E1:00.0 Off |                    0 |
+| N/A   23C    P8             33W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+preflight OK: --waypoints, geodesic_path, --linear, HiGHS all present
+=== stage: collect (milp_cpp teacher, --every 1 --episodes 10 --waypoints 8)
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[notify] post failed (ignored)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+corridor_asym        episode 0:  166 steps, coverage 98.1%, 332 examples so far, 32s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_asym        episode 1:  166 steps, coverage 98.4%, 664 examples so far, 33s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_asym        episode 2:  102 steps, coverage 98.4%, 868 examples so far, 19s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_asym        episode 3:  127 steps, coverage 98.1%, 1122 examples so far, 29s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_asym        episode 4:  111 steps, coverage 98.1%, 1344 examples so far, 19s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_asym        episode 5:  144 steps, coverage 98.1%, 1632 examples so far, 29s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_asym        episode 6:  153 steps, coverage 98.1%, 1938 examples so far, 31s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_asym        episode 7:   75 steps, coverage 98.0%, 2088 examples so far, 12s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_asym        episode 8:  145 steps, coverage 98.1%, 2378 examples so far, 31s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_asym        episode 9:  151 steps, coverage 98.6%, 2680 examples so far, 29s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_sym         episode 0:  281 steps, coverage 98.1%, 3242 examples so far, 73s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_sym         episode 1:  245 steps, coverage 98.1%, 3732 examples so far, 63s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_sym         episode 2:  214 steps, coverage 98.4%, 4160 examples so far, 44s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_sym         episode 3:  227 steps, coverage 98.1%, 4614 examples so far, 58s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_sym         episode 4:  242 steps, coverage 98.0%, 5098 examples so far, 61s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_sym         episode 5:  254 steps, coverage 98.3%, 5606 examples so far, 63s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_sym         episode 6:  292 steps, coverage 98.1%, 6190 examples so far, 90s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_sym         episode 7:  292 steps, coverage 98.1%, 6774 examples so far, 90s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_sym         episode 8:  267 steps, coverage 98.1%, 7308 examples so far, 72s
+note: this milp_cpp build has no min_share -- ignoring
+corridor_sym         episode 9:  258 steps, coverage 98.1%, 7824 examples so far, 70s
+/home/alejandrolopezcordero01/explore-bench-cfm/explore-bench/cfm_example/../Explore-Bench/grid_simulator/window.py:23: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  self.fig, self.ax = plt.subplots()
+note: this milp_cpp build has no min_share -- ignoring
+room_2               episode 0:  514 steps, coverage 98.1%, 8852 examples so far, 163s
+note: this milp_cpp build has no min_share -- ignoring
+room_2               episode 1:  417 steps, coverage 98.0%, 9686 examples so far, 134s
+note: this milp_cpp build has no min_share -- ignoring
+room_2               episode 2:  600 steps, coverage 97.2%, 10876 examples so far, 199s
+note: this milp_cpp build has no min_share -- ignoring
+room_2               episode 3:  584 steps, coverage 98.1%, 12044 examples so far, 210s
+note: this milp_cpp build has no min_share -- ignoring
+room_2               episode 4:  550 steps, coverage 98.0%, 13144 examples so far, 171s
+note: this milp_cpp build has no min_share -- ignoring
+room_2               episode 5:  466 steps, coverage 98.0%, 14076 examples so far, 137s
+note: this milp_cpp build has no min_share -- ignoring
+room_2               episode 6:  478 steps, coverage 98.1%, 15032 examples so far, 144s
+note: this milp_cpp build has no min_share -- ignoring
+room_2               episode 7:  465 steps, coverage 98.1%, 15962 examples so far, 160s
+note: this milp_cpp build has no min_share -- ignoring
+room_2               episode 8:  519 steps, coverage 98.0%, 17000 examples so far, 164s
+note: this milp_cpp build has no min_share -- ignoring
+room_2               episode 9:  600 steps, coverage 95.8%, 18200 examples so far, 202s
+note: this milp_cpp build has no min_share -- ignoring
+room_3               episode 0:  600 steps, coverage 94.7%, 19400 examples so far, 291s
+note: this milp_cpp build has no min_share -- ignoring
+room_3               episode 1:  600 steps, coverage 82.1%, 20600 examples so far, 251s
+note: this milp_cpp build has no min_share -- ignoring
+room_3               episode 2:  600 steps, coverage 80.4%, 21800 examples so far, 273s
+note: this milp_cpp build has no min_share -- ignoring
+room_3               episode 3:  600 steps, coverage 86.3%, 23000 examples so far, 282s
+note: this milp_cpp build has no min_share -- ignoring
+room_3               episode 4:  600 steps, coverage 80.5%, 24200 examples so far, 318s
+note: this milp_cpp build has no min_share -- ignoring
+room_3               episode 5:  600 steps, coverage 90.4%, 25400 examples so far, 280s
+note: this milp_cpp build has no min_share -- ignoring
+room_3               episode 6:  600 steps, coverage 90.8%, 26600 examples so far, 287s
+note: this milp_cpp build has no min_share -- ignoring
+room_3               episode 7:  600 steps, coverage 95.1%, 27800 examples so far, 294s
+note: this milp_cpp build has no min_share -- ignoring
+room_3               episode 8:  600 steps, coverage 92.7%, 29000 examples so far, 275s
+note: this milp_cpp build has no min_share -- ignoring
+room_3               episode 9:  600 steps, coverage 97.1%, 30200 examples so far, 334s
+note: this milp_cpp build has no min_share -- ignoring
+room_with_corridor   episode 0:  600 steps, coverage 92.0%, 31400 examples so far, 198s
+note: this milp_cpp build has no min_share -- ignoring
+room_with_corridor   episode 1:  456 steps, coverage 98.1%, 32306 examples so far, 147s
+note: this milp_cpp build has no min_share -- ignoring
+room_with_corridor   episode 2:  600 steps, coverage 93.7%, 33506 examples so far, 204s
+note: this milp_cpp build has no min_share -- ignoring
+room_with_corridor   episode 3:  600 steps, coverage 91.5%, 34706 examples so far, 191s
+note: this milp_cpp build has no min_share -- ignoring
+room_with_corridor   episode 4:  600 steps, coverage 94.3%, 35906 examples so far, 200s
+note: this milp_cpp build has no min_share -- ignoring
+room_with_corridor   episode 5:  600 steps, coverage 89.8%, 37106 examples so far, 191s
+note: this milp_cpp build has no min_share -- ignoring
+room_with_corridor   episode 6:  452 steps, coverage 98.1%, 38010 examples so far, 148s
+note: this milp_cpp build has no min_share -- ignoring
+room_with_corridor   episode 7:  574 steps, coverage 98.2%, 39155 examples so far, 190s
+note: this milp_cpp build has no min_share -- ignoring
+room_with_corridor   episode 8:  600 steps, coverage 89.9%, 40355 examples so far, 190s
+note: this milp_cpp build has no min_share -- ignoring
+room_with_corridor   episode 9:  458 steps, coverage 98.1%, 41271 examples so far, 159s
+saved 41271 milp_cpp examples to data_ea.npz (mean snap to frontier 0.00 cells, dropped 19 stalled states)
+data_ea.npz: {'cond': (41271, 5, 64, 64), 'start': (41271, 2), 'goal': (41271, 1, 2), 'path': (41271, 8, 2)}
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[notify] post failed (ignored)
+=== stage: train (control: --linear)
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[notify] post failed (ignored)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+training on cuda
+straight-line interpolation (--linear)
+41271 examples, 1 goal samples each
+epoch    1  loss 0.06905
+epoch   10  loss 0.00437
+epoch   20  loss 0.00291
+epoch   30  loss 0.00238
+epoch   40  loss 0.00202
+epoch   50  loss 0.00178
+epoch   60  loss 0.00146
+epoch   70  loss 0.00128
+epoch   80  loss 0.00114
+epoch   90  loss 0.00109
+epoch  100  loss 0.00099
+epoch  110  loss 0.00106
+epoch  120  loss 0.00090
+epoch  130  loss 0.00089
+epoch  140  loss 0.00094
+epoch  150  loss 0.00077
+epoch  160  loss 0.00085
+epoch  170  loss 0.00081
+epoch  180  loss 0.00076
+epoch  190  loss 0.00069
+epoch  200  loss 0.00069
+saved model to cfm_ea_linear.pt
+=== stage: train (treatment: geodesic)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+training on cuda
+geodesic interpolation along 8 waypoints
+41271 examples, 1 goal samples each
+epoch    1  loss 0.16353
+epoch   10  loss 0.04591
+epoch   20  loss 0.02877
+epoch   30  loss 0.02252
+epoch   40  loss 0.01970
+epoch   50  loss 0.01746
+epoch   60  loss 0.01501
+epoch   70  loss 0.01415
+epoch   80  loss 0.01286
+epoch   90  loss 0.01207
+epoch  100  loss 0.01174
+epoch  110  loss 0.01120
+epoch  120  loss 0.01046
+epoch  130  loss 0.00877
+epoch  140  loss 0.00935
+epoch  150  loss 0.00922
+epoch  160  loss 0.00815
+epoch  170  loss 0.00814
+epoch  180  loss 0.00753
+epoch  190  loss 0.00776
+epoch  200  loss 0.00721
+saved model to cfm_ea_geodesic.pt
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[notify] post failed (ignored)
+=== stage: evaluate (36 runs)
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[notify] post failed (ignored)
+--- cfm_ea_linear.pt loop seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 291, 'steps_98': 317, 'final_coverage': 0.9804, 'total_path': 634, 'longest_path': 317, 'overlap': 0.0, 'mean_snap_cells': 22.48, 'seconds': 64}
+--- cfm_ea_linear.pt loop seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 454, 'steps_98': 496, 'final_coverage': 0.9809, 'total_path': 992, 'longest_path': 496, 'overlap': 0.692, 'mean_snap_cells': 23.26, 'seconds': 122}
+--- cfm_ea_linear.pt loop seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 225, 'steps_98': 248, 'final_coverage': 0.9822, 'total_path': 496, 'longest_path': 248, 'overlap': 0.0, 'mean_snap_cells': 15.93, 'seconds': 38}
+--- cfm_ea_linear.pt corridor seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 254, 'steps_98': 330, 'final_coverage': 0.9803, 'total_path': 660, 'longest_path': 330, 'overlap': 0.164, 'mean_snap_cells': 16.57, 'seconds': 57}
+--- cfm_ea_linear.pt corridor seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 602, 'steps_98': 742, 'final_coverage': 0.9801, 'total_path': 1484, 'longest_path': 742, 'overlap': 0.965, 'mean_snap_cells': 18.72, 'seconds': 119}
+--- cfm_ea_linear.pt corridor seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 297, 'steps_98': 329, 'final_coverage': 0.9804, 'total_path': 658, 'longest_path': 329, 'overlap': 0.237, 'mean_snap_cells': 17.02, 'seconds': 56}
+--- cfm_ea_linear.pt corner seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 441, 'steps_98': 719, 'final_coverage': 0.9801, 'total_path': 1438, 'longest_path': 719, 'overlap': 0.57, 'mean_snap_cells': 20.39, 'seconds': 74}
+--- cfm_ea_linear.pt corner seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 571, 'steps_98': 679, 'final_coverage': 0.981, 'total_path': 1358, 'longest_path': 679, 'overlap': 0.646, 'mean_snap_cells': 17.92, 'seconds': 70}
+--- cfm_ea_linear.pt corner seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 682, 'steps_98': 1108, 'final_coverage': 0.9801, 'total_path': 2216, 'longest_path': 1108, 'overlap': 0.901, 'mean_snap_cells': 25.09, 'seconds': 141}
+--- cfm_ea_linear.pt room seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 522, 'steps_98': 578, 'final_coverage': 0.9835, 'total_path': 1156, 'longest_path': 578, 'overlap': 0.413, 'mean_snap_cells': 23.64, 'seconds': 71}
+--- cfm_ea_linear.pt room seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 317, 'steps_98': 431, 'final_coverage': 0.9801, 'total_path': 862, 'longest_path': 431, 'overlap': 0.144, 'mean_snap_cells': 19.05, 'seconds': 49}
+--- cfm_ea_linear.pt room seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 362, 'steps_98': 444, 'final_coverage': 0.9807, 'total_path': 888, 'longest_path': 444, 'overlap': 0.226, 'mean_snap_cells': 16.23, 'seconds': 69}
+--- cfm_ea_linear.pt loop_with_corridor seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 512, 'steps_98': 839, 'final_coverage': 0.9812, 'total_path': 1678, 'longest_path': 839, 'overlap': 0.892, 'mean_snap_cells': 32.76, 'seconds': 165}
+--- cfm_ea_linear.pt loop_with_corridor seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 616, 'steps_98': 732, 'final_coverage': 0.98, 'total_path': 1464, 'longest_path': 732, 'overlap': 0.598, 'mean_snap_cells': 34.47, 'seconds': 178}
+--- cfm_ea_linear.pt loop_with_corridor seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 443, 'steps_98': 622, 'final_coverage': 0.9802, 'total_path': 1244, 'longest_path': 622, 'overlap': 0.427, 'mean_snap_cells': 42.47, 'seconds': 128}
+--- cfm_ea_linear.pt room_with_corner seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 779, 'steps_98': 1000, 'final_coverage': 0.981, 'total_path': 2000, 'longest_path': 1000, 'overlap': 0.571, 'mean_snap_cells': 17.42, 'seconds': 108}
+--- cfm_ea_linear.pt room_with_corner seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 623, 'steps_98': 973, 'final_coverage': 0.9833, 'total_path': 1946, 'longest_path': 973, 'overlap': 0.693, 'mean_snap_cells': 29.88, 'seconds': 92}
+--- cfm_ea_linear.pt room_with_corner seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_linear.pt', 'steps_90': 1292, 'steps_98': 1795, 'final_coverage': 0.9809, 'total_path': 3590, 'longest_path': 1795, 'overlap': 0.963, 'mean_snap_cells': 23.17, 'seconds': 176}
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[notify] post failed (ignored)
+--- cfm_ea_geodesic.pt loop seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 404, 'steps_98': 457, 'final_coverage': 0.9809, 'total_path': 914, 'longest_path': 457, 'overlap': 0.588, 'mean_snap_cells': 25.65, 'seconds': 125}
+--- cfm_ea_geodesic.pt loop seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 443, 'steps_98': 494, 'final_coverage': 0.9809, 'total_path': 988, 'longest_path': 494, 'overlap': 0.661, 'mean_snap_cells': 22.44, 'seconds': 94}
+--- cfm_ea_geodesic.pt loop seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 244, 'steps_98': 506, 'final_coverage': 0.9992, 'total_path': 1012, 'longest_path': 506, 'overlap': 0.053, 'mean_snap_cells': 16.47, 'seconds': 80}
+--- cfm_ea_geodesic.pt corridor seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 144, 'steps_98': 296, 'final_coverage': 0.9801, 'total_path': 592, 'longest_path': 296, 'overlap': 0.0, 'mean_snap_cells': 14.86, 'seconds': 40}
+--- cfm_ea_geodesic.pt corridor seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 358, 'steps_98': 395, 'final_coverage': 0.9807, 'total_path': 790, 'longest_path': 395, 'overlap': 0.515, 'mean_snap_cells': 15.71, 'seconds': 63}
+--- cfm_ea_geodesic.pt corridor seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 541, 'steps_98': 720, 'final_coverage': 0.9811, 'total_path': 1440, 'longest_path': 720, 'overlap': 0.752, 'mean_snap_cells': 14.47, 'seconds': 119}
+--- cfm_ea_geodesic.pt corner seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 469, 'steps_98': 664, 'final_coverage': 0.9803, 'total_path': 1328, 'longest_path': 664, 'overlap': 0.222, 'mean_snap_cells': 13.17, 'seconds': 71}
+--- cfm_ea_geodesic.pt corner seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 481, 'steps_98': 614, 'final_coverage': 0.9802, 'total_path': 1228, 'longest_path': 614, 'overlap': 0.109, 'mean_snap_cells': 14.87, 'seconds': 54}
+--- cfm_ea_geodesic.pt corner seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 499, 'steps_98': 625, 'final_coverage': 0.9877, 'total_path': 1250, 'longest_path': 625, 'overlap': 0.542, 'mean_snap_cells': 14.37, 'seconds': 71}
+--- cfm_ea_geodesic.pt room seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 300, 'steps_98': 444, 'final_coverage': 0.9807, 'total_path': 888, 'longest_path': 444, 'overlap': 0.113, 'mean_snap_cells': 13.03, 'seconds': 54}
+--- cfm_ea_geodesic.pt room seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 572, 'steps_98': 651, 'final_coverage': 0.98, 'total_path': 1302, 'longest_path': 651, 'overlap': 0.639, 'mean_snap_cells': 30.97, 'seconds': 99}
+--- cfm_ea_geodesic.pt room seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 283, 'steps_98': 437, 'final_coverage': 0.9802, 'total_path': 874, 'longest_path': 437, 'overlap': 0.271, 'mean_snap_cells': 15.77, 'seconds': 65}
+--- cfm_ea_geodesic.pt loop_with_corridor seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 521, 'steps_98': 567, 'final_coverage': 0.9801, 'total_path': 1134, 'longest_path': 567, 'overlap': 0.18, 'mean_snap_cells': 38.85, 'seconds': 105}
+--- cfm_ea_geodesic.pt loop_with_corridor seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 488, 'steps_98': 669, 'final_coverage': 0.9809, 'total_path': 1338, 'longest_path': 669, 'overlap': 0.279, 'mean_snap_cells': 42.47, 'seconds': 82}
+--- cfm_ea_geodesic.pt loop_with_corridor seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 396, 'steps_98': 451, 'final_coverage': 0.9801, 'total_path': 902, 'longest_path': 451, 'overlap': 0.005, 'mean_snap_cells': 23.75, 'seconds': 96}
+--- cfm_ea_geodesic.pt room_with_corner seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 41, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 853, 'steps_98': 1301, 'final_coverage': 0.9802, 'total_path': 2602, 'longest_path': 1301, 'overlap': 0.453, 'mean_snap_cells': 27.64, 'seconds': 117}
+--- cfm_ea_geodesic.pt room_with_corner seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 42, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 852, 'steps_98': 1075, 'final_coverage': 0.9841, 'total_path': 2150, 'longest_path': 1075, 'overlap': 0.852, 'mean_snap_cells': 24.17, 'seconds': 149}
+--- cfm_ea_geodesic.pt room_with_corner seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 43, 'ckpt': 'cfm_ea_geodesic.pt', 'steps_90': 613, 'steps_98': 940, 'final_coverage': 0.9803, 'total_path': 1880, 'longest_path': 940, 'overlap': 0.512, 'mean_snap_cells': 18.56, 'seconds': 92}
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[notify] post failed (ignored)
+=== stage: report
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[notify] post failed (ignored)
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/alejandrolopezcordero01/miniconda3/envs/mujoco-env/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[notify] post failed (ignored)
