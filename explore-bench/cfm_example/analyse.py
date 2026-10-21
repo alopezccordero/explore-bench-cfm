@@ -98,7 +98,7 @@ def show(pairs, adjust):
             out.append((contrast(a, b), a, b))
     if not out:
         print('\nno comparable pairs found'); return
-    print(f"\n{'contrast (b better = negative)':58s}{'wins':>8}{'mean':>7}"
+    print(f"\n{'contrast: B vs A (negative mean = B better)':52s}{'wins':>8}{'mean':>7}"
           f"{'95% CI':>18}{'p':>8}" + (f"{'Holm':>7}" if adjust else ''))
     for c, a, b in sorted(out, key=lambda t: t[0]['p']):
         holm = ''
@@ -106,7 +106,7 @@ def show(pairs, adjust):
             rank = sorted(x[0]['p'] for x in out).index(c['p'])
             holm = f"{min(c['p'] * (len(out) - rank), 1.0):>7.3f}"
         note = '' if c['of'] else '   (no decisive runs: all paired diffs zero)'
-        print(f'{b + "  vs  " + a:46.46s}{c["wins"]:>5}/{c["of"]:<2}{c["mean"]:>7.0f}'
+        print(f'{b + "  vs  " + a:52.52s}{c["wins"]:>5}/{c["of"]:<2}{c["mean"]:>7.0f}'
               f'  [{c["lo"]:>6.0f},{c["hi"]:>6.0f}]{c["p"]:>8.4f}{holm}{note}')
 
 
