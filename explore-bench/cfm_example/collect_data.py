@@ -155,6 +155,14 @@ def resample(path, k):
 
 conds, starts, goals, snaps = [], [], [], [] #dataset arrays
 paths = []  #geodesic route robot -> goal, for E-A's obstacle-aware interpolation
+# The complete cell-by-cell A* route, kept in ragged (CSR) form so nothing is thrown
+# away: raw_path holds every route concatenated, and offsets/lengths index into it.
+# resample() to K waypoints is lossy and irreversible -- at K=8 the chords between
+# waypoints left free space on 27.8% of data_x3.npz, worst on long routes (44.4% on
+# room_with_corridor), and the stored 8 points cannot be refined afterwards. With the raw
+# cells on disk, K becomes a training-time choice and this is measurable without
+# re-collecting anything.
+raw_cells = []
 # Per-example provenance. 18 of 50 episodes in data_ea.npz hit the 600-step cap (all ten
 # on room_3), so its truncated tails are over-represented and indistinguishable from
 # clean demonstrations. Recording this lets a later run down-weight them instead of
@@ -208,6 +216,7 @@ for name in args.maps: #we start by iterating the maps
                             continue
                         if args.waypoints:
                             paths.append(resample(route, args.waypoints))
+                            raw_cells.append(np.asarray(route, np.int16))
                         conds.append(build_condition(m, pos, mates).astype(np.float16)) #condition
                         #5 x 64 x 64 data
                         starts.append(pos) #pos of robot during step
@@ -237,6 +246,12 @@ if paths:
     # interpolates along it instead of along the straight line, which on the previous
     # dataset crossed a wall in 63% of examples.
     extra['path'] = to_norm(np.stack(paths))
+if raw_cells:
+    lengths = np.asarray([len(r) for r in raw_cells], np.int32)
+    extra['raw_path'] = np.concatenate(raw_cells)                 # (sum L, 2) cell indices
+    extra['raw_path_lengths'] = lengths                           # (N,)
+    extra['raw_path_offsets'] = np.concatenate(                   # (N,) start of each route
+        [[0], np.cumsum(lengths[:-1])]).astype(np.int64)
 np.savez_compressed(args.out, cond=np.stack(conds), start=to_norm(starts),
                     goal=to_norm(np.stack(goals)[:, None, :]), **extra) # (N, 1, 2)
 #saves examples into data.npz. each step  % 10 == 0. is recorded with

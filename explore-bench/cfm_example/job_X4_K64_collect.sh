@@ -1,5 +1,5 @@
 #!/bin/bash
-# X3: re-collect with a step budget the teacher can actually finish in.
+# X4: re-collect with a step budget the teacher can actually finish in.
 #
 # collect_data.py defaulted to --max-steps 600 while evaluation allows 2000. In
 # data_ea.npz that truncated 18 of 50 episodes -- including all ten on room_3, which
@@ -25,13 +25,13 @@
 # X2 need no retraining, and the next model should be trained on data whose quality has
 # been checked first.
 #
-#SBATCH --job-name=CFM-X3-collect
+#SBATCH --job-name=CFM-X4-K64-collect
 #SBATCH --partition=kimq,gpua30q,gpul40q
 #SBATCH --time=10:00:00
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=24G
-#SBATCH --output=CFM-X3-%j.out
-#SBATCH --error=CFM-X3-%j.err
+#SBATCH --output=CFM-X4-K64-collect-%j.out
+#SBATCH --error=CFM-X4-K64-collect-%j.err
 
 set -euo pipefail
 
@@ -41,11 +41,11 @@ export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
 cd ~/explore-bench-cfm/explore-bench/cfm_example
 
 JOB_ID="${SLURM_JOB_ID:-local-$$}"
-RUN_LOG="run_x3_${JOB_ID}.log"
+RUN_LOG="run_CFM-X4-K64-collect_${JOB_ID}.log"
 exec > >(tee -a "$RUN_LOG") 2>&1
 source ./notify.sh
 
-report_init "X3 collection with a 1500-step budget" \
+report_init "CFM-X4-K64-collect collection with a 1500-step budget" \
 "Re-collecting with --max-steps 1500 and per-episode provenance.
 At 600 steps, 18/50 episodes truncated (all ten on room_3, mean coverage 89%).
 Teacher milp_cpp, reverted 5d5083c build. Expect ~4-5h, no training in this job."
@@ -58,14 +58,14 @@ for need in ('--waypoints', 'def geodesic_path', \"extra['meta']\"):
 from scipy.optimize import milp
 print('preflight OK')"
 
-stage "collect (milp_cpp, --max-steps 1500 --every 1 --episodes 10 --waypoints 8)"
-python -u collect_data.py --method milp_cpp --every 1 --episodes 10 --waypoints 8 \
-       --max-steps 1500 --out data_x3.npz
+stage "collect (milp_cpp, --max-steps 1500 --every 1 --episodes 10 --waypoints 64)"
+python -u collect_data.py --method milp_cpp --every 1 --episodes 10 --waypoints 64 \
+       --max-steps 1500 --out data_x4_K64.npz
 
 stage "report"
 SUMMARY="$(python - <<'PY'
 import numpy as np
-d = np.load('data_x3.npz', allow_pickle=True)
+d = np.load('data_x4_K64.npz', allow_pickle=True)
 ep = d['episodes']; names = list(d['map_names'])
 lines = [f"{len(d['cond'])} examples, {len(ep)} episodes"]
 for mi, nm in enumerate(names):
@@ -78,7 +78,7 @@ print('\n'.join(lines))
 PY
 )"
 echo "$SUMMARY"
-notify "**X3** \`$JOB_ID\` collection done:
+notify "**CFM-X4-K64-collect** \`$JOB_ID\` collection done:
 \`\`\`
 $SUMMARY
 \`\`\`
