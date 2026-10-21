@@ -1,0 +1,63 @@
+[notify] webhook=/home/alejandrolopezcordero01/.discord_webhook outbox=notify_outbox.txt dir=/home/alejandrolopezcordero01/explore-bench-cfm/explore-bench/cfm_example
+[notify] sent
+=== stage: preflight
+scipy 1.15.3 torch 2.6.0+cu124 cuda True
+Wed Oct 21 17:58:47 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:4C:00.0 Off |                    0 |
+| N/A   25C    P0             62W /  400W |       0MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+preflight OK: 45291 examples, K=64, 3010008 raw cells
+=== stage: train (geodesic, K=64, arc <= 160)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+training on cuda
+arc filter <= 160 cells: keeping 41683 of 45291 (92.0%), dropped max arc 732
+geodesic interpolation along 64 waypoints
+41683 examples, 1 goal samples each
+epoch    1  loss 0.09978
+epoch   10  loss 0.02538
+epoch   20  loss 0.01693
+epoch   30  loss 0.01363
+epoch   40  loss 0.01148
+epoch   50  loss 0.00991
+epoch   60  loss 0.00962
+epoch   70  loss 0.00943
+epoch   80  loss 0.00900
+epoch   90  loss 0.00820
+epoch  100  loss 0.00753
+epoch  110  loss 0.00780
+epoch  120  loss 0.00718
+epoch  130  loss 0.00695
+epoch  140  loss 0.00687
+epoch  150  loss 0.00673
+epoch  160  loss 0.00671
+epoch  170  loss 0.00637
+epoch  180  loss 0.00633
+epoch  190  loss 0.00648
+epoch  200  loss 0.00615
+saved model to cfm_x5_geodesic.pt
+[notify] sent
+=== stage: evaluate (120 runs)
+--- geodesic ex=0 loop seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.

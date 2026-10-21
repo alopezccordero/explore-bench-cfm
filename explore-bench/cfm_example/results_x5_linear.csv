@@ -1,0 +1,2 @@
+method,map,robots,seed,ckpt,nsample,exclude,euler_steps,max_steps,steps_90,steps_98,final_coverage,total_path,longest_path,overlap,mean_snap_cells,seconds
+cfm,loop,2,41,cfm_x5_linear.pt,1,0.0,20,2000,256,308,0.9809,616,308,0.048,17.34,69

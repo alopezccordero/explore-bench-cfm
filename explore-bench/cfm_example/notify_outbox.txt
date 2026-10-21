@@ -101,3 +101,24 @@ on data_x4.npz with arc filtering, then re-run the X1 grid.
 ===== 2026-10-21 15:42:35  X4 collection at K=64 with raw routes/142406
 **X4 collection at K=64 with raw routes** - job `142406` finished normally on `sxm004`
 elapsed 353 min, all stages completed.
+
+===== 2026-10-21 17:58:22  X5 geodesic interpolation (K=64)/142594
+**X5 geodesic interpolation (K=64)** - job `142594` started on `sxm003`
+Training on data_x4.npz with --max-arc 160 (41683 of 45291 examples kept), then
+evaluating at exclude 0 and 35 over 6 maps x 10 seeds = 120 runs.
+Pairs against job_x5_linear.sh on the same data, seeds and settings.
+Expect ~30 min training on GPU plus ~3h evaluation.
+
+===== 2026-10-21 17:58:25  X5 linear interpolation (control)/142595
+**X5 linear interpolation (control)** - job `142595` started on `sxm003`
+Control arm for the geodesic test. Training on data_x4.npz with --max-arc 160 (41683 of
+45291 examples kept, same as the geodesic arm), then evaluating at exclude 0 and 35 over
+6 maps x 10 seeds = 120 runs.
+Pairs against job_x5_geodesic.sh on the same data, seeds and settings.
+Expect ~30 min training on GPU plus ~3h evaluation.
+
+===== 2026-10-21 18:03:38  X5 linear interpolation (control)/142595
+**X5 linear** `142595`: training done, `cfm_x5_linear.pt` written. Starting 120 evaluations.
+
+===== 2026-10-21 18:03:56  X5 geodesic interpolation (K=64)/142594
+**X5 geodesic** `142594`: training done, `cfm_x5_geodesic.pt` written. Starting 120 evaluations.
