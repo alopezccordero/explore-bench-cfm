@@ -45,6 +45,28 @@ from cfm_common import (TRAIN_MAPS, build_condition, coverage, frontier_mask, ge
                         make_env, quiet, robot_and_mates, to_norm)
 from cfm_teachers import TEACHERS, make_teacher
 
+def teacher_kwargs(method, **wanted):
+    """Keep only the options the installed teacher actually accepts.
+
+    cfm_teachers.py gets reverted between experiments (the territory/latency variants are
+    kept as patches), and each version takes a different set of options. Filtering by the
+    real signature means an older teacher ignores flags it never had instead of dying on
+    them, and a typo in an option name still shows up as a stale-flag warning.
+    """
+    import inspect
+    from cfm_teachers import TEACHERS
+    cls = TEACHERS[method]
+    accepted = set()
+    for klass in cls.__mro__:
+        sig = inspect.signature(klass.__init__).parameters
+        accepted |= {n for n, p in sig.items()
+                     if p.kind in (p.POSITIONAL_OR_KEYWORD, p.KEYWORD_ONLY)}
+    drop = sorted(k for k in wanted if k not in accepted)
+    if drop:
+        print(f'note: this {method} build has no {", ".join(drop)} -- ignoring')
+    return {k: v for k, v in wanted.items() if k in accepted}
+
+
 p = argparse.ArgumentParser()
 p.add_argument('--method', choices=['mmpf', 'cost'] + list(TEACHERS), default='mmpf',
                help='which teacher to record; mtsp and milp_cpp plan on the ground truth')
@@ -57,6 +79,8 @@ p.add_argument('--max-snap', type=float, default=5.0,
                help='drop a state when the teacher goal is farther than this from a frontier')
 p.add_argument('--seed', type=int, default=0)
 p.add_argument('--out', default='data.npz')
+p.add_argument('--waypoints', type=int, default=8,
+               help='points per stored route; 0 stores goals only, as before')
 # mtsp / milp_cpp only
 p.add_argument('--max-nodes', type=int, default=10,
                help='frontier clusters kept as MILP nodes (by true information gain)')
@@ -64,16 +88,25 @@ p.add_argument('--replan', type=int, default=10,
                help='re-solve the MILP every N steps as well; 0 = only when a goal is used up')
 p.add_argument('--goal-tol', type=float, default=12.0,
                help='cells a goal may recede with its frontier before the MILP is re-solved')
-p.add_argument('--latency', type=float, default=1.0,
+p.add_argument('--latency', type=float, default=0.5,
                help='mtsp objective: 1 = minimum arrival time, 0 = minimum distance')
+p.add_argument('--min-share', type=float, default=0.02,
+               help='drop frontier clusters gating less than this share of the unexplored map')
+p.add_argument('--makespan', type=float, default=0.5,
+               help='mtsp objective: weight on the plan completion time')
 p.add_argument('--cpp-balance', type=float, default=1.0,
                help='weight of the makespan term in milp_cpp (0 = pure min-sum travel)')
 args = p.parse_args() #arguments used
 
 
-def snap_to_frontier(fmask, m, pos, goal):
-    """Teacher goal -> nearest frontier cell this robot can walk to, and how far that was."""
-    valid = fmask & np.isfinite(geodesic_dist(m, pos)) #drop frontiers behind unknown space
+def snap_to_frontier(fmask, dist, goal):
+    """Teacher goal -> nearest frontier cell this robot can walk to, and how far that was.
+
+    Takes the robot's geodesic distance field rather than recomputing it: the caller needs
+    the same field to trace the route to the goal, and that BFS is the single most
+    expensive thing in collection (~72 ms a call, more than a simulator step).
+    """
+    valid = fmask & np.isfinite(dist)       #drop frontiers behind unknown space
     if not valid.any():
         return None, None
     cells = np.argwhere(valid)
@@ -82,7 +115,46 @@ def snap_to_frontier(fmask, m, pos, goal):
     return cells[j], float(np.sqrt(d2[j]))
 
 
+STEP4 = ((1, 0), (-1, 0), (0, 1), (0, -1))
+
+
+def geodesic_path(dist, goal):
+    """Cells from the robot to `goal`, walking the BFS field downhill.
+
+    `dist` is geodesic_dist(m, pos): 4-connected step counts through *known free* space,
+    so the route never crosses a wall and never enters unknown space -- the states the
+    student can actually occupy and condition on.
+    """
+    cur = (int(goal[0]), int(goal[1]))
+    d = dist[cur]
+    if not np.isfinite(d):
+        return None
+    out = [cur]
+    h, w = dist.shape
+    while d > 0:
+        for dy, dx in STEP4:
+            n = (cur[0] + dy, cur[1] + dx)
+            if 0 <= n[0] < h and 0 <= n[1] < w and dist[n] == d - 1:
+                cur, d = n, d - 1
+                out.append(cur)
+                break
+        else:                               # field is not monotone: should not happen
+            return None
+    return out[::-1]                        # robot -> goal
+
+
+def resample(path, k):
+    """`k` points spaced evenly along `path` by arc length, endpoints included."""
+    p = np.asarray(path, float)
+    if len(p) < 2:
+        return np.repeat(p.reshape(1, 2), k, axis=0)
+    s = np.concatenate([[0.0], np.cumsum(np.hypot(*(p[1:] - p[:-1]).T))])
+    at = np.linspace(0.0, s[-1], k)
+    return np.stack([np.interp(at, s, p[:, 0]), np.interp(at, s, p[:, 1])], axis=1)
+
+
 conds, starts, goals, snaps = [], [], [], [] #dataset arrays
+paths = []  #geodesic route robot -> goal, for E-A's obstacle-aware interpolation
 dropped = 0 #states where the teacher never reached a frontier
 for name in args.maps: #we start by iterating the maps
     for ep in range(args.episodes): #episodes is per maps
@@ -92,12 +164,14 @@ for name in args.maps: #we start by iterating the maps
         if args.method in TEACHERS:
             # the privileged teachers are just another get_goal, so step_for_cost drives
             # and senses exactly as it does for the benchmark's own methods
-            kw = dict(max_nodes=args.max_nodes, replan=args.replan, goal_tol=args.goal_tol)
+            kw = dict(max_nodes=args.max_nodes, replan=args.replan, goal_tol=args.goal_tol,
+                      min_share=args.min_share)
             if args.method == 'milp_cpp':
                 kw['balance'] = args.cpp_balance
             else:
                 kw['latency'] = args.latency
-            get_goal = make_teacher(args.method, env, **kw)
+                kw['makespan'] = args.makespan
+            get_goal = make_teacher(args.method, env, **teacher_kwargs(args.method, **kw))
             step_env = lambda: env.step_for_cost(get_goal=get_goal)  # noqa: E731
         else:
             get_goal = env.get_goal_for_mmpf if args.method == 'mmpf' else env.get_goal_for_cost
@@ -112,13 +186,20 @@ for name in args.maps: #we start by iterating the maps
                         teacher_goals = get_goal() #the goal the teacher picked, one per robot
                     for i in range(args.robots): #for each robot
                         pos, mates = robot_and_mates(env, i) # record position of robot, and other robots
-                        g, snap = snap_to_frontier(fmask, m, pos, teacher_goals[i])
+                        dist = geodesic_dist(m, pos)  #reused for the route below
+                        g, snap = snap_to_frontier(fmask, dist, teacher_goals[i])
                         #goal cells
                         if g is None or tuple(g) == pos:
                             continue #nothing reachable left, or the teacher stayed put
                         if snap > args.max_snap:
                             dropped += 1 #stalled short of a frontier: no goal to learn from
                             continue
+                        route = geodesic_path(dist, g) if args.waypoints else None
+                        if args.waypoints and route is None:
+                            dropped += 1  #no route through known space: nothing to learn
+                            continue
+                        if args.waypoints:
+                            paths.append(resample(route, args.waypoints))
                         conds.append(build_condition(m, pos, mates).astype(np.float16)) #condition
                         #5 x 64 x 64 data
                         starts.append(pos) #pos of robot during step
@@ -135,8 +216,14 @@ for name in args.maps: #we start by iterating the maps
 if not conds:
     raise SystemExit('no examples collected')
 
+extra = {}
+if paths:
+    # (N, K, 2) normalised route. train_cfm.py picks this up automatically and
+    # interpolates along it instead of along the straight line, which on the previous
+    # dataset crossed a wall in 63% of examples.
+    extra['path'] = to_norm(np.stack(paths))
 np.savez_compressed(args.out, cond=np.stack(conds), start=to_norm(starts),
-                    goal=to_norm(np.stack(goals)[:, None, :])) # (N, 1, 2)
+                    goal=to_norm(np.stack(goals)[:, None, :]), **extra) # (N, 1, 2)
 #saves examples into data.npz. each step  % 10 == 0. is recorded with
 #with its conditions (5 X 64 X 64), the starting position of the robot and the goal.
 ###conditions are

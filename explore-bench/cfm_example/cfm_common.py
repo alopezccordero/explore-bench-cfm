@@ -15,6 +15,7 @@ import warnings
 
 import numpy as np
 from scipy import ndimage
+from scipy.spatial import cKDTree
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.join(HERE, '..', 'Explore-Bench')
@@ -156,11 +157,46 @@ def teacher_goal_fn(rng):
 
 # ---------------------------------------------------------------- model
 
-def cfm_goal_fn(model, gen=None):
+def cfm_goal_fn(model, gen=None, exclude=0.0, nsample=1):
+    """Goals from the trained flow.
+
+    `exclude` > 0 keeps a robot off frontier cells within that many cells of a goal a
+    teammate has already claimed this step. The teachers forbid two robots taking the
+    same viewpoint with a hard constraint in the MILP; the student cannot learn that from
+    its training data, because collect_data.py records one (condition -> goal) pair per
+    robot and independent draws from correct marginals still collide. The condition image
+    shows where teammates *are*, never where they are going -- and env.goals already holds
+    exactly that, so the cheapest fix is to apply the constraint here at selection time
+    rather than hope the model infers it.
+    """
     def fn(env, i, fmask):
         pos, mates = robot_and_mates(env, i)
-        goal, snap = choose_goal(model, env.complete_map, pos, mates, gen=gen)
-        if goal is not None:
-            env.snap_dists.append(snap)  # how far the flow landed from a real frontier cell
-        return goal
+        if exclude <= 0 and nsample == 1:
+            goal, snap = choose_goal(model, env.complete_map, pos, mates, gen=gen)
+            if goal is not None:
+                env.snap_dists.append(snap)  # how far the flow landed from a real frontier
+            return goal
+
+        m = env.complete_map
+        valid = frontier_mask(m) & np.isfinite(geodesic_dist(m, pos))
+        if not valid.any():
+            return None
+        cells = np.argwhere(valid)
+        taken = [g for j, g in enumerate(env.goals or []) if j != i and g is not None]
+        if taken:
+            free = np.ones(len(cells), bool)
+            for q in taken:
+                free &= ((cells - np.asarray(q, float)) ** 2).sum(1) > exclude ** 2
+            if free.any():          # if everything is claimed, fall back to the full set
+                cells = cells[free]
+        # `nsample` > 1: the flow is stochastic (noise at x0, then Euler steps), so draw
+        # several goals and keep whichever lands nearest a real frontier. Snap distance is
+        # the strongest predictor of exploration performance we have, and this trades the
+        # sampler's variance for accuracy at no training cost. If it does not help, the
+        # error is bias rather than variance -- which is itself worth knowing.
+        points = sample_goals(model, build_condition(m, pos, mates), pos, nsample, gen=gen)
+        d, j = cKDTree(cells).query(points)
+        best = int(np.argmin(np.atleast_1d(d)))
+        env.snap_dists.append(float(np.atleast_1d(d)[best]))
+        return cells[np.atleast_1d(j)[best]]
     return fn

@@ -1,7 +1,19 @@
 """Step 2: train v(x, t | map) with conditional flow matching.
 
-For each example: x0 = robot position + small noise, x1 = one teacher goal,
-x_t = (1 - t) x0 + t x1, and the model learns to predict the velocity x1 - x0.
+For each example: x0 = robot position + small noise, x1 = one teacher goal, and the model
+learns the velocity that carries x0 to x1.
+
+The conditional path between them matters. The straight line x_t = (1-t) x0 + t x1 is the
+textbook choice, but it assumes the space is convex -- and here it is full of walls. On
+data_cpp.npz the segment crosses a wall cell in 63% of examples, and 23% of the average
+path is wall or not-known-free, so most of the supervision is at states the robot could
+never occupy. The field is then integrated from those states at inference, which is what
+the large mean_snap_cells in results.csv is measuring.
+
+So when the dataset carries a `path` array -- the geodesic route through known free space,
+stored by collect_data.py --waypoints -- the interpolation follows it and the target is
+that route's tangent. Pass --linear to force the straight-line objective on the same data,
+which is the controlled comparison for E-A.
 """
 import argparse
 
@@ -17,6 +29,8 @@ p.add_argument('--batch', type=int, default=256)
 p.add_argument('--lr', type=float, default=1e-3)
 p.add_argument('--seed', type=int, default=0)
 p.add_argument('--out', default='cfm.pt')
+p.add_argument('--linear', action='store_true',
+               help='straight-line interpolation even when the data has routes')
 args = p.parse_args()
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -27,6 +41,12 @@ d = np.load(args.data) # load data
 cond = torch.tensor(d['cond'], dtype=torch.float32).to(device)  # (N, 5, 64, 64) condition tensor
 start = torch.tensor(d['start']).to(device)                     # (N, 2) starting positions of robot
 goal = torch.tensor(d['goal']).to(device)          # (N, K, 2) goal position of robot
+path = None
+if 'path' in d.files and not args.linear:
+    path = torch.tensor(d['path'], dtype=torch.float32).to(device)   # (N, W, 2) route
+    print(f'geodesic interpolation along {path.shape[1]} waypoints')
+else:
+    print('straight-line interpolation' + (' (--linear)' if args.linear else ''))
 #n is number of samples (1000), k is goals per sample or (example), 2 is xy coordinate
 n, k = goal.shape[:2] #n = samples, k = goals per samples
 #k is now 1
@@ -39,14 +59,33 @@ for epoch in range(1, args.epochs + 1): #learning loop
     total = 0.0 
     for b in range(0, n, args.batch): #from b=0 to 1000, b+256 each iter
         idx = perm[b:b + args.batch] #store indexes of training examples for current batch
-        x1 = goal[idx, 0]        # choose one goal per sample    
-        x0 = start[idx] + NOISE * torch.randn(len(idx), 2, device=device)   # source: around the robot add noise to robot pos
+        x1 = goal[idx, 0]        # choose one goal per sample
+        eps = NOISE * torch.randn(len(idx), 2, device=device)  # spread of the source
         t = torch.rand(len(idx), 1).to(device)  #generate 256 random numbers from 0 to 1.
-        xt = (1 - t) * x0 + t * x1 #position at time t. 
+        if path is None:
+            x0 = start[idx] + eps          # source: around the robot
+            xt = (1 - t) * x0 + t * x1     #position at time t.
+            target = x1 - x0
+        else:
+            # Walk the stored route instead of the straight line. With W waypoints at
+            # evenly spaced times, t falls in segment j and the conditional velocity is
+            # that segment's tangent, scaled by (W-1) because the whole route is covered
+            # as t goes 0 -> 1.
+            route = path[idx]                                   # (B, W, 2)
+            w = route.shape[1]
+            u = t.squeeze(1) * (w - 1)
+            j = u.long().clamp(max=w - 2)
+            frac = (u - j.to(u.dtype)).unsqueeze(1)
+            rows = torch.arange(len(idx), device=device)
+            a, b2 = route[rows, j], route[rows, j + 1]
+            # the (1-t) eps term keeps x0 = route start + noise and x1 = route end, so the
+            # source and target distributions are untouched and only the path differs
+            xt = a + frac * (b2 - a) + (1 - t) * eps
+            target = (w - 1) * (b2 - a) - eps
 
-        pred = model(xt, t, cond[idx]) 
+        pred = model(xt, t, cond[idx])
 
-        loss = ((pred - (x1 - x0)) ** 2).mean() 
+        loss = ((pred - target) ** 2).mean()
         #x1 - x0 is the displacement. since it goes from t0 to t1 it represents the velocity.
         #calculate the model loss manually - MSE
         #inputs of net

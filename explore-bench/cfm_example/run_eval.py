@@ -24,6 +24,28 @@ from cfm_common import (UNKNOWN, VelocityField, cfm_goal_fn, coverage, make_env,
                         teacher_goal_fn)
 from cfm_teachers import TEACHERS, make_teacher
 
+def teacher_kwargs(method, **wanted):
+    """Keep only the options the installed teacher actually accepts.
+
+    cfm_teachers.py gets reverted between experiments (the territory/latency variants are
+    kept as patches), and each version takes a different set of options. Filtering by the
+    real signature means an older teacher ignores flags it never had instead of dying on
+    them, and a typo in an option name still shows up as a stale-flag warning.
+    """
+    import inspect
+    from cfm_teachers import TEACHERS
+    cls = TEACHERS[method]
+    accepted = set()
+    for klass in cls.__mro__:
+        sig = inspect.signature(klass.__init__).parameters
+        accepted |= {n for n, p in sig.items()
+                     if p.kind in (p.POSITIONAL_OR_KEYWORD, p.KEYWORD_ONLY)}
+    drop = sorted(k for k in wanted if k not in accepted)
+    if drop:
+        print(f'note: this {method} build has no {", ".join(drop)} -- ignoring')
+    return {k: v for k, v in wanted.items() if k in accepted}
+
+
 p = argparse.ArgumentParser()
 p.add_argument('--method', choices=['cost', 'mmpf', 'teacher', 'cfm'] + list(TEACHERS),
                required=True)
@@ -35,10 +57,17 @@ p.add_argument('--ckpt', default='cfm.pt')
 p.add_argument('--csv', default='results.csv')
 p.add_argument('--show', action='store_true', help='open the simulator window and update it every step')
 # mtsp / milp_cpp only, same meaning as in collect_data.py
+p.add_argument('--nsample', type=int, default=1,
+               help='cfm only: draw this many goals from the flow and keep the one nearest a frontier')
+p.add_argument('--exclude', type=float, default=0.0,
+               help='cfm only: keep a robot this many cells clear of a goal a teammate already claimed')
 p.add_argument('--max-nodes', type=int, default=10)
 p.add_argument('--replan', type=int, default=10)
 p.add_argument('--goal-tol', type=float, default=12.0)
-p.add_argument('--latency', type=float, default=1.0)
+p.add_argument('--latency', type=float, default=0.5)
+p.add_argument('--min-share', type=float, default=0.02,
+               help='drop frontier clusters gating less than this share of the unexplored map')
+p.add_argument('--makespan', type=float, default=0.5)
 p.add_argument('--cpp-balance', type=float, default=1.0)
 args = p.parse_args()
 
@@ -50,17 +79,19 @@ elif args.method == 'teacher':
     env = make_env(args.map, args.robots, teacher_goal_fn(np.random.default_rng(args.seed)))
 elif args.method in TEACHERS:
     env = make_env(args.map, args.robots)
-    kw = dict(max_nodes=args.max_nodes, replan=args.replan, goal_tol=args.goal_tol)
+    kw = dict(max_nodes=args.max_nodes, replan=args.replan, goal_tol=args.goal_tol,
+              min_share=args.min_share)
     if args.method == 'milp_cpp':
         kw['balance'] = args.cpp_balance
     else:
         kw['latency'] = args.latency
-    planner = make_teacher(args.method, env, **kw)
+        kw['makespan'] = args.makespan
+    planner = make_teacher(args.method, env, **teacher_kwargs(args.method, **kw))
 else:
     model = VelocityField()
     model.load_state_dict(torch.load(args.ckpt, map_location='cpu'))
     model.eval()
-    env = make_env(args.map, args.robots, cfm_goal_fn(model, torch.Generator().manual_seed(args.seed)))
+    env = make_env(args.map, args.robots, cfm_goal_fn(model, torch.Generator().manual_seed(args.seed), exclude=args.exclude, nsample=args.nsample))
 
 # step_for_mmpf is a copy of step_for_cost that calls get_goal_for_mmpf() itself:
 # it takes no get_goal hook, so the method is chosen by picking the step function.
