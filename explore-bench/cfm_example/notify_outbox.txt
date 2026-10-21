@@ -53,3 +53,51 @@ then:  python analyse.py results_x1.csv
 ===== 2026-10-21 04:45:27  X1 powered grid/142363
 **X1 powered grid** - job `142363` finished normally on `sxm003`
 elapsed 161 min, all stages completed.
+
+===== 2026-10-21 09:49:38  X4 collection at K=64 with raw routes/142406
+**X4 collection at K=64 with raw routes** - job `142406` started on `sxm004`
+Re-collecting so geodesic interpolation can be tested with a valid conditional path.
+At K=8 the chords between waypoints left free space on 27.8% of data_x3.npz, vs 31.6%
+for a plain straight line -- so there was almost no treatment to detect.
+Also storing the complete A* routes (raw_path / offsets / lengths), which makes K a
+training-time choice. Expect ~4-5h, no GPU, no training.
+
+===== 2026-10-21 15:42:31  X4 collection at K=64 with raw routes/142406
+**X4** `142406` collection and verification complete
+```
+45291 examples, 50 episodes, 3010008 raw route cells (12.0 MB)
+  corridor_asym        cov 98.2% min 98.0% capped 0/10 steps 134
+  corridor_sym         cov 98.1% min 98.0% capped 0/10 steps 257
+  room_2               cov 98.1% min 98.0% capped 0/10 steps 532
+  room_3               cov 98.0% min 98.0% capped 0/10 steps 734
+  room_with_corridor   cov 98.1% min 98.0% capped 0/10 steps 608
+total capped: 0/50
+```
+```
+data_x4.npz: 45291 examples, 3010008 route cells (12.0 MB), K=64
+1. CSR integrity          OK  lengths min 3 mean 66 max 778
+2. endpoints              OK  0 start mismatches, 0 goal mismatches
+3. 4-connectivity         OK  0 routes with a non-adjacent step
+4. cells in free space    OK  0 routes touch a non-free cell
+5. resample fidelity      OK  max deviation 0.00e+00 (normalised units)
+
+6. chord validity: share of examples where a segment between waypoints leaves free space
+       K   spacing  invalid   by route length (<40 / 40-80 / 80-160 / 160+)
+       8      9.4c    27.4%    6.1% / 18.3% / 66.8% / 97.5%
+      16      4.4c    21.9%    0.0% / 12.3% / 62.7% / 95.3%
+      32      2.1c    14.2%    0.0% /  0.0% / 43.8% / 92.8%
+      64      1.0c     5.7%    0.0% /  0.0% /  0.0% / 69.5%
+     128      0.5c     0.5%    0.0% /  0.0% /  0.0% /  6.5%
+    line         -    36.3%   (straight start->goal, the pre-geodesic objective)
+
+arc length: mean 65.5  median 45.0  max 777.0 cells;  8.2% exceed 160 cells
+
+VERIFICATION PASSED
+```
+Read the K=8 row against the K=64 row and the 'line' row: K=8 and the straight line were
+nearly the same, which is why geodesic never reproduced. Next: retrain linear vs geodesic
+on data_x4.npz with arc filtering, then re-run the X1 grid.
+
+===== 2026-10-21 15:42:35  X4 collection at K=64 with raw routes/142406
+**X4 collection at K=64 with raw routes** - job `142406` finished normally on `sxm004`
+elapsed 353 min, all stages completed.
