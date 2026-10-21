@@ -1,0 +1,55 @@
+
+===== 2026-10-21 02:04:06  X1 powered grid/142363
+**X1 powered grid** - job `142363` started on `sxm003`
+3 checkpoints x nsample{1,4} x exclude{0,35} x 6 maps x 20 seeds = 1440 runs.
+Primary: exclude 35 vs 0 at nsample 1 on cfm_ea_geodesic.pt, paired by (map,seed).
+One array task per seed; ~3h per task, all 20 in parallel.
+
+===== 2026-10-21 02:04:10  X2 Euler steps/142383
+**X2 Euler steps** - job `142383` started on `gpu012`
+Does integrating the flow more finely help the geodesic model in the simulator?
+2 checkpoints x steps{20,50,100} x 6 maps x 5 seeds = 180 runs, one task per seed.
+Offline the geodesic endpoint error improves 8.69 -> 7.35 cells from 20 to 100 steps;
+whether that shows up in exploration is the open question.
+
+===== 2026-10-21 02:04:14  X3 collection with a 1500-step budget/142387
+**X3 collection with a 1500-step budget** - job `142387` started on `gpu011`
+Re-collecting with --max-steps 1500 and per-episode provenance.
+At 600 steps, 18/50 episodes truncated (all ten on room_3, mean coverage 89%).
+Teacher milp_cpp, reverted 5d5083c build. Expect ~4-5h, no training in this job.
+
+===== 2026-10-21 03:00:08  X2 Euler steps/142383
+**X2** task 0 (seed 41) done. Merge with:
+python merge_results.py results_x2_seed*.csv > results_x2.csv
+
+===== 2026-10-21 03:00:09  X2 Euler steps/142383
+**X2 Euler steps** - job `142383` finished normally on `gpu012`
+elapsed 56 min, all stages completed.
+
+===== 2026-10-21 04:23:04  X3 collection with a 1500-step budget/142387
+**X3** `142387` collection done:
+```
+45291 examples, 50 episodes
+  corridor_asym        cov 98.2% min 98.0% capped 0/10  mean steps 134
+  corridor_sym         cov 98.1% min 98.0% capped 0/10  mean steps 257
+  room_2               cov 98.1% min 98.0% capped 0/10  mean steps 532
+  room_3               cov 98.0% min 98.0% capped 0/10  mean steps 734
+  room_with_corridor   cov 98.1% min 98.0% capped 0/10  mean steps 608
+total capped: 0/50  (was 18/50 at 600 steps)
+```
+Compare with the 600-step run: room_3 was 89.0% mean, 10/10 capped.
+If room_3 is still capping, the teacher is stuck rather than slow and the planner needs
+the diagnosis, not a bigger budget.
+
+===== 2026-10-21 04:23:04  X3 collection with a 1500-step budget/142387
+**X3 collection with a 1500-step budget** - job `142387` finished normally on `gpu011`
+elapsed 138 min, all stages completed.
+
+===== 2026-10-21 04:45:27  X1 powered grid/142363
+**X1** task 0 (seed 41) finished: 72 rows.
+When every task is done:  python merge_results.py results_x1_seed*.csv > results_x1.csv
+then:  python analyse.py results_x1.csv
+
+===== 2026-10-21 04:45:27  X1 powered grid/142363
+**X1 powered grid** - job `142363` finished normally on `sxm003`
+elapsed 161 min, all stages completed.

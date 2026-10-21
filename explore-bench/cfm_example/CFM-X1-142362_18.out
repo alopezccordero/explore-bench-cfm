@@ -1,0 +1,440 @@
+=== stage: preflight seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+preflight OK
+=== stage: evaluate seed 59
+--- cfm_ea_geodesic.pt ns=1 ex=0 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 248, 'steps_98': 270, 'final_coverage': 0.9824, 'total_path': 540, 'longest_path': 270, 'overlap': 0.054, 'mean_snap_cells': 15.09, 'seconds': 68}
+--- cfm_ea_geodesic.pt ns=1 ex=0 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 273, 'steps_98': 311, 'final_coverage': 0.9818, 'total_path': 622, 'longest_path': 311, 'overlap': 0.167, 'mean_snap_cells': 14.51, 'seconds': 56}
+--- cfm_ea_geodesic.pt ns=1 ex=0 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 537, 'steps_98': 722, 'final_coverage': 0.9854, 'total_path': 1444, 'longest_path': 722, 'overlap': 0.273, 'mean_snap_cells': 14.68, 'seconds': 74}
+--- cfm_ea_geodesic.pt ns=1 ex=0 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 444, 'steps_98': 624, 'final_coverage': 0.9804, 'total_path': 1248, 'longest_path': 624, 'overlap': 0.112, 'mean_snap_cells': 15.49, 'seconds': 68}
+--- cfm_ea_geodesic.pt ns=1 ex=0 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 711, 'steps_98': 784, 'final_coverage': 0.9809, 'total_path': 1568, 'longest_path': 784, 'overlap': 0.57, 'mean_snap_cells': 44.7, 'seconds': 119}
+--- cfm_ea_geodesic.pt ns=1 ex=0 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 1157, 'steps_98': 1693, 'final_coverage': 0.9801, 'total_path': 3386, 'longest_path': 1693, 'overlap': 0.915, 'mean_snap_cells': 24.64, 'seconds': 167}
+--- cfm_ea_geodesic.pt ns=1 ex=35 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 203, 'steps_98': 222, 'final_coverage': 0.9809, 'total_path': 444, 'longest_path': 222, 'overlap': 0.033, 'mean_snap_cells': 17.76, 'seconds': 70}
+--- cfm_ea_geodesic.pt ns=1 ex=35 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 273, 'steps_98': 311, 'final_coverage': 0.9818, 'total_path': 622, 'longest_path': 311, 'overlap': 0.167, 'mean_snap_cells': 14.51, 'seconds': 57}
+--- cfm_ea_geodesic.pt ns=1 ex=35 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 586, 'steps_98': 716, 'final_coverage': 0.9802, 'total_path': 1432, 'longest_path': 716, 'overlap': 0.794, 'mean_snap_cells': 22.84, 'seconds': 79}
+--- cfm_ea_geodesic.pt ns=1 ex=35 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 389, 'steps_98': 611, 'final_coverage': 0.9803, 'total_path': 1222, 'longest_path': 611, 'overlap': 0.339, 'mean_snap_cells': 17.77, 'seconds': 62}
+--- cfm_ea_geodesic.pt ns=1 ex=35 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 551, 'steps_98': 621, 'final_coverage': 0.9808, 'total_path': 1242, 'longest_path': 621, 'overlap': 0.022, 'mean_snap_cells': 29.46, 'seconds': 80}
+--- cfm_ea_geodesic.pt ns=1 ex=35 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 971, 'steps_98': 1114, 'final_coverage': 0.98, 'total_path': 2228, 'longest_path': 1114, 'overlap': 0.332, 'mean_snap_cells': 21.23, 'seconds': 104}
+--- cfm_ea_geodesic.pt ns=4 ex=0 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 236, 'steps_98': 255, 'final_coverage': 0.9825, 'total_path': 510, 'longest_path': 255, 'overlap': 0.054, 'mean_snap_cells': 11.3, 'seconds': 85}
+--- cfm_ea_geodesic.pt ns=4 ex=0 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 242, 'steps_98': 367, 'final_coverage': 0.9811, 'total_path': 734, 'longest_path': 367, 'overlap': 0.236, 'mean_snap_cells': 10.45, 'seconds': 61}
+--- cfm_ea_geodesic.pt ns=4 ex=0 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 392, 'steps_98': 717, 'final_coverage': 0.9804, 'total_path': 1434, 'longest_path': 717, 'overlap': 0.564, 'mean_snap_cells': 14.22, 'seconds': 76}
+--- cfm_ea_geodesic.pt ns=4 ex=0 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 314, 'steps_98': 376, 'final_coverage': 0.9825, 'total_path': 752, 'longest_path': 376, 'overlap': 0.163, 'mean_snap_cells': 10.6, 'seconds': 60}
+--- cfm_ea_geodesic.pt ns=4 ex=0 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 620, 'steps_98': 735, 'final_coverage': 0.9845, 'total_path': 1470, 'longest_path': 735, 'overlap': 0.714, 'mean_snap_cells': 28.5, 'seconds': 102}
+--- cfm_ea_geodesic.pt ns=4 ex=0 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 695, 'steps_98': 1171, 'final_coverage': 0.9804, 'total_path': 2342, 'longest_path': 1171, 'overlap': 0.644, 'mean_snap_cells': 20.48, 'seconds': 117}
+--- cfm_ea_geodesic.pt ns=4 ex=35 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 207, 'steps_98': 229, 'final_coverage': 0.988, 'total_path': 458, 'longest_path': 229, 'overlap': 0.033, 'mean_snap_cells': 11.21, 'seconds': 81}
+--- cfm_ea_geodesic.pt ns=4 ex=35 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 242, 'steps_98': 405, 'final_coverage': 0.9802, 'total_path': 810, 'longest_path': 405, 'overlap': 0.365, 'mean_snap_cells': 11.59, 'seconds': 65}
+--- cfm_ea_geodesic.pt ns=4 ex=35 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 464, 'steps_98': 764, 'final_coverage': 0.9811, 'total_path': 1528, 'longest_path': 764, 'overlap': 0.186, 'mean_snap_cells': 24.22, 'seconds': 89}
+--- cfm_ea_geodesic.pt ns=4 ex=35 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 314, 'steps_98': 376, 'final_coverage': 0.9825, 'total_path': 752, 'longest_path': 376, 'overlap': 0.173, 'mean_snap_cells': 8.52, 'seconds': 58}
+--- cfm_ea_geodesic.pt ns=4 ex=35 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 629, 'steps_98': 876, 'final_coverage': 0.9808, 'total_path': 1752, 'longest_path': 876, 'overlap': 0.709, 'mean_snap_cells': 23.55, 'seconds': 116}
+--- cfm_ea_geodesic.pt ns=4 ex=35 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_geodesic.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 674, 'steps_98': 1145, 'final_coverage': 0.98, 'total_path': 2290, 'longest_path': 1145, 'overlap': 0.562, 'mean_snap_cells': 23.64, 'seconds': 116}
+--- cfm_ea_linear.pt ns=1 ex=0 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 209, 'steps_98': 234, 'final_coverage': 0.9824, 'total_path': 468, 'longest_path': 234, 'overlap': 0.051, 'mean_snap_cells': 16.19, 'seconds': 79}
+--- cfm_ea_linear.pt ns=1 ex=0 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 329, 'steps_98': 531, 'final_coverage': 0.9818, 'total_path': 1062, 'longest_path': 531, 'overlap': 0.354, 'mean_snap_cells': 18.09, 'seconds': 89}
+--- cfm_ea_linear.pt ns=1 ex=0 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 647, 'steps_98': 894, 'final_coverage': 0.9847, 'total_path': 1788, 'longest_path': 894, 'overlap': 0.737, 'mean_snap_cells': 19.21, 'seconds': 84}
+--- cfm_ea_linear.pt ns=1 ex=0 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 365, 'steps_98': 498, 'final_coverage': 0.9805, 'total_path': 996, 'longest_path': 498, 'overlap': 0.176, 'mean_snap_cells': 22.87, 'seconds': 61}
+--- cfm_ea_linear.pt ns=1 ex=0 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 547, 'steps_98': 637, 'final_coverage': 0.9804, 'total_path': 1274, 'longest_path': 637, 'overlap': 0.566, 'mean_snap_cells': 31.83, 'seconds': 115}
+--- cfm_ea_linear.pt ns=1 ex=0 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 624, 'steps_98': 702, 'final_coverage': 0.9806, 'total_path': 1404, 'longest_path': 702, 'overlap': 0.142, 'mean_snap_cells': 19.61, 'seconds': 71}
+--- cfm_ea_linear.pt ns=1 ex=35 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 258, 'steps_98': 272, 'final_coverage': 0.9838, 'total_path': 544, 'longest_path': 272, 'overlap': 0.18, 'mean_snap_cells': 16.62, 'seconds': 72}
+--- cfm_ea_linear.pt ns=1 ex=35 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 410, 'steps_98': 474, 'final_coverage': 0.98, 'total_path': 948, 'longest_path': 474, 'overlap': 0.335, 'mean_snap_cells': 18.31, 'seconds': 83}
+--- cfm_ea_linear.pt ns=1 ex=35 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 515, 'steps_98': 759, 'final_coverage': 0.986, 'total_path': 1518, 'longest_path': 759, 'overlap': 0.52, 'mean_snap_cells': 24.18, 'seconds': 93}
+--- cfm_ea_linear.pt ns=1 ex=35 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 365, 'steps_98': 543, 'final_coverage': 0.9806, 'total_path': 1086, 'longest_path': 543, 'overlap': 0.311, 'mean_snap_cells': 20.48, 'seconds': 68}
+--- cfm_ea_linear.pt ns=1 ex=35 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 392, 'steps_98': 615, 'final_coverage': 0.9803, 'total_path': 1230, 'longest_path': 615, 'overlap': 0.308, 'mean_snap_cells': 22.53, 'seconds': 107}
+--- cfm_ea_linear.pt ns=1 ex=35 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 841, 'steps_98': 1251, 'final_coverage': 0.9804, 'total_path': 2502, 'longest_path': 1251, 'overlap': 0.833, 'mean_snap_cells': 19.27, 'seconds': 120}
+--- cfm_ea_linear.pt ns=4 ex=0 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 209, 'steps_98': 234, 'final_coverage': 0.9824, 'total_path': 468, 'longest_path': 234, 'overlap': 0.051, 'mean_snap_cells': 13.07, 'seconds': 83}
+--- cfm_ea_linear.pt ns=4 ex=0 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 308, 'steps_98': 351, 'final_coverage': 0.9806, 'total_path': 702, 'longest_path': 351, 'overlap': 0.162, 'mean_snap_cells': 8.33, 'seconds': 72}
+--- cfm_ea_linear.pt ns=4 ex=0 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 619, 'steps_98': 793, 'final_coverage': 0.981, 'total_path': 1586, 'longest_path': 793, 'overlap': 0.501, 'mean_snap_cells': 16.64, 'seconds': 86}
+--- cfm_ea_linear.pt ns=4 ex=0 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 342, 'steps_98': 481, 'final_coverage': 0.9807, 'total_path': 962, 'longest_path': 481, 'overlap': 0.202, 'mean_snap_cells': 14.68, 'seconds': 67}
+--- cfm_ea_linear.pt ns=4 ex=0 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 642, 'steps_98': 745, 'final_coverage': 0.9806, 'total_path': 1490, 'longest_path': 745, 'overlap': 0.522, 'mean_snap_cells': 34.22, 'seconds': 125}
+--- cfm_ea_linear.pt ns=4 ex=0 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 792, 'steps_98': 1084, 'final_coverage': 0.98, 'total_path': 2168, 'longest_path': 1084, 'overlap': 0.641, 'mean_snap_cells': 16.78, 'seconds': 111}
+--- cfm_ea_linear.pt ns=4 ex=35 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 258, 'steps_98': 272, 'final_coverage': 0.9838, 'total_path': 544, 'longest_path': 272, 'overlap': 0.18, 'mean_snap_cells': 13.27, 'seconds': 75}
+--- cfm_ea_linear.pt ns=4 ex=35 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 308, 'steps_98': 351, 'final_coverage': 0.9806, 'total_path': 702, 'longest_path': 351, 'overlap': 0.162, 'mean_snap_cells': 8.33, 'seconds': 71}
+--- cfm_ea_linear.pt ns=4 ex=35 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 530, 'steps_98': 630, 'final_coverage': 0.9814, 'total_path': 1260, 'longest_path': 630, 'overlap': 0.727, 'mean_snap_cells': 23.14, 'seconds': 61}
+--- cfm_ea_linear.pt ns=4 ex=35 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 342, 'steps_98': 397, 'final_coverage': 0.9804, 'total_path': 794, 'longest_path': 397, 'overlap': 0.092, 'mean_snap_cells': 14.38, 'seconds': 61}
+--- cfm_ea_linear.pt ns=4 ex=35 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 563, 'steps_98': 595, 'final_coverage': 0.9804, 'total_path': 1190, 'longest_path': 595, 'overlap': 0.0, 'mean_snap_cells': 30.83, 'seconds': 77}
+--- cfm_ea_linear.pt ns=4 ex=35 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_ea_linear.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 645, 'steps_98': 990, 'final_coverage': 0.9806, 'total_path': 1980, 'longest_path': 990, 'overlap': 0.517, 'mean_snap_cells': 17.0, 'seconds': 101}
+--- cfm_cpp.pt ns=1 ex=0 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 212, 'steps_98': 230, 'final_coverage': 0.9809, 'total_path': 460, 'longest_path': 230, 'overlap': 0.051, 'mean_snap_cells': 17.27, 'seconds': 71}
+--- cfm_cpp.pt ns=1 ex=0 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 302, 'steps_98': 350, 'final_coverage': 0.9806, 'total_path': 700, 'longest_path': 350, 'overlap': 0.19, 'mean_snap_cells': 11.65, 'seconds': 62}
+--- cfm_cpp.pt ns=1 ex=0 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 772, 'steps_98': 987, 'final_coverage': 0.9806, 'total_path': 1974, 'longest_path': 987, 'overlap': 0.797, 'mean_snap_cells': 25.44, 'seconds': 95}
+--- cfm_cpp.pt ns=1 ex=0 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 487, 'steps_98': 693, 'final_coverage': 0.9814, 'total_path': 1386, 'longest_path': 693, 'overlap': 0.61, 'mean_snap_cells': 23.57, 'seconds': 79}
+--- cfm_cpp.pt ns=1 ex=0 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 516, 'steps_98': 736, 'final_coverage': 0.9804, 'total_path': 1472, 'longest_path': 736, 'overlap': 0.416, 'mean_snap_cells': 32.64, 'seconds': 106}
+--- cfm_cpp.pt ns=1 ex=0 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 866, 'steps_98': 1056, 'final_coverage': 0.9831, 'total_path': 2112, 'longest_path': 1056, 'overlap': 0.496, 'mean_snap_cells': 19.35, 'seconds': 101}
+--- cfm_cpp.pt ns=1 ex=35 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 254, 'steps_98': 272, 'final_coverage': 0.9807, 'total_path': 544, 'longest_path': 272, 'overlap': 0.18, 'mean_snap_cells': 13.72, 'seconds': 79}
+--- cfm_cpp.pt ns=1 ex=35 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 286, 'steps_98': 489, 'final_coverage': 0.9804, 'total_path': 978, 'longest_path': 489, 'overlap': 0.355, 'mean_snap_cells': 14.19, 'seconds': 73}
+--- cfm_cpp.pt ns=1 ex=35 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 419, 'steps_98': 628, 'final_coverage': 0.9818, 'total_path': 1256, 'longest_path': 628, 'overlap': 0.314, 'mean_snap_cells': 25.7, 'seconds': 61}
+--- cfm_cpp.pt ns=1 ex=35 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 470, 'steps_98': 656, 'final_coverage': 0.9809, 'total_path': 1312, 'longest_path': 656, 'overlap': 0.654, 'mean_snap_cells': 18.64, 'seconds': 71}
+--- cfm_cpp.pt ns=1 ex=35 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 456, 'steps_98': 675, 'final_coverage': 0.9804, 'total_path': 1350, 'longest_path': 675, 'overlap': 0.343, 'mean_snap_cells': 37.04, 'seconds': 87}
+--- cfm_cpp.pt ns=1 ex=35 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 832, 'steps_98': 1174, 'final_coverage': 0.9867, 'total_path': 2348, 'longest_path': 1174, 'overlap': 0.773, 'mean_snap_cells': 24.94, 'seconds': 120}
+--- cfm_cpp.pt ns=4 ex=0 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 212, 'steps_98': 230, 'final_coverage': 0.9809, 'total_path': 460, 'longest_path': 230, 'overlap': 0.051, 'mean_snap_cells': 14.27, 'seconds': 74}
+--- cfm_cpp.pt ns=4 ex=0 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 313, 'steps_98': 460, 'final_coverage': 0.9805, 'total_path': 920, 'longest_path': 460, 'overlap': 0.308, 'mean_snap_cells': 11.11, 'seconds': 80}
+--- cfm_cpp.pt ns=4 ex=0 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 683, 'steps_98': 780, 'final_coverage': 0.98, 'total_path': 1560, 'longest_path': 780, 'overlap': 0.816, 'mean_snap_cells': 23.58, 'seconds': 90}
+--- cfm_cpp.pt ns=4 ex=0 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 282, 'steps_98': 362, 'final_coverage': 0.9803, 'total_path': 724, 'longest_path': 362, 'overlap': 0.026, 'mean_snap_cells': 11.04, 'seconds': 56}
+--- cfm_cpp.pt ns=4 ex=0 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 421, 'steps_98': 721, 'final_coverage': 0.9803, 'total_path': 1442, 'longest_path': 721, 'overlap': 0.438, 'mean_snap_cells': 38.99, 'seconds': 109}
+--- cfm_cpp.pt ns=4 ex=0 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 0.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 884, 'steps_98': 950, 'final_coverage': 0.9807, 'total_path': 1900, 'longest_path': 950, 'overlap': 0.671, 'mean_snap_cells': 17.55, 'seconds': 98}
+--- cfm_cpp.pt ns=4 ex=35 loop seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 258, 'steps_98': 270, 'final_coverage': 0.9824, 'total_path': 540, 'longest_path': 270, 'overlap': 0.18, 'mean_snap_cells': 14.14, 'seconds': 60}
+--- cfm_cpp.pt ns=4 ex=35 corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 341, 'steps_98': 487, 'final_coverage': 0.9806, 'total_path': 974, 'longest_path': 487, 'overlap': 0.331, 'mean_snap_cells': 11.37, 'seconds': 85}
+--- cfm_cpp.pt ns=4 ex=35 corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 506, 'steps_98': 593, 'final_coverage': 0.9931, 'total_path': 1186, 'longest_path': 593, 'overlap': 0.183, 'mean_snap_cells': 19.15, 'seconds': 82}
+--- cfm_cpp.pt ns=4 ex=35 room seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 282, 'steps_98': 362, 'final_coverage': 0.9803, 'total_path': 724, 'longest_path': 362, 'overlap': 0.026, 'mean_snap_cells': 11.2, 'seconds': 55}
+--- cfm_cpp.pt ns=4 ex=35 loop_with_corridor seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 421, 'steps_98': 596, 'final_coverage': 0.9803, 'total_path': 1192, 'longest_path': 596, 'overlap': 0.313, 'mean_snap_cells': 27.68, 'seconds': 79}
+--- cfm_cpp.pt ns=4 ex=35 room_with_corner seed 59
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 59, 'ckpt': 'cfm_cpp.pt', 'nsample': 4, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 729, 'steps_98': 924, 'final_coverage': 0.9804, 'total_path': 1848, 'longest_path': 924, 'overlap': 0.354, 'mean_snap_cells': 19.42, 'seconds': 113}
+seed 59 done: 72 rows in results_x1_seed59.csv
