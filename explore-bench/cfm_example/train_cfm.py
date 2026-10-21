@@ -29,6 +29,8 @@ p.add_argument('--batch', type=int, default=256)
 p.add_argument('--lr', type=float, default=1e-3)
 p.add_argument('--seed', type=int, default=0)
 p.add_argument('--out', default='cfm.pt')
+p.add_argument('--max-arc', type=float, default=0.0,
+               help='drop examples whose route is longer than this many cells (0 = all)')
 p.add_argument('--linear', action='store_true',
                help='straight-line interpolation even when the data has routes')
 args = p.parse_args()
@@ -37,13 +39,32 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'training on {device}')
 
 torch.manual_seed(args.seed) #manual seed for reproducing the results
-d = np.load(args.data) # load data 
-cond = torch.tensor(d['cond'], dtype=torch.float32).to(device)  # (N, 5, 64, 64) condition tensor
-start = torch.tensor(d['start']).to(device)                     # (N, 2) starting positions of robot
-goal = torch.tensor(d['goal']).to(device)          # (N, K, 2) goal position of robot
+d = np.load(args.data) # load data
+
+# Optional arc filter, applied in numpy before anything reaches the device, so the big
+# condition array is only materialised once.
+#
+# At K=64 the chords between waypoints are valid for every route under 160 cells, but
+# still leave free space on 69.5% of the longer ones (8.2% of data_x4.npz, arcs up to
+# 777 cells). Keeping those dilutes the geodesic treatment with examples whose
+# interpolation path is no better than a straight line -- which is exactly why the
+# earlier K=8 runs found nothing. The filter drops the same examples from both arms, so
+# the linear-vs-geodesic comparison stays paired; --max-arc 0 keeps everything.
+keep = slice(None)
+if args.max_arc > 0 and 'path' in d.files:
+    from cfm_common import from_norm
+    pc = from_norm(d['path'])
+    arc = np.hypot(*(pc[:, 1:] - pc[:, :-1]).transpose(2, 0, 1)).sum(1)
+    keep = arc <= args.max_arc
+    print(f'arc filter <= {args.max_arc:g} cells: keeping {keep.sum()} of {len(arc)} '
+          f'({100 * keep.mean():.1f}%), dropped max arc {arc.max():.0f}')
+
+cond = torch.tensor(d['cond'][keep], dtype=torch.float32).to(device)  # (N, 5, 64, 64) condition tensor
+start = torch.tensor(d['start'][keep]).to(device)                     # (N, 2) starting positions of robot
+goal = torch.tensor(d['goal'][keep]).to(device)    # (N, K, 2) goal position of robot
 path = None
 if 'path' in d.files and not args.linear:
-    path = torch.tensor(d['path'], dtype=torch.float32).to(device)   # (N, W, 2) route
+    path = torch.tensor(d['path'][keep], dtype=torch.float32).to(device)   # (N, W, 2) route
     print(f'geodesic interpolation along {path.shape[1]} waypoints')
 else:
     print('straight-line interpolation' + (' (--linear)' if args.linear else ''))
