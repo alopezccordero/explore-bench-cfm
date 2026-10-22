@@ -49,7 +49,7 @@ case "$METHOD" in
   *) echo "usage: sbatch $0 <cost|mmpf|mtsp|milp_cpp|greedy_ratio>"; exit 2 ;;
 esac
 
-source ~/miniconda3/bin/activate
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate mujoco-env
 export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
 cd ~/explore-bench-cfm/explore-bench/cfm_example

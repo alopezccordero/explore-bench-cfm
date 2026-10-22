@@ -1,0 +1,1 @@
+usage: sbatch /var/spool/slurmd/job142609/slurm_script <cost|mmpf|mtsp|milp_cpp|greedy_ratio>

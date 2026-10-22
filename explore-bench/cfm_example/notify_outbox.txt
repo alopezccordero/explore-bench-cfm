@@ -256,3 +256,271 @@ then +9 steps p=0.29 at 20 seeds.
 ===== 2026-10-21 22:34:17  X5 geodesic interpolation (K=64)/142594
 **X5 geodesic interpolation (K=64)** - job `142594` finished normally on `sxm003`
 elapsed 276 min, all stages completed.
+
+===== 2026-10-22 00:49:22  E-C baselines + teachers/142610
+**E-C baselines + teachers** - job `142610` started on `sxm003`
+Filling the reference line E1 is missing: cost, mmpf, mtsp, milp_cpp on all 6 test maps
+x seeds 41-43 = 72 runs. Teachers are the reverted 5d5083c build so these rows match the
+corner numbers already in results.csv. Expect ~2h.
+
+===== 2026-10-22 00:49:28  E-C baselines + teachers/142610
+**E-C** `142610`: starting **cost** (6 maps x 3 seeds).
+
+===== 2026-10-22 00:49:31  E-C baselines + teachers/142610
+**E-C baselines + teachers** - job `142610` finished normally on `sxm003`
+elapsed 0 min, all stages completed.
+
+===== 2026-10-22 00:53:08  X6 baseline: cost/142616
+**X6 baseline: cost** - job `142616` started on `sxm003`
+60 runs on the X5 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps -- so every row
+pairs by (map, seed) against the X5 student results.
+greedy_ratio is the new information-ratio oracle from the teacher audit; the audit cleared
+the MILPs' solver (385/385 proven optimal, gap 0) and their candidate set (99.4-100% of
+cluster gain kept), leaving the objective as the thing to test.
+Expect 2-4h. No GPU, no training.
+
+===== 2026-10-22 00:53:11  X6 baseline: mtsp/142618
+**X6 baseline: mtsp** - job `142618` started on `sxm003`
+60 runs on the X5 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps -- so every row
+pairs by (map, seed) against the X5 student results.
+greedy_ratio is the new information-ratio oracle from the teacher audit; the audit cleared
+the MILPs' solver (385/385 proven optimal, gap 0) and their candidate set (99.4-100% of
+cluster gain kept), leaving the objective as the thing to test.
+Expect 2-4h. No GPU, no training.
+
+===== 2026-10-22 00:53:11  X6 baseline: milp_cpp/142619
+**X6 baseline: milp_cpp** - job `142619` started on `sxm003`
+60 runs on the X5 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps -- so every row
+pairs by (map, seed) against the X5 student results.
+greedy_ratio is the new information-ratio oracle from the teacher audit; the audit cleared
+the MILPs' solver (385/385 proven optimal, gap 0) and their candidate set (99.4-100% of
+cluster gain kept), leaving the objective as the thing to test.
+Expect 2-4h. No GPU, no training.
+
+===== 2026-10-22 00:53:11  X6 baseline: greedy_ratio/142620
+**X6 baseline: greedy_ratio** - job `142620` started on `sxm003`
+60 runs on the X5 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps -- so every row
+pairs by (map, seed) against the X5 student results.
+greedy_ratio is the new information-ratio oracle from the teacher audit; the audit cleared
+the MILPs' solver (385/385 proven optimal, gap 0) and their candidate set (99.4-100% of
+cluster gain kept), leaving the objective as the thing to test.
+Expect 2-4h. No GPU, no training.
+
+===== 2026-10-22 00:53:11  X6 baseline: mmpf/142617
+**X6 baseline: mmpf** - job `142617` started on `sxm003`
+60 runs on the X5 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps -- so every row
+pairs by (map, seed) against the X5 student results.
+greedy_ratio is the new information-ratio oracle from the teacher audit; the audit cleared
+the MILPs' solver (385/385 proven optimal, gap 0) and their candidate set (99.4-100% of
+cluster gain kept), leaving the objective as the thing to test.
+Expect 2-4h. No GPU, no training.
+
+===== 2026-10-22 00:57:42  X6 baseline: cost/142616
+**X6 cost** `142616`: loop done (10/60 runs)
+
+===== 2026-10-22 00:58:07  X6 baseline: mmpf/142617
+**X6 mmpf** `142617`: loop done (10/60 runs)
+
+===== 2026-10-22 00:58:38  X6 baseline: milp_cpp/142619
+**X6 milp_cpp** `142619`: loop done (10/60 runs)
+
+===== 2026-10-22 00:58:50  X6 baseline: greedy_ratio/142620
+**X6 greedy_ratio** `142620`: loop done (10/60 runs)
+
+===== 2026-10-22 00:59:47  X6 baseline: mtsp/142618
+**X6 mtsp** `142618`: loop done (10/60 runs)
+
+===== 2026-10-22 01:03:58  X6 baseline: mmpf/142617
+**X6 mmpf** `142617`: corridor done (20/60 runs)
+
+===== 2026-10-22 01:04:22  X6 baseline: milp_cpp/142619
+**X6 milp_cpp** `142619`: corridor done (20/60 runs)
+
+===== 2026-10-22 01:04:46  X6 baseline: cost/142616
+**X6 cost** `142616`: corridor done (20/60 runs)
+
+===== 2026-10-22 01:05:18  X6 baseline: greedy_ratio/142620
+**X6 greedy_ratio** `142620`: corridor done (20/60 runs)
+
+===== 2026-10-22 01:06:08  X6 baseline: mtsp/142618
+**X6 mtsp** `142618`: corridor done (20/60 runs)
+
+===== 2026-10-22 01:17:17  X6 baseline: milp_cpp/142619
+**X6 milp_cpp** `142619`: corner done (30/60 runs)
+
+===== 2026-10-22 01:20:57  X6 baseline: cost/142616
+**X6 cost** `142616`: corner done (30/60 runs)
+
+===== 2026-10-22 01:21:15  X6 baseline: greedy_ratio/142620
+**X6 greedy_ratio** `142620`: corner done (30/60 runs)
+
+===== 2026-10-22 01:22:45  X6 baseline: mmpf/142617
+**X6 mmpf** `142617`: corner done (30/60 runs)
+
+===== 2026-10-22 01:23:43  X6 baseline: mtsp/142618
+**X6 mtsp** `142618`: corner done (30/60 runs)
+
+===== 2026-10-22 01:25:25  X6 baseline: milp_cpp/142619
+**X6 milp_cpp** `142619`: room done (40/60 runs)
+
+===== 2026-10-22 01:30:28  X6 baseline: greedy_ratio/142620
+**X6 greedy_ratio** `142620`: room done (40/60 runs)
+
+===== 2026-10-22 01:30:31  X6 baseline: cost/142616
+**X6 cost** `142616`: room done (40/60 runs)
+
+===== 2026-10-22 01:30:48  X6 baseline: mmpf/142617
+**X6 mmpf** `142617`: room done (40/60 runs)
+
+===== 2026-10-22 01:35:09  X6 baseline: mtsp/142618
+**X6 mtsp** `142618`: room done (40/60 runs)
+
+===== 2026-10-22 01:35:11  X6 baseline: milp_cpp/142619
+**X6 milp_cpp** `142619`: loop_with_corridor done (50/60 runs)
+
+===== 2026-10-22 01:39:19  X6 baseline: mmpf/142617
+**X6 mmpf** `142617`: loop_with_corridor done (50/60 runs)
+
+===== 2026-10-22 01:42:22  X6 baseline: cost/142616
+**X6 cost** `142616`: loop_with_corridor done (50/60 runs)
+
+===== 2026-10-22 01:42:22  X6 baseline: greedy_ratio/142620
+**X6 greedy_ratio** `142620`: loop_with_corridor done (50/60 runs)
+
+===== 2026-10-22 01:46:26  X6 baseline: mtsp/142618
+**X6 mtsp** `142618`: loop_with_corridor done (50/60 runs)
+
+===== 2026-10-22 02:01:23  X6 baseline: milp_cpp/142619
+**X6 milp_cpp** `142619`: room_with_corner done (60/60 runs)
+
+===== 2026-10-22 02:01:24  X6 baseline: milp_cpp/142619
+**X6 baseline milp_cpp FINAL**
+`results_x6_milp_cpp.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+milp_cpp                  corner               527   527    0  0.135   -  
+milp_cpp                  corridor             318   318    0  0.211   -  
+milp_cpp                  loop                 325   325    0  0.056   -  
+milp_cpp                  loop_with_corridor   480   480    0  0.100   -  
+milp_cpp                  room                 409   409    0  0.169   -  
+milp_cpp                  room_with_corner     793   793    0  0.187   -  
+---------------------------------------------------------------------
+milp_cpp                  ALL                  475   475    0  0.143   -    sd 180
+```
+Pair against the student once the five baselines are in:
+  python merge_results.py results_x6_*.csv results_x5_linear.csv results_x5_geodesic.csv > results_x6.csv
+  python analyse.py results_x6.csv --vs 'x5_linear ns1 ex35 st20'
+The --vs form is needed because a baseline label has fewer fields than a student label,
+and the automatic pairing only relates configurations with the same number of fields.
+
+===== 2026-10-22 02:01:24  X6 baseline: milp_cpp/142619
+**X6 baseline: milp_cpp** - job `142619` finished normally on `sxm003`
+elapsed 68 min, all stages completed.
+
+===== 2026-10-22 02:01:40  X6 baseline: cost/142616
+**X6 cost** `142616`: room_with_corner done (60/60 runs)
+
+===== 2026-10-22 02:01:40  X6 baseline: cost/142616
+**X6 baseline cost FINAL**
+`results_x6_cost.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+cost                      corner               973  1076    1  0.773   -  
+cost                      corridor             402   402    0  0.400   -  
+cost                      loop                 275   275    0  0.030   -  
+cost                      loop_with_corridor   645   645    0  0.358   -  
+cost                      room                 538   538    0  0.405   -  
+cost                      room_with_corner    1083  1083    0  0.546   -  
+---------------------------------------------------------------------
+cost                      ALL                  647   670    1  0.419   -    sd 361
+```
+Pair against the student once the five baselines are in:
+  python merge_results.py results_x6_*.csv results_x5_linear.csv results_x5_geodesic.csv > results_x6.csv
+  python analyse.py results_x6.csv --vs 'x5_linear ns1 ex35 st20'
+The --vs form is needed because a baseline label has fewer fields than a student label,
+and the automatic pairing only relates configurations with the same number of fields.
+
+===== 2026-10-22 02:01:41  X6 baseline: cost/142616
+**X6 baseline: cost** - job `142616` finished normally on `sxm003`
+elapsed 68 min, all stages completed.
+
+===== 2026-10-22 02:09:44  X6 baseline: greedy_ratio/142620
+**X6 greedy_ratio** `142620`: room_with_corner done (60/60 runs)
+
+===== 2026-10-22 02:09:45  X6 baseline: greedy_ratio/142620
+**X6 baseline greedy_ratio FINAL**
+`results_x6_greedy_ratio.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+greedy_ratio              corner               520   520    0  0.250   -  
+greedy_ratio              corridor             330   330    0  0.296   -  
+greedy_ratio              loop                 324   324    0  0.053   -  
+greedy_ratio              loop_with_corridor   519   519    0  0.203   -  
+greedy_ratio              room                 409   409    0  0.237   -  
+greedy_ratio              room_with_corner     726   726    0  0.353   -  
+---------------------------------------------------------------------
+greedy_ratio              ALL                  471   471    0  0.232   -    sd 155
+```
+Pair against the student once the five baselines are in:
+  python merge_results.py results_x6_*.csv results_x5_linear.csv results_x5_geodesic.csv > results_x6.csv
+  python analyse.py results_x6.csv --vs 'x5_linear ns1 ex35 st20'
+The --vs form is needed because a baseline label has fewer fields than a student label,
+and the automatic pairing only relates configurations with the same number of fields.
+
+===== 2026-10-22 02:09:45  X6 baseline: greedy_ratio/142620
+**X6 baseline: greedy_ratio** - job `142620` finished normally on `sxm003`
+elapsed 76 min, all stages completed.
+
+===== 2026-10-22 02:14:39  X6 baseline: mtsp/142618
+**X6 mtsp** `142618`: room_with_corner done (60/60 runs)
+
+===== 2026-10-22 02:14:39  X6 baseline: mtsp/142618
+**X6 baseline mtsp FINAL**
+`results_x6_mtsp.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+mtsp                      corner               508   508    0  0.123   -  
+mtsp                      corridor             316   316    0  0.221   -  
+mtsp                      loop                 338   338    0  0.120   -  
+mtsp                      loop_with_corridor   446   446    0  0.075   -  
+mtsp                      room                 397   397    0  0.141   -  
+mtsp                      room_with_corner     747   747    0  0.176   -  
+---------------------------------------------------------------------
+mtsp                      ALL                  459   459    0  0.143   -    sd 158
+```
+Pair against the student once the five baselines are in:
+  python merge_results.py results_x6_*.csv results_x5_linear.csv results_x5_geodesic.csv > results_x6.csv
+  python analyse.py results_x6.csv --vs 'x5_linear ns1 ex35 st20'
+The --vs form is needed because a baseline label has fewer fields than a student label,
+and the automatic pairing only relates configurations with the same number of fields.
+
+===== 2026-10-22 02:14:40  X6 baseline: mtsp/142618
+**X6 baseline: mtsp** - job `142618` finished normally on `sxm003`
+elapsed 81 min, all stages completed.
+
+===== 2026-10-22 02:32:53  X6 baseline: mmpf/142617
+**X6 mmpf** `142617`: room_with_corner done (60/60 runs)
+
+===== 2026-10-22 02:32:54  X6 baseline: mmpf/142617
+**X6 baseline mmpf FINAL**
+`results_x6_mmpf.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+mmpf                      corner               740   740    0  0.056   -  
+mmpf                      corridor             394   394    0  0.064   -  
+mmpf                      loop                 300   300    0  0.030   -  
+mmpf                      loop_with_corridor   440   440    0  0.031   -  
+mmpf                      room                 344   344    0  0.060   -  
+mmpf                      room_with_corner     912  1347    4  0.045   -  
+---------------------------------------------------------------------
+mmpf                      ALL                  494   594    4  0.048   -    sd 247
+```
+Pair against the student once the five baselines are in:
+  python merge_results.py results_x6_*.csv results_x5_linear.csv results_x5_geodesic.csv > results_x6.csv
+  python analyse.py results_x6.csv --vs 'x5_linear ns1 ex35 st20'
+The --vs form is needed because a baseline label has fewer fields than a student label,
+and the automatic pairing only relates configurations with the same number of fields.
+
+===== 2026-10-22 02:32:54  X6 baseline: mmpf/142617
+**X6 baseline: mmpf** - job `142617` finished normally on `sxm003`
+elapsed 99 min, all stages completed.
