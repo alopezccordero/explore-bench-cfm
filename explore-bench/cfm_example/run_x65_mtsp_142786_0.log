@@ -1,0 +1,500 @@
+[notify] webhook=/home/alejandrolopezcordero01/.discord_webhook outbox=notify_outbox.txt dir=/home/alejandrolopezcordero01/explore-bench-cfm/explore-bench/cfm_example
+[notify] sent
+=== stage: preflight
+scipy 1.15.3
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+preflight OK: mtsp, fixes=False, X6.3 instrumentation present
+=== stage: evaluate mtsp (60 runs)
+--- mtsp loop seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 251, 'steps_98': 304, 'final_coverage': 0.9809, 'total_path': 608, 'longest_path': 304, 'overlap': 0.048, 'mean_snap_cells': '', 'seconds': 33}
+solver: 32 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.02s max, 0/32 fell back to greedy, 3.0 candidates per plan
+replans: 32 total -- periodic 27 (84%)  frontier_gone 4 (12%)  no_goal 1 (3%)
+goals:   600 steps held a goal that had only moved (mean re-snap 0.49 cells)
+--- mtsp loop seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 214, 'steps_98': 269, 'final_coverage': 0.9809, 'total_path': 538, 'longest_path': 269, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 30}
+solver: 30 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.01s max, 0/30 fell back to greedy, 3.3 candidates per plan
+replans: 30 total -- periodic 24 (80%)  frontier_gone 5 (17%)  no_goal 1 (3%)
+goals:   529 steps held a goal that had only moved (mean re-snap 0.41 cells)
+--- mtsp loop seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 217, 'steps_98': 400, 'final_coverage': 0.9809, 'total_path': 800, 'longest_path': 400, 'overlap': 0.293, 'mean_snap_cells': '', 'seconds': 47}
+solver: 42 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.02s max, 0/42 fell back to greedy, 3.3 candidates per plan
+replans: 42 total -- periodic 36 (86%)  frontier_gone 5 (12%)  no_goal 1 (2%)
+goals:   791 steps held a goal that had only moved (mean re-snap 0.53 cells)
+--- mtsp loop seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 229, 'steps_98': 415, 'final_coverage': 0.9809, 'total_path': 830, 'longest_path': 415, 'overlap': 0.316, 'mean_snap_cells': '', 'seconds': 50}
+solver: 44 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.02s max, 0/44 fell back to greedy, 3.2 candidates per plan
+replans: 44 total -- periodic 40 (91%)  frontier_gone 3 (7%)  no_goal 1 (2%)
+goals:   823 steps held a goal that had only moved (mean re-snap 0.53 cells)
+--- mtsp loop seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 219, 'steps_98': 392, 'final_coverage': 0.9807, 'total_path': 784, 'longest_path': 392, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 47}
+solver: 43 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.01s max, 0/43 fell back to greedy, 3.2 candidates per plan
+replans: 43 total -- periodic 36 (84%)  frontier_gone 6 (14%)  no_goal 1 (2%)
+goals:   772 steps held a goal that had only moved (mean re-snap 0.54 cells)
+--- mtsp loop seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 240, 'steps_98': 402, 'final_coverage': 0.9804, 'total_path': 804, 'longest_path': 402, 'overlap': 0.307, 'mean_snap_cells': '', 'seconds': 48}
+solver: 43 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.03s max, 0/43 fell back to greedy, 3.3 candidates per plan
+replans: 43 total -- periodic 37 (86%)  frontier_gone 5 (12%)  no_goal 1 (2%)
+goals:   796 steps held a goal that had only moved (mean re-snap 0.42 cells)
+--- mtsp loop seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 290, 'steps_98': 304, 'final_coverage': 0.9809, 'total_path': 608, 'longest_path': 304, 'overlap': 0.048, 'mean_snap_cells': '', 'seconds': 31}
+solver: 33 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.02s max, 0/33 fell back to greedy, 2.7 candidates per plan
+replans: 33 total -- periodic 27 (82%)  frontier_gone 5 (15%)  no_goal 1 (3%)
+goals:   600 steps held a goal that had only moved (mean re-snap 0.63 cells)
+--- mtsp loop seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 365, 'steps_98': 399, 'final_coverage': 0.9895, 'total_path': 798, 'longest_path': 399, 'overlap': 0.093, 'mean_snap_cells': '', 'seconds': 50}
+solver: 42 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.01s max, 0/42 fell back to greedy, 3.1 candidates per plan
+replans: 42 total -- periodic 37 (88%)  frontier_gone 4 (10%)  no_goal 1 (2%)
+goals:   790 steps held a goal that had only moved (mean re-snap 0.30 cells)
+--- mtsp loop seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 221, 'steps_98': 266, 'final_coverage': 0.9872, 'total_path': 532, 'longest_path': 266, 'overlap': 0.053, 'mean_snap_cells': '', 'seconds': 28}
+solver: 28 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.02s max, 0/28 fell back to greedy, 3.0 candidates per plan
+replans: 28 total -- periodic 25 (89%)  frontier_gone 2 (7%)  no_goal 1 (4%)
+goals:   527 steps held a goal that had only moved (mean re-snap 0.47 cells)
+--- mtsp loop seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 221, 'steps_98': 232, 'final_coverage': 0.9809, 'total_path': 464, 'longest_path': 232, 'overlap': 0.046, 'mean_snap_cells': '', 'seconds': 21}
+solver: 26 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.0s total / 0.00s max, 0/26 fell back to greedy, 2.0 candidates per plan
+replans: 26 total -- periodic 19 (73%)  frontier_gone 6 (23%)  no_goal 1 (4%)
+goals:   454 steps held a goal that had only moved (mean re-snap 0.74 cells)
+[notify] sent
+--- mtsp corridor seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corridor', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 217, 'steps_98': 251, 'final_coverage': 0.9817, 'total_path': 502, 'longest_path': 251, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 31}
+solver: 30 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.02s max, 0/30 fell back to greedy, 4.5 candidates per plan
+replans: 30 total -- periodic 21 (70%)  frontier_gone 8 (27%)  no_goal 1 (3%)
+goals:   488 steps held a goal that had only moved (mean re-snap 0.66 cells)
+--- mtsp corridor seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corridor', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 333, 'steps_98': 393, 'final_coverage': 0.9821, 'total_path': 786, 'longest_path': 393, 'overlap': 0.476, 'mean_snap_cells': '', 'seconds': 36}
+solver: 46 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/46 fell back to greedy, 2.0 candidates per plan
+replans: 46 total -- periodic 35 (76%)  frontier_gone 10 (22%)  no_goal 1 (2%)
+goals:   769 steps held a goal that had only moved (mean re-snap 0.60 cells)
+--- mtsp corridor seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corridor', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 341, 'steps_98': 374, 'final_coverage': 0.9819, 'total_path': 748, 'longest_path': 374, 'overlap': 0.47, 'mean_snap_cells': '', 'seconds': 37}
+solver: 44 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.01s max, 0/44 fell back to greedy, 2.0 candidates per plan
+replans: 44 total -- periodic 34 (77%)  frontier_gone 9 (20%)  no_goal 1 (2%)
+goals:   731 steps held a goal that had only moved (mean re-snap 0.62 cells)
+--- mtsp corridor seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corridor', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 269, 'steps_98': 302, 'final_coverage': 0.9809, 'total_path': 604, 'longest_path': 302, 'overlap': 0.061, 'mean_snap_cells': '', 'seconds': 38}
+solver: 36 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.02s max, 0/36 fell back to greedy, 3.6 candidates per plan
+replans: 36 total -- periodic 24 (67%)  frontier_gone 11 (31%)  no_goal 1 (3%)
+goals:   586 steps held a goal that had only moved (mean re-snap 0.69 cells)
+--- mtsp corridor seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corridor', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 322, 'steps_98': 355, 'final_coverage': 0.9802, 'total_path': 710, 'longest_path': 355, 'overlap': 0.401, 'mean_snap_cells': '', 'seconds': 37}
+solver: 40 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.02s max, 0/40 fell back to greedy, 3.0 candidates per plan
+replans: 40 total -- periodic 29 (72%)  frontier_gone 10 (25%)  no_goal 1 (2%)
+goals:   694 steps held a goal that had only moved (mean re-snap 0.53 cells)
+--- mtsp corridor seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corridor', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 304, 'steps_98': 339, 'final_coverage': 0.9819, 'total_path': 678, 'longest_path': 339, 'overlap': 0.415, 'mean_snap_cells': '', 'seconds': 35}
+solver: 41 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.02s max, 0/41 fell back to greedy, 2.7 candidates per plan
+replans: 41 total -- periodic 29 (71%)  frontier_gone 11 (27%)  no_goal 1 (2%)
+goals:   658 steps held a goal that had only moved (mean re-snap 0.59 cells)
+--- mtsp corridor seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corridor', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 294, 'steps_98': 329, 'final_coverage': 0.981, 'total_path': 658, 'longest_path': 329, 'overlap': 0.379, 'mean_snap_cells': '', 'seconds': 33}
+solver: 36 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.01s max, 0/36 fell back to greedy, 2.6 candidates per plan
+replans: 36 total -- periodic 30 (83%)  frontier_gone 5 (14%)  no_goal 1 (3%)
+goals:   648 steps held a goal that had only moved (mean re-snap 0.53 cells)
+--- mtsp corridor seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corridor', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 257, 'steps_98': 272, 'final_coverage': 0.9813, 'total_path': 544, 'longest_path': 272, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 38}
+solver: 33 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.4s total / 0.05s max, 0/33 fell back to greedy, 5.4 candidates per plan
+replans: 33 total -- periodic 22 (67%)  frontier_gone 10 (30%)  no_goal 1 (3%)
+goals:   527 steps held a goal that had only moved (mean re-snap 0.60 cells)
+--- mtsp corridor seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corridor', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 153, 'steps_98': 282, 'final_coverage': 0.9828, 'total_path': 564, 'longest_path': 282, 'overlap': 0.009, 'mean_snap_cells': '', 'seconds': 51}
+solver: 34 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.4s total / 0.04s max, 0/34 fell back to greedy, 6.1 candidates per plan
+replans: 34 total -- periodic 22 (65%)  frontier_gone 11 (32%)  no_goal 1 (3%)
+goals:   546 steps held a goal that had only moved (mean re-snap 0.54 cells)
+--- mtsp corridor seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corridor', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 226, 'steps_98': 258, 'final_coverage': 0.98, 'total_path': 516, 'longest_path': 258, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 32}
+solver: 30 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.3s total / 0.04s max, 0/30 fell back to greedy, 5.3 candidates per plan
+replans: 30 total -- periodic 19 (63%)  frontier_gone 10 (33%)  no_goal 1 (3%)
+goals:   498 steps held a goal that had only moved (mean re-snap 0.52 cells)
+[notify] sent
+--- mtsp corner seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 413, 'steps_98': 513, 'final_coverage': 0.9802, 'total_path': 1026, 'longest_path': 513, 'overlap': 0.049, 'mean_snap_cells': '', 'seconds': 108}
+solver: 58 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 1.4s total / 0.09s max, 0/58 fell back to greedy, 7.3 candidates per plan
+replans: 58 total -- periodic 45 (78%)  frontier_gone 10 (17%)  arrived 2 (3%)  no_goal 1 (2%)
+goals:   1007 steps held a goal that had only moved (mean re-snap 0.51 cells)
+--- mtsp corner seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 300, 'steps_98': 445, 'final_coverage': 0.9808, 'total_path': 890, 'longest_path': 445, 'overlap': 0.195, 'mean_snap_cells': '', 'seconds': 127}
+solver: 49 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 1.7s total / 0.12s max, 0/49 fell back to greedy, 9.8 candidates per plan
+replans: 49 total -- periodic 39 (80%)  frontier_gone 8 (16%)  no_goal 1 (2%)  arrived 1 (2%)
+goals:   874 steps held a goal that had only moved (mean re-snap 0.55 cells)
+--- mtsp corner seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 363, 'steps_98': 480, 'final_coverage': 0.9873, 'total_path': 960, 'longest_path': 480, 'overlap': 0.157, 'mean_snap_cells': '', 'seconds': 98}
+solver: 57 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.7s total / 0.04s max, 0/57 fell back to greedy, 6.3 candidates per plan
+replans: 57 total -- periodic 37 (65%)  frontier_gone 19 (33%)  no_goal 1 (2%)
+goals:   932 steps held a goal that had only moved (mean re-snap 0.50 cells)
+--- mtsp corner seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 409, 'steps_98': 444, 'final_coverage': 0.9817, 'total_path': 888, 'longest_path': 444, 'overlap': 0.021, 'mean_snap_cells': '', 'seconds': 88}
+solver: 52 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 1.6s total / 0.25s max, 0/52 fell back to greedy, 6.8 candidates per plan
+replans: 52 total -- periodic 37 (71%)  frontier_gone 13 (25%)  no_goal 1 (2%)  arrived 1 (2%)
+goals:   866 steps held a goal that had only moved (mean re-snap 0.54 cells)
+--- mtsp corner seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 413, 'steps_98': 500, 'final_coverage': 0.9812, 'total_path': 1000, 'longest_path': 500, 'overlap': 0.163, 'mean_snap_cells': '', 'seconds': 92}
+solver: 59 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.7s total / 0.07s max, 0/59 fell back to greedy, 5.9 candidates per plan
+replans: 59 total -- periodic 39 (66%)  frontier_gone 18 (31%)  no_goal 1 (2%)  arrived 1 (2%)
+goals:   970 steps held a goal that had only moved (mean re-snap 0.47 cells)
+--- mtsp corner seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 344, 'steps_98': 523, 'final_coverage': 0.9812, 'total_path': 1046, 'longest_path': 523, 'overlap': 0.232, 'mean_snap_cells': '', 'seconds': 111}
+solver: 57 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.8s total / 0.06s max, 0/57 fell back to greedy, 6.1 candidates per plan
+replans: 57 total -- periodic 41 (72%)  frontier_gone 13 (23%)  arrived 2 (4%)  no_goal 1 (2%)
+goals:   1020 steps held a goal that had only moved (mean re-snap 0.54 cells)
+--- mtsp corner seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 460, 'steps_98': 549, 'final_coverage': 0.9805, 'total_path': 1098, 'longest_path': 549, 'overlap': 0.099, 'mean_snap_cells': '', 'seconds': 117}
+solver: 61 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 1.1s total / 0.18s max, 0/61 fell back to greedy, 6.0 candidates per plan
+replans: 61 total -- periodic 43 (70%)  frontier_gone 16 (26%)  no_goal 1 (2%)  arrived 1 (2%)
+goals:   1069 steps held a goal that had only moved (mean re-snap 0.50 cells)
+--- mtsp corner seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 466, 'steps_98': 588, 'final_coverage': 0.98, 'total_path': 1176, 'longest_path': 588, 'overlap': 0.054, 'mean_snap_cells': '', 'seconds': 132}
+solver: 66 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 1.2s total / 0.12s max, 0/66 fell back to greedy, 6.0 candidates per plan
+replans: 66 total -- periodic 51 (77%)  frontier_gone 12 (18%)  arrived 2 (3%)  no_goal 1 (2%)
+goals:   1156 steps held a goal that had only moved (mean re-snap 0.48 cells)
+--- mtsp corner seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 350, 'steps_98': 465, 'final_coverage': 0.9841, 'total_path': 930, 'longest_path': 465, 'overlap': 0.195, 'mean_snap_cells': '', 'seconds': 131}
+solver: 55 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 1.0s total / 0.10s max, 0/55 fell back to greedy, 7.5 candidates per plan
+replans: 55 total -- periodic 38 (69%)  frontier_gone 13 (24%)  arrived 3 (5%)  no_goal 1 (2%)
+goals:   902 steps held a goal that had only moved (mean re-snap 0.53 cells)
+--- mtsp corner seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'corner', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 532, 'steps_98': 576, 'final_coverage': 0.9849, 'total_path': 1152, 'longest_path': 576, 'overlap': 0.062, 'mean_snap_cells': '', 'seconds': 154}
+solver: 68 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 2.6s total / 0.18s max, 0/68 fell back to greedy, 6.9 candidates per plan
+replans: 68 total -- periodic 47 (69%)  frontier_gone 16 (24%)  arrived 4 (6%)  no_goal 1 (1%)
+goals:   1122 steps held a goal that had only moved (mean re-snap 0.45 cells)
+[notify] sent
+--- mtsp room seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'room', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 319, 'steps_98': 399, 'final_coverage': 0.9805, 'total_path': 798, 'longest_path': 399, 'overlap': 0.097, 'mean_snap_cells': '', 'seconds': 77}
+solver: 46 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.8s total / 0.07s max, 0/46 fell back to greedy, 7.5 candidates per plan
+replans: 46 total -- periodic 34 (74%)  frontier_gone 11 (24%)  no_goal 1 (2%)
+goals:   781 steps held a goal that had only moved (mean re-snap 0.62 cells)
+--- mtsp room seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'room', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 294, 'steps_98': 352, 'final_coverage': 0.9802, 'total_path': 704, 'longest_path': 352, 'overlap': 0.061, 'mean_snap_cells': '', 'seconds': 62}
+solver: 42 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.02s max, 0/42 fell back to greedy, 5.6 candidates per plan
+replans: 42 total -- periodic 28 (67%)  frontier_gone 13 (31%)  no_goal 1 (2%)
+goals:   681 steps held a goal that had only moved (mean re-snap 0.78 cells)
+--- mtsp room seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'room', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 345, 'steps_98': 413, 'final_coverage': 0.9806, 'total_path': 826, 'longest_path': 413, 'overlap': 0.157, 'mean_snap_cells': '', 'seconds': 68}
+solver: 52 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.6s total / 0.06s max, 0/52 fell back to greedy, 6.7 candidates per plan
+replans: 52 total -- periodic 33 (63%)  frontier_gone 18 (35%)  no_goal 1 (2%)
+goals:   796 steps held a goal that had only moved (mean re-snap 0.69 cells)
+--- mtsp room seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'room', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 360, 'steps_98': 388, 'final_coverage': 0.9826, 'total_path': 776, 'longest_path': 388, 'overlap': 0.071, 'mean_snap_cells': '', 'seconds': 75}
+solver: 47 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 1.2s total / 0.11s max, 0/47 fell back to greedy, 7.4 candidates per plan
+replans: 47 total -- periodic 34 (72%)  frontier_gone 12 (26%)  no_goal 1 (2%)
+goals:   757 steps held a goal that had only moved (mean re-snap 0.61 cells)
+--- mtsp room seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'room', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 373, 'steps_98': 417, 'final_coverage': 0.9801, 'total_path': 834, 'longest_path': 417, 'overlap': 0.144, 'mean_snap_cells': '', 'seconds': 74}
+solver: 51 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.8s total / 0.07s max, 0/51 fell back to greedy, 6.6 candidates per plan
+replans: 51 total -- periodic 35 (69%)  frontier_gone 15 (29%)  no_goal 1 (2%)
+goals:   811 steps held a goal that had only moved (mean re-snap 0.64 cells)
+--- mtsp room seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'room', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 330, 'steps_98': 401, 'final_coverage': 0.9804, 'total_path': 802, 'longest_path': 401, 'overlap': 0.064, 'mean_snap_cells': '', 'seconds': 68}
+solver: 50 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.6s total / 0.03s max, 0/50 fell back to greedy, 6.7 candidates per plan
+replans: 50 total -- periodic 34 (68%)  frontier_gone 15 (30%)  no_goal 1 (2%)
+goals:   778 steps held a goal that had only moved (mean re-snap 0.76 cells)
+--- mtsp room seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'room', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 383, 'steps_98': 460, 'final_coverage': 0.9801, 'total_path': 920, 'longest_path': 460, 'overlap': 0.208, 'mean_snap_cells': '', 'seconds': 61}
+solver: 54 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.4s total / 0.02s max, 0/54 fell back to greedy, 4.9 candidates per plan
+replans: 54 total -- periodic 39 (72%)  frontier_gone 14 (26%)  no_goal 1 (2%)
+goals:   894 steps held a goal that had only moved (mean re-snap 0.52 cells)
+--- mtsp room seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'room', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 315, 'steps_98': 355, 'final_coverage': 0.981, 'total_path': 710, 'longest_path': 355, 'overlap': 0.225, 'mean_snap_cells': '', 'seconds': 60}
+solver: 44 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.3s total / 0.03s max, 0/44 fell back to greedy, 6.5 candidates per plan
+replans: 44 total -- periodic 27 (61%)  frontier_gone 16 (36%)  no_goal 1 (2%)
+goals:   686 steps held a goal that had only moved (mean re-snap 0.64 cells)
+--- mtsp room seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'room', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 286, 'steps_98': 342, 'final_coverage': 0.9803, 'total_path': 684, 'longest_path': 342, 'overlap': 0.198, 'mean_snap_cells': '', 'seconds': 52}
+solver: 42 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.3s total / 0.02s max, 0/42 fell back to greedy, 5.7 candidates per plan
+replans: 42 total -- periodic 28 (67%)  frontier_gone 13 (31%)  no_goal 1 (2%)
+goals:   662 steps held a goal that had only moved (mean re-snap 0.71 cells)
+--- mtsp room seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'room', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 349, 'steps_98': 442, 'final_coverage': 0.9801, 'total_path': 884, 'longest_path': 442, 'overlap': 0.184, 'mean_snap_cells': '', 'seconds': 76}
+solver: 54 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.5s total / 0.14s max, 0/54 fell back to greedy, 5.6 candidates per plan
+replans: 54 total -- periodic 39 (72%)  frontier_gone 14 (26%)  no_goal 1 (2%)
+goals:   861 steps held a goal that had only moved (mean re-snap 0.57 cells)
+[notify] sent
+--- mtsp loop_with_corridor seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 425, 'steps_98': 466, 'final_coverage': 0.9816, 'total_path': 932, 'longest_path': 466, 'overlap': 0.007, 'mean_snap_cells': '', 'seconds': 72}
+solver: 50 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.6s total / 0.07s max, 0/50 fell back to greedy, 6.1 candidates per plan
+replans: 50 total -- periodic 36 (72%)  frontier_gone 13 (26%)  no_goal 1 (2%)
+goals:   908 steps held a goal that had only moved (mean re-snap 0.49 cells)
+--- mtsp loop_with_corridor seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 444, 'steps_98': 484, 'final_coverage': 0.9804, 'total_path': 968, 'longest_path': 484, 'overlap': 0.025, 'mean_snap_cells': '', 'seconds': 68}
+solver: 54 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.4s total / 0.03s max, 0/54 fell back to greedy, 5.1 candidates per plan
+replans: 54 total -- periodic 42 (78%)  frontier_gone 11 (20%)  no_goal 1 (2%)
+goals:   947 steps held a goal that had only moved (mean re-snap 0.54 cells)
+--- mtsp loop_with_corridor seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 300, 'steps_98': 346, 'final_coverage': 0.9802, 'total_path': 692, 'longest_path': 346, 'overlap': 0.219, 'mean_snap_cells': '', 'seconds': 56}
+solver: 40 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.02s max, 0/40 fell back to greedy, 5.3 candidates per plan
+replans: 40 total -- periodic 29 (72%)  frontier_gone 10 (25%)  no_goal 1 (2%)
+goals:   674 steps held a goal that had only moved (mean re-snap 0.77 cells)
+--- mtsp loop_with_corridor seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 302, 'steps_98': 471, 'final_coverage': 0.9806, 'total_path': 942, 'longest_path': 471, 'overlap': 0.015, 'mean_snap_cells': '', 'seconds': 81}
+solver: 55 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.4s total / 0.03s max, 0/55 fell back to greedy, 6.2 candidates per plan
+replans: 55 total -- periodic 42 (76%)  frontier_gone 12 (22%)  no_goal 1 (2%)
+goals:   926 steps held a goal that had only moved (mean re-snap 0.50 cells)
+--- mtsp loop_with_corridor seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 385, 'steps_98': 420, 'final_coverage': 0.9802, 'total_path': 840, 'longest_path': 420, 'overlap': 0.1, 'mean_snap_cells': '', 'seconds': 68}
+solver: 46 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.3s total / 0.04s max, 0/46 fell back to greedy, 5.5 candidates per plan
+replans: 46 total -- periodic 35 (76%)  frontier_gone 10 (22%)  no_goal 1 (2%)
+goals:   822 steps held a goal that had only moved (mean re-snap 0.70 cells)
+--- mtsp loop_with_corridor seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 326, 'steps_98': 362, 'final_coverage': 0.9814, 'total_path': 724, 'longest_path': 362, 'overlap': 0.08, 'mean_snap_cells': '', 'seconds': 47}
+solver: 41 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.01s max, 0/41 fell back to greedy, 4.3 candidates per plan
+replans: 41 total -- periodic 32 (78%)  frontier_gone 8 (20%)  no_goal 1 (2%)
+goals:   710 steps held a goal that had only moved (mean re-snap 0.72 cells)
+--- mtsp loop_with_corridor seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 318, 'steps_98': 376, 'final_coverage': 0.9806, 'total_path': 752, 'longest_path': 376, 'overlap': 0.143, 'mean_snap_cells': '', 'seconds': 50}
+solver: 43 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.01s max, 0/43 fell back to greedy, 3.9 candidates per plan
+replans: 43 total -- periodic 32 (74%)  frontier_gone 10 (23%)  no_goal 1 (2%)
+goals:   733 steps held a goal that had only moved (mean re-snap 0.74 cells)
+--- mtsp loop_with_corridor seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring
+{'method': 'mtsp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 235, 'steps_98': 484, 'final_coverage': 0.9802, 'total_path': 968, 'longest_path': 484, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 87}
+solver: 57 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.7s total / 0.04s max, 0/57 fell back to greedy, 6.6 candidates per plan
+replans: 57 total -- periodic 41 (72%)  frontier_gone 15 (26%)  no_goal 1 (2%)
+goals:   944 steps held a goal that had only moved (mean re-snap 0.55 cells)
+--- mtsp loop_with_corridor seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this mtsp build has no latency, makespan, min_share -- ignoring

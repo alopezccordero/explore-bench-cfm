@@ -1,0 +1,621 @@
+[notify] webhook=/home/alejandrolopezcordero01/.discord_webhook outbox=notify_outbox.txt dir=/home/alejandrolopezcordero01/explore-bench-cfm/explore-bench/cfm_example
+[notify] sent
+=== stage: preflight
+scipy 1.15.3
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+preflight OK: greedy_ratio, fixes=False, X6.3 instrumentation present
+=== stage: evaluate greedy_ratio (60 runs)
+--- greedy_ratio loop seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 275, 'steps_98': 288, 'final_coverage': 0.98, 'total_path': 576, 'longest_path': 288, 'overlap': 0.004, 'mean_snap_cells': '', 'seconds': 16}
+solver: no MILP solves (this method does not use one)
+replans: 31 total -- periodic 26 (84%)  frontier_gone 4 (13%)  no_goal 1 (3%)
+goals:   568 steps held a goal that had only moved (mean re-snap 0.52 cells)
+--- greedy_ratio loop seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 214, 'steps_98': 269, 'final_coverage': 0.9809, 'total_path': 538, 'longest_path': 269, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 15}
+solver: no MILP solves (this method does not use one)
+replans: 30 total -- periodic 24 (80%)  frontier_gone 5 (17%)  no_goal 1 (3%)
+goals:   529 steps held a goal that had only moved (mean re-snap 0.41 cells)
+--- greedy_ratio loop seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 209, 'steps_98': 430, 'final_coverage': 0.9809, 'total_path': 860, 'longest_path': 430, 'overlap': 0.01, 'mean_snap_cells': '', 'seconds': 26}
+solver: no MILP solves (this method does not use one)
+replans: 45 total -- periodic 42 (93%)  frontier_gone 2 (4%)  no_goal 1 (2%)
+goals:   855 steps held a goal that had only moved (mean re-snap 0.51 cells)
+--- greedy_ratio loop seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 243, 'steps_98': 479, 'final_coverage': 0.9812, 'total_path': 958, 'longest_path': 479, 'overlap': 0.02, 'mean_snap_cells': '', 'seconds': 30}
+solver: no MILP solves (this method does not use one)
+replans: 50 total -- periodic 46 (92%)  frontier_gone 3 (6%)  no_goal 1 (2%)
+goals:   952 steps held a goal that had only moved (mean re-snap 0.32 cells)
+--- greedy_ratio loop seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 261, 'steps_98': 287, 'final_coverage': 0.9927, 'total_path': 574, 'longest_path': 287, 'overlap': 0.015, 'mean_snap_cells': '', 'seconds': 15}
+solver: no MILP solves (this method does not use one)
+replans: 30 total -- periodic 26 (87%)  frontier_gone 3 (10%)  no_goal 1 (3%)
+goals:   568 steps held a goal that had only moved (mean re-snap 0.87 cells)
+--- greedy_ratio loop seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 219, 'steps_98': 457, 'final_coverage': 0.9986, 'total_path': 914, 'longest_path': 457, 'overlap': 0.4, 'mean_snap_cells': '', 'seconds': 27}
+solver: no MILP solves (this method does not use one)
+replans: 48 total -- periodic 44 (92%)  frontier_gone 3 (6%)  no_goal 1 (2%)
+goals:   908 steps held a goal that had only moved (mean re-snap 0.43 cells)
+--- greedy_ratio loop seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 257, 'steps_98': 284, 'final_coverage': 0.98, 'total_path': 568, 'longest_path': 284, 'overlap': 0.002, 'mean_snap_cells': '', 'seconds': 16}
+solver: no MILP solves (this method does not use one)
+replans: 30 total -- periodic 27 (90%)  frontier_gone 2 (7%)  no_goal 1 (3%)
+goals:   564 steps held a goal that had only moved (mean re-snap 0.69 cells)
+--- greedy_ratio loop seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 238, 'steps_98': 257, 'final_coverage': 0.9805, 'total_path': 514, 'longest_path': 257, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 14}
+solver: no MILP solves (this method does not use one)
+replans: 28 total -- periodic 23 (82%)  frontier_gone 4 (14%)  no_goal 1 (4%)
+goals:   506 steps held a goal that had only moved (mean re-snap 0.48 cells)
+--- greedy_ratio loop seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 221, 'steps_98': 252, 'final_coverage': 0.981, 'total_path': 504, 'longest_path': 252, 'overlap': 0.029, 'mean_snap_cells': '', 'seconds': 13}
+solver: no MILP solves (this method does not use one)
+replans: 27 total -- periodic 24 (89%)  frontier_gone 2 (7%)  no_goal 1 (4%)
+goals:   499 steps held a goal that had only moved (mean re-snap 0.52 cells)
+--- greedy_ratio loop seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 221, 'steps_98': 232, 'final_coverage': 0.9809, 'total_path': 464, 'longest_path': 232, 'overlap': 0.046, 'mean_snap_cells': '', 'seconds': 11}
+solver: no MILP solves (this method does not use one)
+replans: 26 total -- periodic 19 (73%)  frontier_gone 6 (23%)  no_goal 1 (4%)
+goals:   454 steps held a goal that had only moved (mean re-snap 0.74 cells)
+[notify] sent
+--- greedy_ratio corridor seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corridor', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 149, 'steps_98': 284, 'final_coverage': 0.9817, 'total_path': 568, 'longest_path': 284, 'overlap': 0.134, 'mean_snap_cells': '', 'seconds': 18}
+solver: no MILP solves (this method does not use one)
+replans: 30 total -- periodic 26 (87%)  frontier_gone 3 (10%)  no_goal 1 (3%)
+goals:   560 steps held a goal that had only moved (mean re-snap 0.58 cells)
+--- greedy_ratio corridor seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corridor', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 333, 'steps_98': 355, 'final_coverage': 0.9813, 'total_path': 710, 'longest_path': 355, 'overlap': 0.459, 'mean_snap_cells': '', 'seconds': 23}
+solver: no MILP solves (this method does not use one)
+replans: 38 total -- periodic 33 (87%)  frontier_gone 4 (11%)  no_goal 1 (3%)
+goals:   703 steps held a goal that had only moved (mean re-snap 0.44 cells)
+--- greedy_ratio corridor seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corridor', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 339, 'steps_98': 373, 'final_coverage': 0.9814, 'total_path': 746, 'longest_path': 373, 'overlap': 0.492, 'mean_snap_cells': '', 'seconds': 21}
+solver: no MILP solves (this method does not use one)
+replans: 39 total -- periodic 35 (90%)  frontier_gone 3 (8%)  no_goal 1 (3%)
+goals:   739 steps held a goal that had only moved (mean re-snap 0.59 cells)
+--- greedy_ratio corridor seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corridor', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 296, 'steps_98': 312, 'final_coverage': 0.9803, 'total_path': 624, 'longest_path': 312, 'overlap': 0.36, 'mean_snap_cells': '', 'seconds': 18}
+solver: no MILP solves (this method does not use one)
+replans: 34 total -- periodic 28 (82%)  frontier_gone 5 (15%)  no_goal 1 (3%)
+goals:   615 steps held a goal that had only moved (mean re-snap 0.50 cells)
+--- greedy_ratio corridor seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corridor', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 323, 'steps_98': 357, 'final_coverage': 0.9809, 'total_path': 714, 'longest_path': 357, 'overlap': 0.356, 'mean_snap_cells': '', 'seconds': 23}
+solver: no MILP solves (this method does not use one)
+replans: 38 total -- periodic 32 (84%)  frontier_gone 5 (13%)  no_goal 1 (3%)
+goals:   706 steps held a goal that had only moved (mean re-snap 0.42 cells)
+--- greedy_ratio corridor seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corridor', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 266, 'steps_98': 289, 'final_coverage': 0.9819, 'total_path': 578, 'longest_path': 289, 'overlap': 0.402, 'mean_snap_cells': '', 'seconds': 15}
+solver: no MILP solves (this method does not use one)
+replans: 32 total -- periodic 26 (81%)  frontier_gone 5 (16%)  no_goal 1 (3%)
+goals:   568 steps held a goal that had only moved (mean re-snap 0.66 cells)
+--- greedy_ratio corridor seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corridor', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 272, 'steps_98': 299, 'final_coverage': 0.9806, 'total_path': 598, 'longest_path': 299, 'overlap': 0.431, 'mean_snap_cells': '', 'seconds': 16}
+solver: no MILP solves (this method does not use one)
+replans: 32 total -- periodic 28 (88%)  frontier_gone 3 (9%)  no_goal 1 (3%)
+goals:   591 steps held a goal that had only moved (mean re-snap 0.62 cells)
+--- greedy_ratio corridor seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corridor', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 216, 'steps_98': 246, 'final_coverage': 0.981, 'total_path': 492, 'longest_path': 246, 'overlap': 0.03, 'mean_snap_cells': '', 'seconds': 19}
+solver: no MILP solves (this method does not use one)
+replans: 26 total -- periodic 23 (88%)  frontier_gone 2 (8%)  no_goal 1 (4%)
+goals:   488 steps held a goal that had only moved (mean re-snap 0.56 cells)
+--- greedy_ratio corridor seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corridor', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 194, 'steps_98': 389, 'final_coverage': 0.9807, 'total_path': 778, 'longest_path': 389, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 30}
+solver: no MILP solves (this method does not use one)
+replans: 41 total -- periodic 36 (88%)  frontier_gone 4 (10%)  no_goal 1 (2%)
+goals:   771 steps held a goal that had only moved (mean re-snap 0.35 cells)
+--- greedy_ratio corridor seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corridor', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 212, 'steps_98': 393, 'final_coverage': 0.9814, 'total_path': 786, 'longest_path': 393, 'overlap': 0.294, 'mean_snap_cells': '', 'seconds': 28}
+solver: no MILP solves (this method does not use one)
+replans: 41 total -- periodic 36 (88%)  frontier_gone 4 (10%)  no_goal 1 (2%)
+goals:   778 steps held a goal that had only moved (mean re-snap 0.36 cells)
+[notify] sent
+--- greedy_ratio corner seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 356, 'steps_98': 496, 'final_coverage': 0.9801, 'total_path': 992, 'longest_path': 496, 'overlap': 0.049, 'mean_snap_cells': '', 'seconds': 51}
+solver: no MILP solves (this method does not use one)
+replans: 54 total -- periodic 44 (81%)  frontier_gone 9 (17%)  no_goal 1 (2%)
+goals:   979 steps held a goal that had only moved (mean re-snap 0.46 cells)
+--- greedy_ratio corner seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 278, 'steps_98': 588, 'final_coverage': 0.9823, 'total_path': 1176, 'longest_path': 588, 'overlap': 0.534, 'mean_snap_cells': '', 'seconds': 60}
+solver: no MILP solves (this method does not use one)
+replans: 63 total -- periodic 53 (84%)  frontier_gone 8 (13%)  no_goal 1 (2%)  arrived 1 (2%)
+goals:   1160 steps held a goal that had only moved (mean re-snap 0.41 cells)
+--- greedy_ratio corner seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 254, 'steps_98': 464, 'final_coverage': 0.9822, 'total_path': 928, 'longest_path': 464, 'overlap': 0.156, 'mean_snap_cells': '', 'seconds': 44}
+solver: no MILP solves (this method does not use one)
+replans: 49 total -- periodic 40 (82%)  frontier_gone 8 (16%)  no_goal 1 (2%)
+goals:   912 steps held a goal that had only moved (mean re-snap 0.59 cells)
+--- greedy_ratio corner seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corner', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 291, 'steps_98': 491, 'final_coverage': 0.9806, 'total_path': 982, 'longest_path': 491, 'overlap': 0.684, 'mean_snap_cells': '', 'seconds': 52}
+solver: no MILP solves (this method does not use one)
+replans: 51 total -- periodic 45 (88%)  frontier_gone 5 (10%)  no_goal 1 (2%)
+goals:   972 steps held a goal that had only moved (mean re-snap 0.51 cells)
+--- greedy_ratio corner seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corner', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 320, 'steps_98': 562, 'final_coverage': 0.9812, 'total_path': 1124, 'longest_path': 562, 'overlap': 0.679, 'mean_snap_cells': '', 'seconds': 51}
+solver: no MILP solves (this method does not use one)
+replans: 59 total -- periodic 51 (86%)  frontier_gone 7 (12%)  no_goal 1 (2%)
+goals:   1112 steps held a goal that had only moved (mean re-snap 0.43 cells)
+--- greedy_ratio corner seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corner', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 266, 'steps_98': 495, 'final_coverage': 0.9845, 'total_path': 990, 'longest_path': 495, 'overlap': 0.194, 'mean_snap_cells': '', 'seconds': 50}
+solver: no MILP solves (this method does not use one)
+replans: 54 total -- periodic 45 (83%)  frontier_gone 8 (15%)  no_goal 1 (2%)
+goals:   975 steps held a goal that had only moved (mean re-snap 0.53 cells)
+--- greedy_ratio corner seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corner', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 375, 'steps_98': 457, 'final_coverage': 0.9838, 'total_path': 914, 'longest_path': 457, 'overlap': 0.088, 'mean_snap_cells': '', 'seconds': 47}
+solver: no MILP solves (this method does not use one)
+replans: 51 total -- periodic 40 (78%)  frontier_gone 10 (20%)  no_goal 1 (2%)
+goals:   898 steps held a goal that had only moved (mean re-snap 0.49 cells)
+--- greedy_ratio corner seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corner', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 386, 'steps_98': 546, 'final_coverage': 0.9816, 'total_path': 1092, 'longest_path': 546, 'overlap': 0.009, 'mean_snap_cells': '', 'seconds': 62}
+solver: no MILP solves (this method does not use one)
+replans: 59 total -- periodic 50 (85%)  frontier_gone 8 (14%)  no_goal 1 (2%)
+goals:   1079 steps held a goal that had only moved (mean re-snap 0.40 cells)
+--- greedy_ratio corner seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corner', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 263, 'steps_98': 562, 'final_coverage': 0.9826, 'total_path': 1124, 'longest_path': 562, 'overlap': 0.032, 'mean_snap_cells': '', 'seconds': 63}
+solver: no MILP solves (this method does not use one)
+replans: 60 total -- periodic 53 (88%)  frontier_gone 6 (10%)  no_goal 1 (2%)
+goals:   1114 steps held a goal that had only moved (mean re-snap 0.39 cells)
+--- greedy_ratio corner seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'corner', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 263, 'steps_98': 538, 'final_coverage': 0.99, 'total_path': 1076, 'longest_path': 538, 'overlap': 0.078, 'mean_snap_cells': '', 'seconds': 52}
+solver: no MILP solves (this method does not use one)
+replans: 57 total -- periodic 48 (84%)  frontier_gone 8 (14%)  no_goal 1 (2%)
+goals:   1059 steps held a goal that had only moved (mean re-snap 0.41 cells)
+[notify] sent
+--- greedy_ratio room seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 317, 'steps_98': 514, 'final_coverage': 0.9805, 'total_path': 1028, 'longest_path': 514, 'overlap': 0.325, 'mean_snap_cells': '', 'seconds': 39}
+solver: no MILP solves (this method does not use one)
+replans: 54 total -- periodic 47 (87%)  frontier_gone 6 (11%)  no_goal 1 (2%)
+goals:   1018 steps held a goal that had only moved (mean re-snap 0.41 cells)
+--- greedy_ratio room seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 208, 'steps_98': 400, 'final_coverage': 0.9809, 'total_path': 800, 'longest_path': 400, 'overlap': 0.345, 'mean_snap_cells': '', 'seconds': 36}
+solver: no MILP solves (this method does not use one)
+replans: 42 total -- periodic 37 (88%)  frontier_gone 4 (10%)  no_goal 1 (2%)
+goals:   792 steps held a goal that had only moved (mean re-snap 0.56 cells)
+--- greedy_ratio room seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 231, 'steps_98': 431, 'final_coverage': 0.9805, 'total_path': 862, 'longest_path': 431, 'overlap': 0.148, 'mean_snap_cells': '', 'seconds': 34}
+solver: no MILP solves (this method does not use one)
+replans: 48 total -- periodic 39 (81%)  frontier_gone 8 (17%)  no_goal 1 (2%)
+goals:   850 steps held a goal that had only moved (mean re-snap 0.41 cells)
+--- greedy_ratio room seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 499, 'steps_98': 530, 'final_coverage': 0.9805, 'total_path': 1060, 'longest_path': 530, 'overlap': 0.414, 'mean_snap_cells': '', 'seconds': 34}
+solver: no MILP solves (this method does not use one)
+replans: 57 total -- periodic 48 (84%)  frontier_gone 8 (14%)  no_goal 1 (2%)
+goals:   1047 steps held a goal that had only moved (mean re-snap 0.43 cells)
+--- greedy_ratio room seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 317, 'steps_98': 381, 'final_coverage': 0.9804, 'total_path': 762, 'longest_path': 381, 'overlap': 0.396, 'mean_snap_cells': '', 'seconds': 26}
+solver: no MILP solves (this method does not use one)
+replans: 42 total -- periodic 34 (81%)  frontier_gone 7 (17%)  no_goal 1 (2%)
+goals:   750 steps held a goal that had only moved (mean re-snap 0.60 cells)
+--- greedy_ratio room seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 330, 'steps_98': 390, 'final_coverage': 0.9802, 'total_path': 780, 'longest_path': 390, 'overlap': 0.355, 'mean_snap_cells': '', 'seconds': 26}
+solver: no MILP solves (this method does not use one)
+replans: 42 total -- periodic 36 (86%)  frontier_gone 5 (12%)  no_goal 1 (2%)
+goals:   770 steps held a goal that had only moved (mean re-snap 0.59 cells)
+--- greedy_ratio room seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 240, 'steps_98': 314, 'final_coverage': 0.9831, 'total_path': 628, 'longest_path': 314, 'overlap': 0.075, 'mean_snap_cells': '', 'seconds': 23}
+solver: no MILP solves (this method does not use one)
+replans: 34 total -- periodic 29 (85%)  frontier_gone 4 (12%)  no_goal 1 (3%)
+goals:   619 steps held a goal that had only moved (mean re-snap 0.64 cells)
+--- greedy_ratio room seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 265, 'steps_98': 434, 'final_coverage': 0.98, 'total_path': 868, 'longest_path': 434, 'overlap': 0.042, 'mean_snap_cells': '', 'seconds': 36}
+solver: no MILP solves (this method does not use one)
+replans: 48 total -- periodic 38 (79%)  frontier_gone 9 (19%)  no_goal 1 (2%)
+goals:   850 steps held a goal that had only moved (mean re-snap 0.39 cells)
+--- greedy_ratio room seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 251, 'steps_98': 396, 'final_coverage': 0.9809, 'total_path': 792, 'longest_path': 396, 'overlap': 0.083, 'mean_snap_cells': '', 'seconds': 31}
+solver: no MILP solves (this method does not use one)
+replans: 43 total -- periodic 36 (84%)  frontier_gone 6 (14%)  no_goal 1 (2%)
+goals:   780 steps held a goal that had only moved (mean re-snap 0.56 cells)
+--- greedy_ratio room seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 255, 'steps_98': 303, 'final_coverage': 0.9805, 'total_path': 606, 'longest_path': 303, 'overlap': 0.189, 'mean_snap_cells': '', 'seconds': 21}
+solver: no MILP solves (this method does not use one)
+replans: 31 total -- periodic 29 (94%)  no_goal 1 (3%)  frontier_gone 1 (3%)
+goals:   603 steps held a goal that had only moved (mean re-snap 0.69 cells)
+[notify] sent
+--- greedy_ratio loop_with_corridor seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 279, 'steps_98': 321, 'final_coverage': 0.98, 'total_path': 642, 'longest_path': 321, 'overlap': 0.001, 'mean_snap_cells': '', 'seconds': 23}
+solver: no MILP solves (this method does not use one)
+replans: 34 total -- periodic 26 (76%)  frontier_gone 7 (21%)  no_goal 1 (3%)
+goals:   630 steps held a goal that had only moved (mean re-snap 0.73 cells)
+--- greedy_ratio loop_with_corridor seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 287, 'steps_98': 546, 'final_coverage': 0.9808, 'total_path': 1092, 'longest_path': 546, 'overlap': 0.12, 'mean_snap_cells': '', 'seconds': 42}
+solver: no MILP solves (this method does not use one)
+replans: 58 total -- periodic 47 (81%)  frontier_gone 10 (17%)  no_goal 1 (2%)
+goals:   1073 steps held a goal that had only moved (mean re-snap 0.50 cells)
+--- greedy_ratio loop_with_corridor seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 287, 'steps_98': 555, 'final_coverage': 0.9801, 'total_path': 1110, 'longest_path': 555, 'overlap': 0.346, 'mean_snap_cells': '', 'seconds': 42}
+solver: no MILP solves (this method does not use one)
+replans: 58 total -- periodic 50 (86%)  frontier_gone 7 (12%)  no_goal 1 (2%)
+goals:   1099 steps held a goal that had only moved (mean re-snap 0.51 cells)
+--- greedy_ratio loop_with_corridor seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 294, 'steps_98': 648, 'final_coverage': 0.9812, 'total_path': 1296, 'longest_path': 648, 'overlap': 0.071, 'mean_snap_cells': '', 'seconds': 54}
+solver: no MILP solves (this method does not use one)
+replans: 67 total -- periodic 61 (91%)  frontier_gone 5 (7%)  no_goal 1 (1%)
+goals:   1287 steps held a goal that had only moved (mean re-snap 0.40 cells)
+--- greedy_ratio loop_with_corridor seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 295, 'steps_98': 550, 'final_coverage': 0.9849, 'total_path': 1100, 'longest_path': 550, 'overlap': 0.449, 'mean_snap_cells': '', 'seconds': 48}
+solver: no MILP solves (this method does not use one)
+replans: 57 total -- periodic 50 (88%)  frontier_gone 6 (11%)  no_goal 1 (2%)
+goals:   1089 steps held a goal that had only moved (mean re-snap 0.52 cells)
+--- greedy_ratio loop_with_corridor seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 319, 'steps_98': 478, 'final_coverage': 0.9818, 'total_path': 956, 'longest_path': 478, 'overlap': 0.588, 'mean_snap_cells': '', 'seconds': 28}
+solver: no MILP solves (this method does not use one)
+replans: 50 total -- periodic 45 (90%)  frontier_gone 4 (8%)  no_goal 1 (2%)
+goals:   949 steps held a goal that had only moved (mean re-snap 0.50 cells)
+--- greedy_ratio loop_with_corridor seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 305, 'steps_98': 506, 'final_coverage': 0.9815, 'total_path': 1012, 'longest_path': 506, 'overlap': 0.298, 'mean_snap_cells': '', 'seconds': 42}
+solver: no MILP solves (this method does not use one)
+replans: 54 total -- periodic 47 (87%)  frontier_gone 6 (11%)  no_goal 1 (2%)
+goals:   1000 steps held a goal that had only moved (mean re-snap 0.61 cells)
+--- greedy_ratio loop_with_corridor seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 275, 'steps_98': 563, 'final_coverage': 0.9805, 'total_path': 1126, 'longest_path': 563, 'overlap': 0.012, 'mean_snap_cells': '', 'seconds': 48}
+solver: no MILP solves (this method does not use one)
+replans: 60 total -- periodic 53 (88%)  frontier_gone 6 (10%)  no_goal 1 (2%)
+goals:   1114 steps held a goal that had only moved (mean re-snap 0.46 cells)
+--- greedy_ratio loop_with_corridor seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 297, 'steps_98': 551, 'final_coverage': 0.9803, 'total_path': 1102, 'longest_path': 551, 'overlap': 0.036, 'mean_snap_cells': '', 'seconds': 41}
+solver: no MILP solves (this method does not use one)
+replans: 57 total -- periodic 49 (86%)  frontier_gone 7 (12%)  no_goal 1 (2%)
+goals:   1091 steps held a goal that had only moved (mean re-snap 0.52 cells)
+--- greedy_ratio loop_with_corridor seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 286, 'steps_98': 474, 'final_coverage': 0.9803, 'total_path': 948, 'longest_path': 474, 'overlap': 0.105, 'mean_snap_cells': '', 'seconds': 33}
+solver: no MILP solves (this method does not use one)
+replans: 50 total -- periodic 42 (84%)  frontier_gone 7 (14%)  no_goal 1 (2%)
+goals:   935 steps held a goal that had only moved (mean re-snap 0.63 cells)
+[notify] sent
+--- greedy_ratio room_with_corner seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room_with_corner', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 351, 'steps_98': 614, 'final_coverage': 0.9806, 'total_path': 1228, 'longest_path': 614, 'overlap': 0.278, 'mean_snap_cells': '', 'seconds': 80}
+solver: no MILP solves (this method does not use one)
+replans: 68 total -- periodic 56 (82%)  frontier_gone 10 (15%)  no_goal 1 (1%)  arrived 1 (1%)
+goals:   1208 steps held a goal that had only moved (mean re-snap 0.44 cells)
+--- greedy_ratio room_with_corner seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room_with_corner', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 425, 'steps_98': 732, 'final_coverage': 0.9818, 'total_path': 1464, 'longest_path': 732, 'overlap': 0.303, 'mean_snap_cells': '', 'seconds': 79}
+solver: no MILP solves (this method does not use one)
+replans: 75 total -- periodic 66 (88%)  frontier_gone 7 (9%)  no_goal 1 (1%)  arrived 1 (1%)
+goals:   1452 steps held a goal that had only moved (mean re-snap 0.44 cells)
+--- greedy_ratio room_with_corner seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room_with_corner', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 375, 'steps_98': 797, 'final_coverage': 0.9809, 'total_path': 1594, 'longest_path': 797, 'overlap': 0.634, 'mean_snap_cells': '', 'seconds': 109}
+solver: no MILP solves (this method does not use one)
+replans: 83 total -- periodic 74 (89%)  frontier_gone 8 (10%)  no_goal 1 (1%)
+goals:   1578 steps held a goal that had only moved (mean re-snap 0.34 cells)
+--- greedy_ratio room_with_corner seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room_with_corner', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 491, 'steps_98': 671, 'final_coverage': 0.98, 'total_path': 1342, 'longest_path': 671, 'overlap': 0.023, 'mean_snap_cells': '', 'seconds': 88}
+solver: no MILP solves (this method does not use one)
+replans: 73 total -- periodic 61 (84%)  frontier_gone 11 (15%)  no_goal 1 (1%)
+goals:   1323 steps held a goal that had only moved (mean re-snap 0.42 cells)
+--- greedy_ratio room_with_corner seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room_with_corner', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 398, 'steps_98': 764, 'final_coverage': 0.9803, 'total_path': 1528, 'longest_path': 764, 'overlap': 0.637, 'mean_snap_cells': '', 'seconds': 97}
+solver: no MILP solves (this method does not use one)
+replans: 81 total -- periodic 66 (81%)  frontier_gone 14 (17%)  no_goal 1 (1%)
+goals:   1504 steps held a goal that had only moved (mean re-snap 0.35 cells)
+--- greedy_ratio room_with_corner seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room_with_corner', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 645, 'steps_98': 868, 'final_coverage': 0.9815, 'total_path': 1736, 'longest_path': 868, 'overlap': 0.623, 'mean_snap_cells': '', 'seconds': 121}
+solver: no MILP solves (this method does not use one)
+replans: 91 total -- periodic 77 (85%)  frontier_gone 12 (13%)  no_goal 1 (1%)  arrived 1 (1%)
+goals:   1716 steps held a goal that had only moved (mean re-snap 0.38 cells)
+--- greedy_ratio room_with_corner seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room_with_corner', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 445, 'steps_98': 611, 'final_coverage': 0.9812, 'total_path': 1222, 'longest_path': 611, 'overlap': 0.186, 'mean_snap_cells': '', 'seconds': 82}
+solver: no MILP solves (this method does not use one)
+replans: 67 total -- periodic 57 (85%)  frontier_gone 8 (12%)  no_goal 1 (1%)  arrived 1 (1%)
+goals:   1204 steps held a goal that had only moved (mean re-snap 0.55 cells)
+--- greedy_ratio room_with_corner seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room_with_corner', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 481, 'steps_98': 739, 'final_coverage': 0.9808, 'total_path': 1478, 'longest_path': 739, 'overlap': 0.018, 'mean_snap_cells': '', 'seconds': 88}
+solver: no MILP solves (this method does not use one)
+replans: 79 total -- periodic 66 (84%)  frontier_gone 12 (15%)  no_goal 1 (1%)
+goals:   1457 steps held a goal that had only moved (mean re-snap 0.39 cells)
+--- greedy_ratio room_with_corner seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room_with_corner', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 420, 'steps_98': 745, 'final_coverage': 0.9811, 'total_path': 1490, 'longest_path': 745, 'overlap': 0.491, 'mean_snap_cells': '', 'seconds': 86}
+solver: no MILP solves (this method does not use one)
+replans: 78 total -- periodic 68 (87%)  frontier_gone 9 (12%)  no_goal 1 (1%)
+goals:   1473 steps held a goal that had only moved (mean re-snap 0.38 cells)
+--- greedy_ratio room_with_corner seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this greedy_ratio build has no latency, makespan, min_share -- ignoring
+{'method': 'greedy_ratio', 'map': 'room_with_corner', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 498, 'steps_98': 721, 'final_coverage': 0.9804, 'total_path': 1442, 'longest_path': 721, 'overlap': 0.336, 'mean_snap_cells': '', 'seconds': 85}
+solver: no MILP solves (this method does not use one)
+replans: 79 total -- periodic 64 (81%)  frontier_gone 14 (18%)  no_goal 1 (1%)
+goals:   1415 steps held a goal that had only moved (mean re-snap 0.44 cells)
+[notify] sent
+=== stage: report
+no MILP solves (greedy_ratio uses none)
+3013 replans over 60 runs: periodic 2571 (85%)  frontier_gone 377 (13%)  no_goal 60 (2%)  arrived 5 (0%)
+[notify] sent
+[notify] sent

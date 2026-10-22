@@ -524,3 +524,275 @@ and the automatic pairing only relates configurations with the same number of fi
 ===== 2026-10-22 02:32:54  X6 baseline: mmpf/142617
 **X6 baseline: mmpf** - job `142617` finished normally on `sxm003`
 elapsed 99 min, all stages completed.
+
+===== 2026-10-22 14:03:53  X6.5 implementation fixes: greedy_ratio_fix/142786
+**X6.5 implementation fixes: greedy_ratio_fix** - job `142786` started on `gpu011`
+60 runs on the X5/X6 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps.
+Pairs 1:1 against its twin arm and against every result already collected.
+The fixes are X6.1 (representative chosen from valid reachable cluster members instead of
+a clipped coordinate) and X6.2 (greedy fallback tries every robot before giving up). No
+objective, cap, cadence or tolerance is changed.
+Both are latent on everything measured so far, so a null is the expected and useful result.
+Expect 2-4h. No GPU, no training.
+
+
+===== 2026-10-22 14:03:53  X6.5 implementation fixes: milp_cpp/142789
+**X6.5 implementation fixes: milp_cpp** - job `142789` started on `gpu011`
+60 runs on the X5/X6 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps.
+Pairs 1:1 against its twin arm and against every result already collected.
+The fixes are X6.1 (representative chosen from valid reachable cluster members instead of
+a clipped coordinate) and X6.2 (greedy fallback tries every robot before giving up). No
+objective, cap, cadence or tolerance is changed.
+Both are latent on everything measured so far, so a null is the expected and useful result.
+===== 2026-10-22 14:03:53  X6.5 implementation fixes: milp_cpp_fix/142790
+Expect 2-4h. No GPU, no training.
+**X6.5 implementation fixes: milp_cpp_fix** - job `142790` started on `gpu011`
+60 runs on the X5/X6 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps.
+Pairs 1:1 against its twin arm and against every result already collected.
+The fixes are X6.1 (representative chosen from valid reachable cluster members instead of
+a clipped coordinate) and X6.2 (greedy fallback tries every robot before giving up). No
+objective, cap, cadence or tolerance is changed.
+Both are latent on everything measured so far, so a null is the expected and useful result.
+Expect 2-4h. No GPU, no training.
+
+===== 2026-10-22 14:03:54  X6.5 implementation fixes: greedy_ratio/142791
+**X6.5 implementation fixes: greedy_ratio** - job `142791` started on `gpu011`
+60 runs on the X5/X6 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps.
+Pairs 1:1 against its twin arm and against every result already collected.
+The fixes are X6.1 (representative chosen from valid reachable cluster members instead of
+a clipped coordinate) and X6.2 (greedy fallback tries every robot before giving up). No
+objective, cap, cadence or tolerance is changed.
+Both are latent on everything measured so far, so a null is the expected and useful result.
+Expect 2-4h. No GPU, no training.
+
+===== 2026-10-22 14:04:46  X6.5 implementation fixes: mtsp/142787
+**X6.5 implementation fixes: mtsp** - job `142787` started on `sxm003`
+60 runs on the X5/X6 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps.
+Pairs 1:1 against its twin arm and against every result already collected.
+The fixes are X6.1 (representative chosen from valid reachable cluster members instead of
+a clipped coordinate) and X6.2 (greedy fallback tries every robot before giving up). No
+objective, cap, cadence or tolerance is changed.
+Both are latent on everything measured so far, so a null is the expected and useful result.
+Expect 2-4h. No GPU, no training.
+
+===== 2026-10-22 14:07:31  X6.5 implementation fixes: milp_cpp/142789
+**X6.5 milp_cpp** `142789`: loop done (10/60 runs)
+
+===== 2026-10-22 14:07:31  X6.5 implementation fixes: milp_cpp_fix/142790
+**X6.5 milp_cpp_fix** `142790`: loop done (10/60 runs)
+
+===== 2026-10-22 14:07:36  X6.5 implementation fixes: greedy_ratio_fix/142786
+**X6.5 greedy_ratio_fix** `142786`: loop done (10/60 runs)
+
+===== 2026-10-22 14:07:37  X6.5 implementation fixes: greedy_ratio/142791
+**X6.5 greedy_ratio** `142791`: loop done (10/60 runs)
+
+===== 2026-10-22 14:10:56  X6.5 implementation fixes: milp_cpp/142789
+**X6.5 milp_cpp** `142789`: corridor done (20/60 runs)
+
+===== 2026-10-22 14:10:57  X6.5 implementation fixes: milp_cpp_fix/142790
+**X6.5 milp_cpp_fix** `142790`: corridor done (20/60 runs)
+
+===== 2026-10-22 14:11:27  X6.5 implementation fixes: greedy_ratio/142791
+**X6.5 greedy_ratio** `142791`: corridor done (20/60 runs)
+
+===== 2026-10-22 14:11:27  X6.5 implementation fixes: greedy_ratio_fix/142786
+**X6.5 greedy_ratio_fix** `142786`: corridor done (20/60 runs)
+
+===== 2026-10-22 14:18:25  X6.5 implementation fixes: milp_cpp/142789
+**X6.5 milp_cpp** `142789`: corner done (30/60 runs)
+
+===== 2026-10-22 14:18:25  X6.5 implementation fixes: milp_cpp_fix/142790
+**X6.5 milp_cpp_fix** `142790`: corner done (30/60 runs)
+
+===== 2026-10-22 14:20:41  X6.5 implementation fixes: greedy_ratio/142791
+**X6.5 greedy_ratio** `142791`: corner done (30/60 runs)
+
+===== 2026-10-22 14:20:42  X6.5 implementation fixes: greedy_ratio_fix/142786
+**X6.5 greedy_ratio_fix** `142786`: corner done (30/60 runs)
+
+===== 2026-10-22 14:23:12  X6.5 implementation fixes: milp_cpp_fix/142790
+**X6.5 milp_cpp_fix** `142790`: room done (40/60 runs)
+
+===== 2026-10-22 14:23:12  X6.5 implementation fixes: milp_cpp/142789
+**X6.5 milp_cpp** `142789`: room done (40/60 runs)
+
+===== 2026-10-22 14:23:23  X6.5 implementation fixes: mtsp_fix/142788
+**X6.5 implementation fixes: mtsp_fix** - job `142788` started on `sxm004`
+60 runs on the X5/X6 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps.
+Pairs 1:1 against its twin arm and against every result already collected.
+The fixes are X6.1 (representative chosen from valid reachable cluster members instead of
+a clipped coordinate) and X6.2 (greedy fallback tries every robot before giving up). No
+objective, cap, cadence or tolerance is changed.
+Both are latent on everything measured so far, so a null is the expected and useful result.
+Expect 2-4h. No GPU, no training.
+
+===== 2026-10-22 14:25:14  X6.5 implementation fixes: mtsp/142787
+**X6.5 mtsp** `142787`: loop done (10/60 runs)
+
+===== 2026-10-22 14:26:05  X6.5 implementation fixes: greedy_ratio_fix/142786
+**X6.5 greedy_ratio_fix** `142786`: room done (40/60 runs)
+
+===== 2026-10-22 14:26:06  X6.5 implementation fixes: greedy_ratio/142791
+**X6.5 greedy_ratio** `142791`: room done (40/60 runs)
+
+===== 2026-10-22 14:28:56  X6.5 implementation fixes: milp_cpp/142789
+**X6.5 milp_cpp** `142789`: loop_with_corridor done (50/60 runs)
+
+===== 2026-10-22 14:28:57  X6.5 implementation fixes: milp_cpp_fix/142790
+**X6.5 milp_cpp_fix** `142790`: loop_with_corridor done (50/60 runs)
+
+===== 2026-10-22 14:33:07  X6.5 implementation fixes: greedy_ratio/142791
+**X6.5 greedy_ratio** `142791`: loop_with_corridor done (50/60 runs)
+
+===== 2026-10-22 14:33:07  X6.5 implementation fixes: greedy_ratio_fix/142786
+**X6.5 greedy_ratio_fix** `142786`: loop_with_corridor done (50/60 runs)
+
+===== 2026-10-22 14:40:15  X6.5 implementation fixes: mtsp/142787
+**X6.5 mtsp** `142787`: corridor done (20/60 runs)
+
+===== 2026-10-22 14:43:57  X6.5 implementation fixes: milp_cpp/142789
+**X6.5 milp_cpp** `142789`: room_with_corner done (60/60 runs)
+
+===== 2026-10-22 14:43:58  X6.5 implementation fixes: milp_cpp/142789
+**X6.5 milp_cpp FINAL (implementation fixes)**
+`results_x65_milp_cpp.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+milp_cpp                  corner               527   527    0  0.135   -  
+milp_cpp                  corridor             318   318    0  0.211   -  
+milp_cpp                  loop                 325   325    0  0.056   -  
+milp_cpp                  loop_with_corridor   480   480    0  0.100   -  
+milp_cpp                  room                 409   409    0  0.169   -  
+milp_cpp                  room_with_corner     793   793    0  0.187   -  
+---------------------------------------------------------------------
+milp_cpp                  ALL                  475   475    0  0.143   -    sd 180
+```
+```
+3150 solves over 60 runs, 2 not proven optimal, 0/3150 fell back to greedy
+6s total in HiGHS, 0.07s worst single solve
+5.5 candidates per plan (mean of per-run means)
+3150 replans over 60 runs: periodic 2492 (79%)  frontier_gone 561 (18%)  no_goal 60 (2%)  arrived 37 (1%)
+```
+Pair the arms once all six are in:
+  python merge_results.py results_x65_*.csv > results_x65.csv
+  python analyse.py results_x65.csv
+  python analyse_by_map.py results_x65.csv --contrast mtsp mtsp_fix --contrast milp_cpp milp_cpp_fix
+And check the instrumentation did not perturb the baseline -- both files carry the same
+method label, so merging pools them into one group instead of contrasting them; compare
+the rows directly:
+  diff <(cut -d, -f1-4,10-16 results_x65_mtsp.csv | sort)        <(cut -d, -f1-4,10-16 results_x6_mtsp.csv  | sort) && echo IDENTICAL
+
+===== 2026-10-22 14:43:58  X6.5 implementation fixes: milp_cpp/142789
+**X6.5 implementation fixes: milp_cpp** - job `142789` finished normally on `gpu011`
+elapsed 40 min, all stages completed.
+
+===== 2026-10-22 14:44:01  X6.5 implementation fixes: milp_cpp_fix/142790
+**X6.5 milp_cpp_fix** `142790`: room_with_corner done (60/60 runs)
+
+===== 2026-10-22 14:44:01  X6.5 implementation fixes: milp_cpp_fix/142790
+**X6.5 milp_cpp_fix FINAL (implementation fixes)**
+`results_x65_milp_cpp_fix.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+milp_cpp_fix              corner               527   527    0  0.135   -  
+milp_cpp_fix              corridor             318   318    0  0.211   -  
+milp_cpp_fix              loop                 325   325    0  0.056   -  
+milp_cpp_fix              loop_with_corridor   480   480    0  0.100   -  
+milp_cpp_fix              room                 409   409    0  0.169   -  
+milp_cpp_fix              room_with_corner     793   793    0  0.187   -  
+---------------------------------------------------------------------
+milp_cpp_fix              ALL                  475   475    0  0.143   -    sd 180
+```
+```
+3150 solves over 60 runs, 2 not proven optimal, 0/3150 fell back to greedy
+6s total in HiGHS, 0.07s worst single solve
+5.5 candidates per plan (mean of per-run means)
+3150 replans over 60 runs: periodic 2492 (79%)  frontier_gone 561 (18%)  no_goal 60 (2%)  arrived 37 (1%)
+```
+Pair the arms once all six are in:
+  python merge_results.py results_x65_*.csv > results_x65.csv
+  python analyse.py results_x65.csv
+  python analyse_by_map.py results_x65.csv --contrast mtsp mtsp_fix --contrast milp_cpp milp_cpp_fix
+And check the instrumentation did not perturb the baseline -- both files carry the same
+method label, so merging pools them into one group instead of contrasting them; compare
+the rows directly:
+  diff <(cut -d, -f1-4,10-16 results_x65_mtsp.csv | sort)        <(cut -d, -f1-4,10-16 results_x6_mtsp.csv  | sort) && echo IDENTICAL
+
+===== 2026-10-22 14:44:02  X6.5 implementation fixes: milp_cpp_fix/142790
+**X6.5 implementation fixes: milp_cpp_fix** - job `142790` finished normally on `gpu011`
+elapsed 40 min, all stages completed.
+
+===== 2026-10-22 14:48:45  X6.5 implementation fixes: greedy_ratio/142791
+**X6.5 greedy_ratio** `142791`: room_with_corner done (60/60 runs)
+
+===== 2026-10-22 14:48:46  X6.5 implementation fixes: greedy_ratio_fix/142786
+**X6.5 greedy_ratio_fix** `142786`: room_with_corner done (60/60 runs)
+
+===== 2026-10-22 14:48:46  X6.5 implementation fixes: greedy_ratio/142791
+**X6.5 greedy_ratio FINAL (implementation fixes)**
+`results_x65_greedy_ratio.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+greedy_ratio              corner               520   520    0  0.250   -  
+greedy_ratio              corridor             330   330    0  0.296   -  
+greedy_ratio              loop                 324   324    0  0.053   -  
+greedy_ratio              loop_with_corridor   519   519    0  0.203   -  
+greedy_ratio              room                 409   409    0  0.237   -  
+greedy_ratio              room_with_corner     726   726    0  0.353   -  
+---------------------------------------------------------------------
+greedy_ratio              ALL                  471   471    0  0.232   -    sd 155
+```
+```
+no MILP solves (greedy_ratio uses none)
+3013 replans over 60 runs: periodic 2571 (85%)  frontier_gone 377 (13%)  no_goal 60 (2%)  arrived 5 (0%)
+```
+Pair the arms once all six are in:
+  python merge_results.py results_x65_*.csv > results_x65.csv
+  python analyse.py results_x65.csv
+  python analyse_by_map.py results_x65.csv --contrast mtsp mtsp_fix --contrast milp_cpp milp_cpp_fix
+And check the instrumentation did not perturb the baseline -- both files carry the same
+method label, so merging pools them into one group instead of contrasting them; compare
+the rows directly:
+  diff <(cut -d, -f1-4,10-16 results_x65_mtsp.csv | sort)        <(cut -d, -f1-4,10-16 results_x6_mtsp.csv  | sort) && echo IDENTICAL
+
+===== 2026-10-22 14:48:46  X6.5 implementation fixes: greedy_ratio/142791
+**X6.5 implementation fixes: greedy_ratio** - job `142791` finished normally on `gpu011`
+elapsed 44 min, all stages completed.
+
+===== 2026-10-22 14:48:46  X6.5 implementation fixes: greedy_ratio_fix/142786
+**X6.5 greedy_ratio_fix FINAL (implementation fixes)**
+`results_x65_greedy_ratio_fix.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+greedy_ratio_fix          corner               520   520    0  0.250   -  
+greedy_ratio_fix          corridor             330   330    0  0.296   -  
+greedy_ratio_fix          loop                 324   324    0  0.053   -  
+greedy_ratio_fix          loop_with_corridor   519   519    0  0.203   -  
+greedy_ratio_fix          room                 409   409    0  0.237   -  
+greedy_ratio_fix          room_with_corner     726   726    0  0.353   -  
+---------------------------------------------------------------------
+greedy_ratio_fix          ALL                  471   471    0  0.232   -    sd 155
+```
+```
+no MILP solves (greedy_ratio uses none)
+3013 replans over 60 runs: periodic 2571 (85%)  frontier_gone 377 (13%)  no_goal 60 (2%)  arrived 5 (0%)
+```
+Pair the arms once all six are in:
+  python merge_results.py results_x65_*.csv > results_x65.csv
+  python analyse.py results_x65.csv
+  python analyse_by_map.py results_x65.csv --contrast mtsp mtsp_fix --contrast milp_cpp milp_cpp_fix
+And check the instrumentation did not perturb the baseline -- both files carry the same
+method label, so merging pools them into one group instead of contrasting them; compare
+the rows directly:
+  diff <(cut -d, -f1-4,10-16 results_x65_mtsp.csv | sort)        <(cut -d, -f1-4,10-16 results_x6_mtsp.csv  | sort) && echo IDENTICAL
+
+===== 2026-10-22 14:48:46  X6.5 implementation fixes: greedy_ratio_fix/142786
+**X6.5 implementation fixes: greedy_ratio_fix** - job `142786` finished normally on `gpu011`
+elapsed 44 min, all stages completed.
+
+===== 2026-10-22 15:14:28  X6.5 implementation fixes: mtsp/142787
+**X6.5 mtsp** `142787`: corner done (30/60 runs)
+
+===== 2026-10-22 15:40:22  X6.5 implementation fixes: mtsp/142787
+**X6.5 mtsp** `142787`: room done (40/60 runs)

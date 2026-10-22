@@ -1,0 +1,3 @@
+method,map,robots,seed,ckpt,nsample,exclude,euler_steps,max_steps,steps_90,steps_98,final_coverage,total_path,longest_path,overlap,mean_snap_cells,seconds
+mtsp_fix,loop,2,41,,,,,2000,251,304,0.9809,608,304,0.048,,42
+mtsp_fix,loop,2,42,,,,,2000,214,269,0.9809,538,269,0.0,,39

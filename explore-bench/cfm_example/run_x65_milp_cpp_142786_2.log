@@ -1,0 +1,623 @@
+[notify] webhook=/home/alejandrolopezcordero01/.discord_webhook outbox=notify_outbox.txt dir=/home/alejandrolopezcordero01/explore-bench-cfm/explore-bench/cfm_example
+[notify] sent
+=== stage: preflight
+scipy 1.15.3
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+preflight OK: milp_cpp, fixes=False, X6.3 instrumentation present
+=== stage: evaluate milp_cpp (60 runs)
+--- milp_cpp loop seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 251, 'steps_98': 304, 'final_coverage': 0.9809, 'total_path': 608, 'longest_path': 304, 'overlap': 0.048, 'mean_snap_cells': '', 'seconds': 17}
+solver: 32 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.07s max, 0/32 fell back to greedy, 3.0 candidates per plan
+replans: 32 total -- periodic 27 (84%)  frontier_gone 4 (12%)  no_goal 1 (3%)
+goals:   600 steps held a goal that had only moved (mean re-snap 0.58 cells)
+--- milp_cpp loop seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 214, 'steps_98': 269, 'final_coverage': 0.9809, 'total_path': 538, 'longest_path': 269, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 15}
+solver: 30 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.0s total / 0.00s max, 0/30 fell back to greedy, 3.3 candidates per plan
+replans: 30 total -- periodic 24 (80%)  frontier_gone 5 (17%)  no_goal 1 (3%)
+goals:   529 steps held a goal that had only moved (mean re-snap 0.41 cells)
+--- milp_cpp loop seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 230, 'steps_98': 437, 'final_coverage': 0.9848, 'total_path': 874, 'longest_path': 437, 'overlap': 0.324, 'mean_snap_cells': '', 'seconds': 26}
+solver: 46 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/46 fell back to greedy, 3.3 candidates per plan
+replans: 46 total -- periodic 41 (89%)  frontier_gone 4 (9%)  no_goal 1 (2%)
+goals:   867 steps held a goal that had only moved (mean re-snap 0.50 cells)
+--- milp_cpp loop seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 286, 'steps_98': 313, 'final_coverage': 0.9821, 'total_path': 626, 'longest_path': 313, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 16}
+solver: 33 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.0s total / 0.00s max, 0/33 fell back to greedy, 2.8 candidates per plan
+replans: 33 total -- periodic 29 (88%)  frontier_gone 3 (9%)  no_goal 1 (3%)
+goals:   620 steps held a goal that had only moved (mean re-snap 0.61 cells)
+--- milp_cpp loop seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 257, 'steps_98': 284, 'final_coverage': 0.9839, 'total_path': 568, 'longest_path': 284, 'overlap': 0.015, 'mean_snap_cells': '', 'seconds': 15}
+solver: 31 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.0s total / 0.00s max, 0/31 fell back to greedy, 2.5 candidates per plan
+replans: 31 total -- periodic 26 (84%)  frontier_gone 4 (13%)  no_goal 1 (3%)
+goals:   560 steps held a goal that had only moved (mean re-snap 0.88 cells)
+--- milp_cpp loop seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 236, 'steps_98': 249, 'final_coverage': 0.9805, 'total_path': 498, 'longest_path': 249, 'overlap': 0.025, 'mean_snap_cells': '', 'seconds': 12}
+solver: 28 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.0s total / 0.00s max, 0/28 fell back to greedy, 2.4 candidates per plan
+replans: 28 total -- periodic 22 (79%)  frontier_gone 5 (18%)  no_goal 1 (4%)
+goals:   488 steps held a goal that had only moved (mean re-snap 0.65 cells)
+--- milp_cpp loop seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 254, 'steps_98': 461, 'final_coverage': 0.9826, 'total_path': 922, 'longest_path': 461, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 26}
+solver: 49 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/49 fell back to greedy, 3.1 candidates per plan
+replans: 49 total -- periodic 43 (88%)  frontier_gone 5 (10%)  no_goal 1 (2%)
+goals:   913 steps held a goal that had only moved (mean re-snap 0.43 cells)
+--- milp_cpp loop seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 416, 'steps_98': 443, 'final_coverage': 0.9804, 'total_path': 886, 'longest_path': 443, 'overlap': 0.083, 'mean_snap_cells': '', 'seconds': 28}
+solver: 47 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/47 fell back to greedy, 3.4 candidates per plan
+replans: 47 total -- periodic 41 (87%)  frontier_gone 5 (11%)  no_goal 1 (2%)
+goals:   877 steps held a goal that had only moved (mean re-snap 0.29 cells)
+--- milp_cpp loop seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 221, 'steps_98': 255, 'final_coverage': 0.9801, 'total_path': 510, 'longest_path': 255, 'overlap': 0.017, 'mean_snap_cells': '', 'seconds': 13}
+solver: 27 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.0s total / 0.00s max, 0/27 fell back to greedy, 3.0 candidates per plan
+replans: 27 total -- periodic 24 (89%)  frontier_gone 2 (7%)  no_goal 1 (4%)
+goals:   505 steps held a goal that had only moved (mean re-snap 0.52 cells)
+--- milp_cpp loop seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 221, 'steps_98': 232, 'final_coverage': 0.9809, 'total_path': 464, 'longest_path': 232, 'overlap': 0.046, 'mean_snap_cells': '', 'seconds': 11}
+solver: 26 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.0s total / 0.00s max, 0/26 fell back to greedy, 2.0 candidates per plan
+replans: 26 total -- periodic 19 (73%)  frontier_gone 6 (23%)  no_goal 1 (4%)
+goals:   454 steps held a goal that had only moved (mean re-snap 0.74 cells)
+[notify] sent
+--- milp_cpp corridor seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corridor', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 203, 'steps_98': 237, 'final_coverage': 0.9804, 'total_path': 474, 'longest_path': 237, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 15}
+solver: 27 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.0s total / 0.00s max, 0/27 fell back to greedy, 5.3 candidates per plan
+replans: 27 total -- periodic 23 (85%)  frontier_gone 3 (11%)  no_goal 1 (4%)
+goals:   467 steps held a goal that had only moved (mean re-snap 0.68 cells)
+--- milp_cpp corridor seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corridor', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 323, 'steps_98': 351, 'final_coverage': 0.9819, 'total_path': 702, 'longest_path': 351, 'overlap': 0.436, 'mean_snap_cells': '', 'seconds': 19}
+solver: 41 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/41 fell back to greedy, 2.0 candidates per plan
+replans: 41 total -- periodic 31 (76%)  frontier_gone 9 (22%)  no_goal 1 (2%)
+goals:   686 steps held a goal that had only moved (mean re-snap 0.53 cells)
+--- milp_cpp corridor seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corridor', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 350, 'steps_98': 379, 'final_coverage': 0.9807, 'total_path': 758, 'longest_path': 379, 'overlap': 0.484, 'mean_snap_cells': '', 'seconds': 20}
+solver: 43 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/43 fell back to greedy, 2.2 candidates per plan
+replans: 43 total -- periodic 34 (79%)  frontier_gone 8 (19%)  no_goal 1 (2%)
+goals:   743 steps held a goal that had only moved (mean re-snap 0.59 cells)
+--- milp_cpp corridor seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corridor', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 265, 'steps_98': 298, 'final_coverage': 0.9809, 'total_path': 596, 'longest_path': 298, 'overlap': 0.086, 'mean_snap_cells': '', 'seconds': 17}
+solver: 34 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/34 fell back to greedy, 2.9 candidates per plan
+replans: 34 total -- periodic 25 (74%)  frontier_gone 8 (24%)  no_goal 1 (3%)
+goals:   582 steps held a goal that had only moved (mean re-snap 0.69 cells)
+--- milp_cpp corridor seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corridor', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 317, 'steps_98': 351, 'final_coverage': 0.981, 'total_path': 702, 'longest_path': 351, 'overlap': 0.414, 'mean_snap_cells': '', 'seconds': 19}
+solver: 39 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/39 fell back to greedy, 3.0 candidates per plan
+replans: 39 total -- periodic 28 (72%)  frontier_gone 10 (26%)  no_goal 1 (3%)
+goals:   685 steps held a goal that had only moved (mean re-snap 0.52 cells)
+--- milp_cpp corridor seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corridor', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 302, 'steps_98': 337, 'final_coverage': 0.9813, 'total_path': 674, 'longest_path': 337, 'overlap': 0.307, 'mean_snap_cells': '', 'seconds': 18}
+solver: 38 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/38 fell back to greedy, 2.9 candidates per plan
+replans: 38 total -- periodic 28 (74%)  frontier_gone 9 (24%)  no_goal 1 (3%)
+goals:   658 steps held a goal that had only moved (mean re-snap 0.55 cells)
+--- milp_cpp corridor seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corridor', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 294, 'steps_98': 331, 'final_coverage': 0.9802, 'total_path': 662, 'longest_path': 331, 'overlap': 0.383, 'mean_snap_cells': '', 'seconds': 18}
+solver: 38 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/38 fell back to greedy, 2.6 candidates per plan
+replans: 38 total -- periodic 30 (79%)  frontier_gone 7 (18%)  no_goal 1 (3%)
+goals:   649 steps held a goal that had only moved (mean re-snap 0.57 cells)
+--- milp_cpp corridor seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corridor', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 247, 'steps_98': 283, 'final_coverage': 0.981, 'total_path': 566, 'longest_path': 283, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 19}
+solver: 32 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/32 fell back to greedy, 5.9 candidates per plan
+replans: 32 total -- periodic 23 (72%)  frontier_gone 8 (25%)  no_goal 1 (3%)
+goals:   553 steps held a goal that had only moved (mean re-snap 0.62 cells)
+--- milp_cpp corridor seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corridor', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 178, 'steps_98': 320, 'final_coverage': 0.981, 'total_path': 640, 'longest_path': 320, 'overlap': 0.0, 'mean_snap_cells': '', 'seconds': 23}
+solver: 37 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/37 fell back to greedy, 4.6 candidates per plan
+replans: 37 total -- periodic 26 (70%)  frontier_gone 10 (27%)  no_goal 1 (3%)
+goals:   624 steps held a goal that had only moved (mean re-snap 0.54 cells)
+--- milp_cpp corridor seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corridor', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 278, 'steps_98': 298, 'final_coverage': 0.9815, 'total_path': 596, 'longest_path': 298, 'overlap': 0.001, 'mean_snap_cells': '', 'seconds': 19}
+solver: 34 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/34 fell back to greedy, 4.5 candidates per plan
+replans: 34 total -- periodic 26 (76%)  frontier_gone 7 (21%)  no_goal 1 (3%)
+goals:   582 steps held a goal that had only moved (mean re-snap 0.51 cells)
+[notify] sent
+--- milp_cpp corner seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 383, 'steps_98': 549, 'final_coverage': 0.9988, 'total_path': 1098, 'longest_path': 549, 'overlap': 0.145, 'mean_snap_cells': '', 'seconds': 34}
+solver: 59 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/59 fell back to greedy, 4.7 candidates per plan
+replans: 59 total -- periodic 50 (85%)  frontier_gone 8 (14%)  no_goal 1 (2%)
+goals:   1086 steps held a goal that had only moved (mean re-snap 0.51 cells)
+--- milp_cpp corner seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 526, 'steps_98': 563, 'final_coverage': 0.9801, 'total_path': 1126, 'longest_path': 563, 'overlap': 0.04, 'mean_snap_cells': '', 'seconds': 60}
+solver: 61 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/61 fell back to greedy, 8.3 candidates per plan
+replans: 61 total -- periodic 49 (80%)  frontier_gone 9 (15%)  arrived 2 (3%)  no_goal 1 (2%)
+goals:   1106 steps held a goal that had only moved (mean re-snap 0.49 cells)
+--- milp_cpp corner seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 440, 'steps_98': 497, 'final_coverage': 0.9815, 'total_path': 994, 'longest_path': 497, 'overlap': 0.15, 'mean_snap_cells': '', 'seconds': 37}
+solver: 56 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/56 fell back to greedy, 5.5 candidates per plan
+replans: 56 total -- periodic 42 (75%)  frontier_gone 13 (23%)  no_goal 1 (2%)
+goals:   973 steps held a goal that had only moved (mean re-snap 0.54 cells)
+--- milp_cpp corner seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 368, 'steps_98': 450, 'final_coverage': 0.98, 'total_path': 900, 'longest_path': 450, 'overlap': 0.229, 'mean_snap_cells': '', 'seconds': 37}
+solver: 51 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/51 fell back to greedy, 7.3 candidates per plan
+replans: 51 total -- periodic 40 (78%)  frontier_gone 10 (20%)  no_goal 1 (2%)
+goals:   880 steps held a goal that had only moved (mean re-snap 0.59 cells)
+--- milp_cpp corner seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 295, 'steps_98': 555, 'final_coverage': 0.9803, 'total_path': 1110, 'longest_path': 555, 'overlap': 0.09, 'mean_snap_cells': '', 'seconds': 40}
+solver: 63 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/63 fell back to greedy, 5.7 candidates per plan
+replans: 63 total -- periodic 50 (79%)  frontier_gone 12 (19%)  no_goal 1 (2%)
+goals:   1092 steps held a goal that had only moved (mean re-snap 0.44 cells)
+--- milp_cpp corner seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 307, 'steps_98': 595, 'final_coverage': 0.9802, 'total_path': 1190, 'longest_path': 595, 'overlap': 0.134, 'mean_snap_cells': '', 'seconds': 44}
+solver: 63 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/63 fell back to greedy, 6.1 candidates per plan
+replans: 63 total -- periodic 53 (84%)  frontier_gone 9 (14%)  no_goal 1 (2%)
+goals:   1176 steps held a goal that had only moved (mean re-snap 0.47 cells)
+--- milp_cpp corner seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 302, 'steps_98': 437, 'final_coverage': 0.9811, 'total_path': 874, 'longest_path': 437, 'overlap': 0.185, 'mean_snap_cells': '', 'seconds': 36}
+solver: 48 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/48 fell back to greedy, 7.8 candidates per plan
+replans: 48 total -- periodic 33 (69%)  frontier_gone 14 (29%)  no_goal 1 (2%)
+goals:   854 steps held a goal that had only moved (mean re-snap 0.59 cells)
+--- milp_cpp corner seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 402, 'steps_98': 629, 'final_coverage': 0.9804, 'total_path': 1258, 'longest_path': 629, 'overlap': 0.182, 'mean_snap_cells': '', 'seconds': 55}
+solver: 68 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/68 fell back to greedy, 7.7 candidates per plan
+replans: 68 total -- periodic 60 (88%)  frontier_gone 7 (10%)  no_goal 1 (1%)
+goals:   1246 steps held a goal that had only moved (mean re-snap 0.44 cells)
+--- milp_cpp corner seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 460, 'steps_98': 547, 'final_coverage': 0.9806, 'total_path': 1094, 'longest_path': 547, 'overlap': 0.093, 'mean_snap_cells': '', 'seconds': 49}
+solver: 57 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/57 fell back to greedy, 8.6 candidates per plan
+replans: 57 total -- periodic 48 (84%)  frontier_gone 8 (14%)  no_goal 1 (2%)
+goals:   1080 steps held a goal that had only moved (mean re-snap 0.55 cells)
+--- milp_cpp corner seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'corner', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 344, 'steps_98': 449, 'final_coverage': 0.9843, 'total_path': 898, 'longest_path': 449, 'overlap': 0.1, 'mean_snap_cells': '', 'seconds': 39}
+solver: 49 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/49 fell back to greedy, 7.4 candidates per plan
+replans: 49 total -- periodic 41 (84%)  frontier_gone 7 (14%)  no_goal 1 (2%)
+goals:   886 steps held a goal that had only moved (mean re-snap 0.55 cells)
+[notify] sent
+--- milp_cpp room seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 298, 'steps_98': 383, 'final_coverage': 0.9821, 'total_path': 766, 'longest_path': 383, 'overlap': 0.152, 'mean_snap_cells': '', 'seconds': 25}
+solver: 44 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/44 fell back to greedy, 5.7 candidates per plan
+replans: 44 total -- periodic 32 (73%)  frontier_gone 11 (25%)  no_goal 1 (2%)
+goals:   747 steps held a goal that had only moved (mean re-snap 0.57 cells)
+--- milp_cpp room seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 253, 'steps_98': 343, 'final_coverage': 0.9808, 'total_path': 686, 'longest_path': 343, 'overlap': 0.093, 'mean_snap_cells': '', 'seconds': 24}
+solver: 37 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/37 fell back to greedy, 5.4 candidates per plan
+replans: 37 total -- periodic 27 (73%)  frontier_gone 9 (24%)  no_goal 1 (3%)
+goals:   671 steps held a goal that had only moved (mean re-snap 0.63 cells)
+--- milp_cpp room seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 260, 'steps_98': 430, 'final_coverage': 0.98, 'total_path': 860, 'longest_path': 430, 'overlap': 0.094, 'mean_snap_cells': '', 'seconds': 29}
+solver: 51 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/51 fell back to greedy, 7.4 candidates per plan
+replans: 51 total -- periodic 36 (71%)  frontier_gone 14 (27%)  no_goal 1 (2%)
+goals:   834 steps held a goal that had only moved (mean re-snap 0.53 cells)
+--- milp_cpp room seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 376, 'steps_98': 405, 'final_coverage': 0.981, 'total_path': 810, 'longest_path': 405, 'overlap': 0.09, 'mean_snap_cells': '', 'seconds': 27}
+solver: 45 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/45 fell back to greedy, 6.6 candidates per plan
+replans: 45 total -- periodic 34 (76%)  frontier_gone 10 (22%)  no_goal 1 (2%)
+goals:   791 steps held a goal that had only moved (mean re-snap 0.57 cells)
+--- milp_cpp room seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 295, 'steps_98': 331, 'final_coverage': 0.9815, 'total_path': 662, 'longest_path': 331, 'overlap': 0.086, 'mean_snap_cells': '', 'seconds': 21}
+solver: 39 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/39 fell back to greedy, 5.3 candidates per plan
+replans: 39 total -- periodic 26 (67%)  frontier_gone 12 (31%)  no_goal 1 (3%)
+goals:   643 steps held a goal that had only moved (mean re-snap 0.72 cells)
+--- milp_cpp room seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 327, 'steps_98': 481, 'final_coverage': 0.9803, 'total_path': 962, 'longest_path': 481, 'overlap': 0.168, 'mean_snap_cells': '', 'seconds': 35}
+solver: 57 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/57 fell back to greedy, 6.6 candidates per plan
+replans: 57 total -- periodic 44 (77%)  frontier_gone 12 (21%)  no_goal 1 (2%)
+goals:   942 steps held a goal that had only moved (mean re-snap 0.51 cells)
+--- milp_cpp room seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 327, 'steps_98': 460, 'final_coverage': 0.9801, 'total_path': 920, 'longest_path': 460, 'overlap': 0.171, 'mean_snap_cells': '', 'seconds': 30}
+solver: 55 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/55 fell back to greedy, 5.6 candidates per plan
+replans: 55 total -- periodic 38 (69%)  frontier_gone 16 (29%)  no_goal 1 (2%)
+goals:   892 steps held a goal that had only moved (mean re-snap 0.51 cells)
+--- milp_cpp room seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 302, 'steps_98': 354, 'final_coverage': 0.9808, 'total_path': 708, 'longest_path': 354, 'overlap': 0.197, 'mean_snap_cells': '', 'seconds': 22}
+solver: 39 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/39 fell back to greedy, 6.0 candidates per plan
+replans: 39 total -- periodic 27 (69%)  frontier_gone 11 (28%)  no_goal 1 (3%)
+goals:   688 steps held a goal that had only moved (mean re-snap 0.70 cells)
+--- milp_cpp room seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 292, 'steps_98': 433, 'final_coverage': 0.9803, 'total_path': 866, 'longest_path': 433, 'overlap': 0.387, 'mean_snap_cells': '', 'seconds': 26}
+solver: 50 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/50 fell back to greedy, 4.6 candidates per plan
+replans: 50 total -- periodic 38 (76%)  frontier_gone 11 (22%)  no_goal 1 (2%)
+goals:   849 steps held a goal that had only moved (mean re-snap 0.59 cells)
+--- milp_cpp room seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 290, 'steps_98': 471, 'final_coverage': 0.9806, 'total_path': 942, 'longest_path': 471, 'overlap': 0.251, 'mean_snap_cells': '', 'seconds': 28}
+solver: 53 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/53 fell back to greedy, 4.4 candidates per plan
+replans: 53 total -- periodic 39 (74%)  frontier_gone 13 (25%)  no_goal 1 (2%)
+goals:   918 steps held a goal that had only moved (mean re-snap 0.54 cells)
+[notify] sent
+--- milp_cpp loop_with_corridor seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 487, 'steps_98': 524, 'final_coverage': 0.9839, 'total_path': 1048, 'longest_path': 524, 'overlap': 0.169, 'mean_snap_cells': '', 'seconds': 36}
+solver: 55 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.01s max, 0/55 fell back to greedy, 6.1 candidates per plan
+replans: 55 total -- periodic 48 (87%)  frontier_gone 6 (11%)  no_goal 1 (2%)
+goals:   1035 steps held a goal that had only moved (mean re-snap 0.42 cells)
+--- milp_cpp loop_with_corridor seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 482, 'steps_98': 550, 'final_coverage': 0.9804, 'total_path': 1100, 'longest_path': 550, 'overlap': 0.028, 'mean_snap_cells': '', 'seconds': 39}
+solver: 61 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/61 fell back to greedy, 6.9 candidates per plan
+replans: 61 total -- periodic 48 (79%)  frontier_gone 12 (20%)  no_goal 1 (2%)
+goals:   1080 steps held a goal that had only moved (mean re-snap 0.45 cells)
+--- milp_cpp loop_with_corridor seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 305, 'steps_98': 365, 'final_coverage': 0.9807, 'total_path': 730, 'longest_path': 365, 'overlap': 0.075, 'mean_snap_cells': '', 'seconds': 28}
+solver: 40 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/40 fell back to greedy, 6.3 candidates per plan
+replans: 40 total -- periodic 31 (78%)  frontier_gone 8 (20%)  no_goal 1 (2%)
+goals:   716 steps held a goal that had only moved (mean re-snap 0.71 cells)
+--- milp_cpp loop_with_corridor seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 318, 'steps_98': 482, 'final_coverage': 0.9811, 'total_path': 964, 'longest_path': 482, 'overlap': 0.082, 'mean_snap_cells': '', 'seconds': 34}
+solver: 51 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/51 fell back to greedy, 5.7 candidates per plan
+replans: 51 total -- periodic 45 (88%)  frontier_gone 5 (10%)  no_goal 1 (2%)
+goals:   956 steps held a goal that had only moved (mean re-snap 0.44 cells)
+--- milp_cpp loop_with_corridor seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 328, 'steps_98': 662, 'final_coverage': 0.988, 'total_path': 1324, 'longest_path': 662, 'overlap': 0.229, 'mean_snap_cells': '', 'seconds': 47}
+solver: 70 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/70 fell back to greedy, 5.2 candidates per plan
+replans: 70 total -- periodic 62 (89%)  frontier_gone 7 (10%)  no_goal 1 (1%)
+goals:   1311 steps held a goal that had only moved (mean re-snap 0.45 cells)
+--- milp_cpp loop_with_corridor seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 309, 'steps_98': 351, 'final_coverage': 0.9806, 'total_path': 702, 'longest_path': 351, 'overlap': 0.086, 'mean_snap_cells': '', 'seconds': 22}
+solver: 39 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/39 fell back to greedy, 5.1 candidates per plan
+replans: 39 total -- periodic 32 (82%)  frontier_gone 6 (15%)  no_goal 1 (3%)
+goals:   693 steps held a goal that had only moved (mean re-snap 0.77 cells)
+--- milp_cpp loop_with_corridor seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 341, 'steps_98': 382, 'final_coverage': 0.9802, 'total_path': 764, 'longest_path': 382, 'overlap': 0.087, 'mean_snap_cells': '', 'seconds': 27}
+solver: 43 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/43 fell back to greedy, 5.3 candidates per plan
+replans: 43 total -- periodic 36 (84%)  frontier_gone 6 (14%)  no_goal 1 (2%)
+goals:   752 steps held a goal that had only moved (mean re-snap 0.71 cells)
+--- milp_cpp loop_with_corridor seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 397, 'steps_98': 572, 'final_coverage': 0.9818, 'total_path': 1144, 'longest_path': 572, 'overlap': 0.035, 'mean_snap_cells': '', 'seconds': 37}
+solver: 62 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/62 fell back to greedy, 4.9 candidates per plan
+replans: 62 total -- periodic 50 (81%)  frontier_gone 11 (18%)  no_goal 1 (2%)
+goals:   1123 steps held a goal that had only moved (mean re-snap 0.43 cells)
+--- milp_cpp loop_with_corridor seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 335, 'steps_98': 375, 'final_coverage': 0.9802, 'total_path': 750, 'longest_path': 375, 'overlap': 0.068, 'mean_snap_cells': '', 'seconds': 23}
+solver: 41 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/41 fell back to greedy, 4.6 candidates per plan
+replans: 41 total -- periodic 34 (83%)  frontier_gone 6 (15%)  no_goal 1 (2%)
+goals:   740 steps held a goal that had only moved (mean re-snap 0.59 cells)
+--- milp_cpp loop_with_corridor seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'loop_with_corridor', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 465, 'steps_98': 534, 'final_coverage': 0.98, 'total_path': 1068, 'longest_path': 534, 'overlap': 0.137, 'mean_snap_cells': '', 'seconds': 30}
+solver: 59 solves, 1 not proven optimal, 0 infeasible, worst gap 5.10e-05, 0.1s total / 0.00s max, 0/59 fell back to greedy, 3.3 candidates per plan
+replans: 59 total -- periodic 46 (78%)  frontier_gone 12 (20%)  no_goal 1 (2%)
+goals:   1052 steps held a goal that had only moved (mean re-snap 0.43 cells)
+[notify] sent
+--- milp_cpp room_with_corner seed 41
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room_with_corner', 'robots': 2, 'seed': 41, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 521, 'steps_98': 834, 'final_coverage': 0.9818, 'total_path': 1668, 'longest_path': 834, 'overlap': 0.377, 'mean_snap_cells': '', 'seconds': 97}
+solver: 87 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.00s max, 0/87 fell back to greedy, 9.2 candidates per plan
+replans: 87 total -- periodic 72 (83%)  frontier_gone 11 (13%)  arrived 3 (3%)  no_goal 1 (1%)
+goals:   1646 steps held a goal that had only moved (mean re-snap 0.33 cells)
+--- milp_cpp room_with_corner seed 42
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room_with_corner', 'robots': 2, 'seed': 42, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 446, 'steps_98': 948, 'final_coverage': 0.9828, 'total_path': 1896, 'longest_path': 948, 'overlap': 0.607, 'mean_snap_cells': '', 'seconds': 68}
+solver: 105 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.00s max, 0/105 fell back to greedy, 6.0 candidates per plan
+replans: 105 total -- periodic 85 (81%)  frontier_gone 13 (12%)  arrived 6 (6%)  no_goal 1 (1%)
+goals:   1863 steps held a goal that had only moved (mean re-snap 0.38 cells)
+--- milp_cpp room_with_corner seed 43
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room_with_corner', 'robots': 2, 'seed': 43, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 591, 'steps_98': 688, 'final_coverage': 0.988, 'total_path': 1376, 'longest_path': 688, 'overlap': 0.079, 'mean_snap_cells': '', 'seconds': 77}
+solver: 76 solves, 1 not proven optimal, 0 infeasible, worst gap 9.41e-05, 0.2s total / 0.00s max, 0/76 fell back to greedy, 10.0 candidates per plan
+replans: 76 total -- periodic 60 (79%)  frontier_gone 13 (17%)  arrived 2 (3%)  no_goal 1 (1%)
+goals:   1350 steps held a goal that had only moved (mean re-snap 0.38 cells)
+--- milp_cpp room_with_corner seed 44
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room_with_corner', 'robots': 2, 'seed': 44, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 493, 'steps_98': 592, 'final_coverage': 0.9801, 'total_path': 1184, 'longest_path': 592, 'overlap': 0.041, 'mean_snap_cells': '', 'seconds': 67}
+solver: 70 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/70 fell back to greedy, 8.6 candidates per plan
+replans: 70 total -- periodic 47 (67%)  frontier_gone 13 (19%)  arrived 9 (13%)  no_goal 1 (1%)
+goals:   1148 steps held a goal that had only moved (mean re-snap 0.45 cells)
+--- milp_cpp room_with_corner seed 45
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room_with_corner', 'robots': 2, 'seed': 45, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 685, 'steps_98': 767, 'final_coverage': 0.9838, 'total_path': 1534, 'longest_path': 767, 'overlap': 0.188, 'mean_snap_cells': '', 'seconds': 92}
+solver: 83 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.00s max, 0/83 fell back to greedy, 9.7 candidates per plan
+replans: 83 total -- periodic 70 (84%)  frontier_gone 11 (13%)  no_goal 1 (1%)  arrived 1 (1%)
+goals:   1516 steps held a goal that had only moved (mean re-snap 0.42 cells)
+--- milp_cpp room_with_corner seed 46
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room_with_corner', 'robots': 2, 'seed': 46, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 683, 'steps_98': 840, 'final_coverage': 0.9877, 'total_path': 1680, 'longest_path': 840, 'overlap': 0.104, 'mean_snap_cells': '', 'seconds': 99}
+solver: 93 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.00s max, 0/93 fell back to greedy, 9.2 candidates per plan
+replans: 93 total -- periodic 71 (76%)  frontier_gone 16 (17%)  arrived 5 (5%)  no_goal 1 (1%)
+goals:   1647 steps held a goal that had only moved (mean re-snap 0.37 cells)
+--- milp_cpp room_with_corner seed 47
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room_with_corner', 'robots': 2, 'seed': 47, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 393, 'steps_98': 881, 'final_coverage': 0.9833, 'total_path': 1762, 'longest_path': 881, 'overlap': 0.125, 'mean_snap_cells': '', 'seconds': 81}
+solver: 97 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.00s max, 0/97 fell back to greedy, 7.1 candidates per plan
+replans: 97 total -- periodic 77 (79%)  frontier_gone 15 (15%)  arrived 4 (4%)  no_goal 1 (1%)
+goals:   1730 steps held a goal that had only moved (mean re-snap 0.39 cells)
+--- milp_cpp room_with_corner seed 48
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room_with_corner', 'robots': 2, 'seed': 48, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 785, 'steps_98': 913, 'final_coverage': 0.98, 'total_path': 1826, 'longest_path': 913, 'overlap': 0.197, 'mean_snap_cells': '', 'seconds': 122}
+solver: 99 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.01s max, 0/99 fell back to greedy, 8.9 candidates per plan
+replans: 99 total -- periodic 77 (78%)  frontier_gone 18 (18%)  arrived 3 (3%)  no_goal 1 (1%)
+goals:   1791 steps held a goal that had only moved (mean re-snap 0.35 cells)
+--- milp_cpp room_with_corner seed 49
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room_with_corner', 'robots': 2, 'seed': 49, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 556, 'steps_98': 612, 'final_coverage': 0.98, 'total_path': 1224, 'longest_path': 612, 'overlap': 0.056, 'mean_snap_cells': '', 'seconds': 77}
+solver: 68 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.1s total / 0.00s max, 0/68 fell back to greedy, 8.7 candidates per plan
+replans: 68 total -- periodic 49 (72%)  frontier_gone 17 (25%)  no_goal 1 (1%)  arrived 1 (1%)
+goals:   1197 steps held a goal that had only moved (mean re-snap 0.57 cells)
+--- milp_cpp room_with_corner seed 50
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+note: this milp_cpp build has no min_share -- ignoring
+{'method': 'milp_cpp', 'map': 'room_with_corner', 'robots': 2, 'seed': 50, 'ckpt': '', 'nsample': '', 'exclude': '', 'euler_steps': '', 'max_steps': 2000, 'steps_90': 550, 'steps_98': 856, 'final_coverage': 0.9817, 'total_path': 1712, 'longest_path': 856, 'overlap': 0.093, 'mean_snap_cells': '', 'seconds': 99}
+solver: 94 solves, 0 not proven optimal, 0 infeasible, worst gap 0.00e+00, 0.2s total / 0.00s max, 0/94 fell back to greedy, 8.3 candidates per plan
+replans: 94 total -- periodic 75 (80%)  frontier_gone 17 (18%)  no_goal 1 (1%)  arrived 1 (1%)
+goals:   1681 steps held a goal that had only moved (mean re-snap 0.35 cells)
+[notify] sent
+=== stage: report
+3150 solves over 60 runs, 2 not proven optimal, 0/3150 fell back to greedy
+6s total in HiGHS, 0.07s worst single solve
+5.5 candidates per plan (mean of per-run means)
+3150 replans over 60 runs: periodic 2492 (79%)  frontier_gone 561 (18%)  no_goal 60 (2%)  arrived 37 (1%)
+[notify] sent
+[notify] sent
