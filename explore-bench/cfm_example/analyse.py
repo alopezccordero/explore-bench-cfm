@@ -32,6 +32,9 @@ p = argparse.ArgumentParser()
 p.add_argument('csv')
 p.add_argument('--primary', action='store_true',
                help='only the declared comparison: exclude 35 vs 0, nsample 1, geodesic')
+p.add_argument('--pair', nargs=2, metavar=('A', 'B'),
+               help='test exactly this one contrast, naming two configuration labels '
+                    'as the summary table prints them')
 p.add_argument('--metric', default='steps_98')
 args = p.parse_args()
 
@@ -98,7 +101,7 @@ def show(pairs, adjust):
             out.append((contrast(a, b), a, b))
     if not out:
         print('\nno comparable pairs found'); return
-    print(f"\n{'contrast: B vs A (negative mean = B better)':52s}{'wins':>8}{'mean':>7}"
+    print(f"\n{'contrast: B vs A (negative mean = B better)':60s}{'wins':>8}{'mean':>7}"
           f"{'95% CI':>18}{'p':>8}" + (f"{'Holm':>7}" if adjust else ''))
     for c, a, b in sorted(out, key=lambda t: t[0]['p']):
         holm = ''
@@ -106,23 +109,37 @@ def show(pairs, adjust):
             rank = sorted(x[0]['p'] for x in out).index(c['p'])
             holm = f"{min(c['p'] * (len(out) - rank), 1.0):>7.3f}"
         note = '' if c['of'] else '   (no decisive runs: all paired diffs zero)'
-        print(f'{b + "  vs  " + a:52.52s}{c["wins"]:>5}/{c["of"]:<2}{c["mean"]:>7.0f}'
+        print(f'{b + "  vs  " + a:60.60s}{c["wins"]:>5}/{c["of"]:<2}{c["mean"]:>7.0f}'
               f'  [{c["lo"]:>6.0f},{c["hi"]:>6.0f}]{c["p"]:>8.4f}{holm}{note}')
 
 
 keys = sorted(groups)
-if args.primary:
-    a = [k for k in keys if k == 'geodesic ns1 ex0 st20']
-    b = [k for k in keys if k == 'geodesic ns1 ex35 st20']
+if args.pair:
+    missing = [k for k in args.pair if k not in groups]
+    if missing:
+        raise SystemExit('no such configuration: ' + '; '.join(missing)
+                         + '\navailable: ' + ' | '.join(keys))
+    print('\n=== single declared contrast (no multiplicity penalty) ===')
+    show([tuple(args.pair)], adjust=False)
+elif args.primary:
+    a = [k for k in keys if k.split()[0].endswith('geodesic')
+         and k.split()[1:] == ['ns1', 'ex0', 'st20']]
+    b = [k for k in keys if k.split()[0].endswith('geodesic')
+         and k.split()[1:] == ['ns1', 'ex35', 'st20']]
     if a and b:
         print('\n=== PRIMARY (declared before running; no multiplicity penalty) ===')
         show([(a[0], b[0])], adjust=False)
     else:
         print('\nprimary pair not present in this file')
 else:
-    print('\n=== all pairwise contrasts sharing a checkpoint ===')
+    print('\n=== all contrasts differing in exactly one setting ===')
+    # Contrast any two configurations differing in exactly one field, the checkpoint
+    # included. The old rule demanded a shared ckpt, which silently dropped the one
+    # comparison X5 exists to make -- linear vs geodesic on the same data -- and printed
+    # 'no comparable pairs found' rather than saying why.
     pairs = [(a, b) for i, a in enumerate(keys) for b in keys[i + 1:]
-             if a.split()[0] == b.split()[0]]
+             if len(a.split()) == len(b.split())
+             and sum(x != y for x, y in zip(a.split(), b.split())) == 1]
     show(pairs, adjust=True)
     print('\nHolm is across the contrasts printed here. The pre-declared primary '
           'comparison is exempt; run with --primary for it alone.')
