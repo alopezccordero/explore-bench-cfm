@@ -776,3 +776,8 @@ Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst othe
 Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
 Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
 See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{'method': 'cfm', 'map': 'room_with_corner', 'robots': 2, 'seed': 50, 'ckpt': 'cfm_x5_geodesic.pt', 'nsample': 1, 'exclude': 35.0, 'euler_steps': 20, 'max_steps': 2000, 'steps_90': 509, 'steps_98': 1088, 'final_coverage': 0.9805, 'total_path': 2176, 'longest_path': 1088, 'overlap': 0.8, 'mean_snap_cells': 22.18, 'seconds': 181}
+[notify] sent
+=== stage: report
+[notify] sent
+[notify] sent
