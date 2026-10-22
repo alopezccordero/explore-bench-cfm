@@ -32,6 +32,11 @@ p = argparse.ArgumentParser()
 p.add_argument('csv')
 p.add_argument('--primary', action='store_true',
                help='only the declared comparison: exclude 35 vs 0, nsample 1, geodesic')
+p.add_argument('--vs', metavar='REFERENCE',
+               help='contrast every other configuration against this one, by label. '
+                    'Use for baselines-vs-student: the auto pairing only relates '
+                    'configurations with the same number of fields, and a baseline label '
+                    "('cost') has fewer than a student's ('x5_linear ns1 ex35 st20').")
 p.add_argument('--pair', nargs=2, metavar=('A', 'B'),
                help='test exactly this one contrast, naming two configuration labels '
                     'as the summary table prints them')
@@ -114,7 +119,13 @@ def show(pairs, adjust):
 
 
 keys = sorted(groups)
-if args.pair:
+if args.vs:
+    if args.vs not in groups:
+        raise SystemExit('no such configuration: ' + args.vs
+                         + chr(10) + 'available: ' + ' | '.join(keys))
+    print(chr(10) + f'=== every configuration against {args.vs} ===')
+    show([(args.vs, b) for b in keys if b != args.vs], adjust=True)
+elif args.pair:
     missing = [k for k in args.pair if k not in groups]
     if missing:
         raise SystemExit('no such configuration: ' + '; '.join(missing)

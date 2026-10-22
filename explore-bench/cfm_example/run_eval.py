@@ -138,6 +138,18 @@ row = {
     'seconds': round(time.time() - t0),
 }
 print(row)
+
+# The teachers' claim to be oracles rests on their MILPs being solved to optimality, which
+# nothing used to check. SOLVE_STATS is filled in by cfm_teachers.solve(); printing it
+# keeps every run self-certifying. Deliberately not a CSV column: the header has to stay
+# identical to results_x5_*.csv for merge_results.py to pair the rows.
+if args.method in TEACHERS:
+    from cfm_teachers import SOLVE_STATS as S
+    if S['solves']:
+        print(f"solver: {S['solves']} MILP solves, {S['suboptimal']} not proven optimal, "
+              f"{S['infeasible']} infeasible, worst gap {S['worst_gap']:.2e}")
+    else:
+        print('solver: no MILP solves (this method does not use one)')
 new = not os.path.exists(args.csv)
 if not new:
     with open(args.csv, newline='') as f:

@@ -42,6 +42,10 @@ from Astar import AStar  # noqa: E402  (cfm_common puts grid_simulator on sys.pa
 
 TIME_LIMIT = 10.0    # seconds per MILP solve; HiGHS returns its incumbent after this
 
+# Filled in by solve(). audit_teacher.py measures this properly; this is the cheap running
+# tally so a collection or evaluation cannot silently depend on an unproven incumbent.
+SOLVE_STATS = {'solves': 0, 'suboptimal': 0, 'infeasible': 0, 'worst_gap': 0.0}
+
 
 # ---------------------------------------------------------------- shared privileged view
 
@@ -222,6 +226,22 @@ def solve(c, rows, integrality, lo, hi):
                integrality=np.asarray(integrality),
                bounds=Bounds(np.asarray(lo, float), np.asarray(hi, float)),
                options={'time_limit': TIME_LIMIT, 'presolve': True})
+    # Keep HiGHS's verdict. Without this an incumbent returned at TIME_LIMIT is
+    # indistinguishable from a proven optimum, so "it is a MILP" was being read as "it is
+    # optimal" with nothing recording whether that held. Measured over 385 solves on room,
+    # corner and room_with_corner it holds on all of them (gap 0, max 0.19s), but that is
+    # a fact about these instance sizes, not a guarantee -- raising max_nodes or the robot
+    # count grows them, so the check stays.
+    SOLVE_STATS['solves'] += 1
+    gap = float(res.mip_gap) if res.mip_gap is not None else float('nan')
+    if res.status != 0 or (gap == gap and gap > 1e-6):
+        SOLVE_STATS['suboptimal'] += 1
+        SOLVE_STATS['worst_gap'] = max(SOLVE_STATS['worst_gap'], gap if gap == gap else 0.0)
+        if SOLVE_STATS['suboptimal'] <= 5:    # say it once or twice, do not flood a log
+            print(f'warning: MILP not proven optimal (status {res.status}, gap {gap:.2e}, '
+                  f'{len(c)} vars, {len(rows)} constraints)')
+    if res.x is None:
+        SOLVE_STATS['infeasible'] += 1
     return None if res.x is None else np.asarray(res.x)
 
 
@@ -428,7 +448,62 @@ def _member(sorted_idx, query):
     return sorted_idx[p] == query
 
 
-TEACHERS = {'mtsp': MtspTeacher, 'milp_cpp': MilpCppTeacher}
+class GreedyRatioTeacher(Privileged):
+    """Send each robot to the candidate with the best true gain per true travel cell.
+
+    Why a greedy rule sits beside two exact MILPs: `steps_98` is a time-to-coverage
+    objective, and neither MILP represents it. `mtsp` minimises total route distance and
+    `milp_cpp` minimises set-cover travel; both are solved to proven optimality (385/385
+    solves, gap 0) for objectives that are not the benchmark metric. Information per unit
+    travel is a direct, if myopic, proxy for it, and it uses the same privileged inputs
+    -- `visible()` for gain, A* on the ground truth for distance -- and the same candidate
+    set, so a comparison isolates the decision rule.
+
+    Measured on seed 41, steps_98 / steps_90:
+
+        map                 milp_cpp     mtsp    greedy
+        room                 383/298  399/319   514/317
+        corner               549/383  513/413   496/356
+        room_with_corner     834/521  825/674   614/351
+
+    It wins outright on the two harder maps and reaches 90% coverage far sooner
+    everywhere, then gives the lead back on `room` through the usual greedy failure: the
+    ratio rule leaves scattered low-gain frontiers for last and pays for them in the tail.
+    That split -- better steps_90, worse steps_98 tail -- is the argument for an objective
+    that prices arrival time directly rather than either of the three.
+
+    `gains` is what the MILPs throw away: `MtspTeacher.plan()` takes it and never reads it,
+    so that teacher routes by distance while ignoring how much each frontier is worth.
+    """
+
+    def plan(self, pos, nodes, gains):
+        cost = self.cost_matrix(pos, nodes)
+        # Strongest claim first, so the robot with the most to gain picks before it is
+        # crowded out. Assigning in index order lets robot 0 take a frontier that robot 1
+        # was far better placed for.
+        def claim(i):
+            return max((gains[j] / max(cost[i, j], 1.0) for j in range(len(nodes))
+                        if np.isfinite(cost[i, j])), default=0.0)
+
+        pick, taken = {}, set()
+        for i in sorted(range(len(pos)), key=lambda i: -claim(i)):
+            best, bj = -1.0, None
+            for j in range(len(nodes)):
+                if j in taken or not np.isfinite(cost[i, j]) or nodes[j] == pos[i]:
+                    continue
+                r = gains[j] / max(cost[i, j], 1.0)
+                if r > best:
+                    best, bj = r, j
+            if bj is None:
+                bj = self.fallback(i, cost, taken)
+            pick[i] = bj
+            taken.add(bj)
+        return [pos[i] if pick.get(i) is None else nodes[pick[i]]
+                for i in range(len(pos))]
+
+
+TEACHERS = {'mtsp': MtspTeacher, 'milp_cpp': MilpCppTeacher,
+            'greedy_ratio': GreedyRatioTeacher}
 
 
 def make_teacher(method, env, **kwargs):
