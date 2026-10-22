@@ -149,6 +149,7 @@ class Privileged:
         if n == 0:
             return [], np.zeros(0, int)
 
+        fm = frontier_mask(m)      # X6.1 tests the clipped cell against this
         flat = lab.ravel()
         counts = np.bincount(flat, minlength=n + 1)
         order = np.argsort(flat, kind='stable')[counts[0]:]
@@ -161,26 +162,34 @@ class Privileged:
         for g in big[:3 * self.max_nodes]:
             pts = np.stack(np.unravel_index(g, m.shape), 1)
             rep = pts[np.abs(pts - pts.mean(0)).sum(1).argmin()]
-            if self.fixes:
-                # X6.1: clipping a medoid to the safe rim can land on a cell that is not
-                # a frontier, and in principle not even free -- the coordinate is forced
-                # into range rather than chosen. Pick the nearest cluster member that is
-                # genuinely usable instead: inside the rim and in a reachable component
-                # of the real free space. Measured over 1490 representatives on room,
-                # corner and room_with_corner the clip never actually produced a bad cell,
-                # so this is expected to change nothing on those maps -- X6.5 is what
-                # checks that. It removes the failure mode rather than a known failure.
+            # the sensor model writes a 3x3 patch around the viewpoint, so stay off the rim
+            c = (int(np.clip(rep[0], 2, h - 3)), int(np.clip(rep[1], 2, w - 3)))
+            if self.fixes and (not fm[c] or self.component[c] == 0):
+                # X6.1: clipping forces a coordinate into range rather than choosing a
+                # cell, so it can land somewhere that is not a frontier and in principle
+                # not even free. Only when that has actually happened, fall back to the
+                # cluster's own members -- the nearest to the centroid that is inside the
+                # rim and in a reachable component of the real free space.
+                #
+                # Repairing only the broken case, rather than replacing the choice
+                # outright, is deliberate. Selecting from within the cluster
+                # unconditionally changed every representative, and on the cluster's
+                # scipy 1.15.3 that made mTSP's arc costs near-tied and its MILP
+                # degenerate: the worst solve went from 0.03s to 6.24s (median per run)
+                # and one episode stalled for two hours. milp_cpp was unaffected, so it
+                # is specific to the arc formulation. The clip produced 0 invalid cells
+                # in 1490 examined, so this branch is expected never to fire -- which is
+                # the point: it removes the failure mode at zero cost to the common path.
                 ok = pts[(pts[:, 0] >= 2) & (pts[:, 0] <= h - 3)
                          & (pts[:, 1] >= 2) & (pts[:, 1] <= w - 3)]
-                if len(ok):
-                    ok = ok[[self.component[int(q[0]), int(q[1])] != 0 for q in ok]]
-                if not len(ok):
+                ok = [q for q in ok if self.component[int(q[0]), int(q[1])] != 0
+                      and fm[int(q[0]), int(q[1])]]
+                if not ok:
                     continue              # nothing usable in this cluster: drop it
+                ok = np.stack(ok)
                 pick = ok[np.abs(ok - pts.mean(0)).sum(1).argmin()]
-                cells.append((int(pick[0]), int(pick[1])))
-            else:
-                # the sensor model writes a 3x3 patch around the viewpoint, so stay off the rim
-                cells.append((int(np.clip(rep[0], 2, h - 3)), int(np.clip(rep[1], 2, w - 3))))
+                c = (int(pick[0]), int(pick[1]))
+            cells.append(c)
 
         if not cells:
             return [], np.zeros(0, int)
