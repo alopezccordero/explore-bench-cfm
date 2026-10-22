@@ -796,3 +796,13 @@ elapsed 44 min, all stages completed.
 
 ===== 2026-10-22 15:40:22  X6.5 implementation fixes: mtsp/142787
 **X6.5 mtsp** `142787`: room done (40/60 runs)
+
+===== 2026-10-22 16:17:12  X6.5 implementation fixes: mtsp_fix/142853
+**X6.5 implementation fixes: mtsp_fix** - job `142853` started on `sxm003`
+60 runs on the X5/X6 grid -- 6 maps x seeds 41-50, 2 robots, max 2000 steps.
+Pairs 1:1 against its twin arm and against every result already collected.
+The fixes are X6.1 (representative chosen from valid reachable cluster members instead of
+a clipped coordinate) and X6.2 (greedy fallback tries every robot before giving up). No
+objective, cap, cadence or tolerance is changed.
+Both are latent on everything measured so far, so a null is the expected and useful result.
+Expect 2-4h. No GPU, no training.
