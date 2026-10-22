@@ -146,10 +146,21 @@ print(row)
 if args.method in TEACHERS:
     from cfm_teachers import SOLVE_STATS as S
     if S['solves']:
-        print(f"solver: {S['solves']} MILP solves, {S['suboptimal']} not proven optimal, "
-              f"{S['infeasible']} infeasible, worst gap {S['worst_gap']:.2e}")
+        print(f"solver: {S['solves']} solves, {S['suboptimal']} not proven optimal, "
+              f"{S['infeasible']} infeasible, worst gap {S['worst_gap']:.2e}, "
+              f"{S['seconds']:.1f}s total / {S['max_seconds']:.2f}s max, "
+              f"{S['fallbacks']}/{S['plans']} fell back to greedy, "
+              f"{S['cand_total'] / max(S['plans'], 1):.1f} candidates per plan")
     else:
         print('solver: no MILP solves (this method does not use one)')
+    if S['resolves']:
+        tot = sum(S['resolves'].values())
+        why = '  '.join(f'{k} {v} ({100 * v / tot:.0f}%)'
+                        for k, v in sorted(S['resolves'].items(), key=lambda kv: -kv[1]))
+        snap = (S['resnap_total'] / S['resnap_n']) if S['resnap_n'] else 0.0
+        print(f'replans: {tot} total -- {why}')
+        print(f'goals:   {S["resnap_n"]} steps held a goal that had only moved '
+              f'(mean re-snap {snap:.2f} cells)')
 new = not os.path.exists(args.csv)
 if not new:
     with open(args.csv, newline='') as f:

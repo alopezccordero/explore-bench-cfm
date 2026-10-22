@@ -33,12 +33,13 @@ import numpy as np
 from scipy import ndimage
 
 import cfm_teachers
-from cfm_common import FREE, UNKNOWN, frontier_mask, make_env, quiet
+from cfm_common import FREE, UNKNOWN, frontier_mask, make_env, quiet  # noqa: F401
 
 SOLVES = []        # one record per MILP solve
 LAST_X = [None]    # solution vector of the most recent solve, for the assignment audit
 CAND = []          # one record per candidates() call
 ROUTE = []         # one record per (solve, robot) assignment
+STALE = []         # one record per (step, robot): is the committed goal still worth it?
 
 
 def patch_solve():
@@ -163,6 +164,35 @@ def held_karp_open(start, pts, dist):
     return min(opts) if opts else (float('nan'), [])
 
 
+def patch_goal_tracking(T):
+    """X6.4: per step and robot, how much the committed goal is still worth.
+
+    `visible()` is cached per cell, so after the first visit this costs one array index per
+    robot per step. A goal whose remaining gain has fallen to zero is a robot walking to a
+    frontier that something else already revealed -- the plan is stale but nothing has
+    noticed, because `__call__` only re-solves on arrival, on the snap exceeding goal_tol,
+    or on the replan timer, and none of those test whether the goal still pays.
+    """
+    orig = T.__call__
+
+    def call(self):
+        goals = orig(self)
+        m = self.env.complete_map
+        unknown = (m == UNKNOWN).ravel()
+        for i, g in enumerate(goals):
+            c = (int(g[0]), int(g[1]))
+            try:
+                gain = int(unknown[self.visible(c)].sum())
+            except Exception:
+                gain = -1
+            p = self.env.agent_pos[i]
+            STALE.append(dict(step=self.env.num_step, robot=i, gain=gain,
+                              dist=float(np.hypot(c[0] - p[0], c[1] - p[1]))))
+        return goals
+
+    T.__call__ = call
+
+
 def patch_cpp_plan(T):
     """Compare the assignment charge against a true optimal route, per robot per solve."""
     orig = T.plan
@@ -223,6 +253,7 @@ def main():
     patch_solve()
     cls = cfm_teachers.TEACHERS[a.method]
     patch_candidates(cls)
+    patch_goal_tracking(cls)
     if a.method == 'milp_cpp' and not a.no_route:
         patch_cpp_plan(cls)
 
@@ -288,6 +319,26 @@ def main():
         print(f'   representative cell in a wall / unreachable component: '
               f'{sum(c["unreachable"] for c in CAND)}')
 
+    # ---- 4. goal staleness (printed before route cost, it is the shorter story)
+    print(f'\n4. GOAL STALENESS  ({len(STALE)} step-robot commitments)')
+    if STALE:
+        gain = np.array([s['gain'] for s in STALE], float)
+        dist = np.array([s['dist'] for s in STALE], float)
+        ok = gain >= 0
+        print(f'   gain still available at the committed goal: '
+              f'mean {gain[ok].mean():.0f}  median {np.median(gain[ok]):.0f}')
+        for thr in (0, 10, 50):
+            bad = ok & (gain <= thr)
+            far = bad & (dist > 3)
+            print(f'   gain <= {thr:<3} on {pct(bad.mean()):>7} of commitments; '
+                  f'of those, {pct((far.sum() / max(bad.sum(), 1))):>7} are still more '
+                  f'than 3 cells away')
+        dead = ok & (gain == 0) & (dist > 3)
+        print(f'   WALKING TO A DEAD GOAL (zero gain, >3 cells out): {pct(dead.mean())} '
+              f'of all step-robot commitments')
+        print('   ^ X6.4: nothing in __call__ tests whether a held goal still pays, so '
+              'this is\n     time spent travelling to information that is already '
+              'collected.')
     # ---- 3. route cost
     print(f'\n3. ROUTE-COST APPROXIMATION  ({len(ROUTE)} robot-assignments)')
     if ROUTE:

@@ -30,6 +30,7 @@ partial map (`cfm_policy.frontier_mask`) -- so the recorded goal already lies on
 frontier and `collect_data.py`'s snap distance stays near zero.
 """
 import math
+import time
 
 import numpy as np
 from scipy import ndimage, sparse
@@ -44,7 +45,16 @@ TIME_LIMIT = 10.0    # seconds per MILP solve; HiGHS returns its incumbent after
 
 # Filled in by solve(). audit_teacher.py measures this properly; this is the cheap running
 # tally so a collection or evaluation cannot silently depend on an unproven incumbent.
-SOLVE_STATS = {'solves': 0, 'suboptimal': 0, 'infeasible': 0, 'worst_gap': 0.0}
+SOLVE_STATS = {'solves': 0, 'suboptimal': 0, 'infeasible': 0, 'worst_gap': 0.0,
+               'seconds': 0.0, 'max_seconds': 0.0, 'plans': 0, 'fallbacks': 0,
+               'cand_total': 0, 'resolves': {}, 'resnap_total': 0.0, 'resnap_n': 0}
+
+
+def reset_stats():
+    """Zero the tally, so one process can measure several runs separately."""
+    SOLVE_STATS.update(solves=0, suboptimal=0, infeasible=0, worst_gap=0.0, seconds=0.0,
+                       max_seconds=0.0, plans=0, fallbacks=0, cand_total=0,
+                       resolves={}, resnap_total=0.0, resnap_n=0)
 
 
 # ---------------------------------------------------------------- shared privileged view
@@ -57,7 +67,13 @@ class Privileged:
     information gain, reachability -- is read off the ground truth.
     """
 
-    def __init__(self, env, max_nodes=10, min_cluster=3, replan=10, goal_tol=12.0):
+    def __init__(self, env, max_nodes=10, min_cluster=3, replan=10, goal_tol=12.0,
+                 fixes=False):
+        # `fixes` turns on the X6 implementation corrections. It defaults off so the
+        # original teachers keep reproducing their published numbers exactly (mtsp 513 /
+        # milp_cpp 549 on corner seed 41) and the corrected variants can be paired
+        # against them in the same process. It changes no objective.
+        self.fixes = fixes
         self.env = env
         self.max_nodes = max_nodes
         self.min_cluster = min_cluster
@@ -145,9 +161,29 @@ class Privileged:
         for g in big[:3 * self.max_nodes]:
             pts = np.stack(np.unravel_index(g, m.shape), 1)
             rep = pts[np.abs(pts - pts.mean(0)).sum(1).argmin()]
-            # the sensor model writes a 3x3 patch around the viewpoint, so stay off the rim
-            cells.append((int(np.clip(rep[0], 2, h - 3)), int(np.clip(rep[1], 2, w - 3))))
+            if self.fixes:
+                # X6.1: clipping a medoid to the safe rim can land on a cell that is not
+                # a frontier, and in principle not even free -- the coordinate is forced
+                # into range rather than chosen. Pick the nearest cluster member that is
+                # genuinely usable instead: inside the rim and in a reachable component
+                # of the real free space. Measured over 1490 representatives on room,
+                # corner and room_with_corner the clip never actually produced a bad cell,
+                # so this is expected to change nothing on those maps -- X6.5 is what
+                # checks that. It removes the failure mode rather than a known failure.
+                ok = pts[(pts[:, 0] >= 2) & (pts[:, 0] <= h - 3)
+                         & (pts[:, 1] >= 2) & (pts[:, 1] <= w - 3)]
+                if len(ok):
+                    ok = ok[[self.component[int(q[0]), int(q[1])] != 0 for q in ok]]
+                if not len(ok):
+                    continue              # nothing usable in this cluster: drop it
+                pick = ok[np.abs(ok - pts.mean(0)).sum(1).argmin()]
+                cells.append((int(pick[0]), int(pick[1])))
+            else:
+                # the sensor model writes a 3x3 patch around the viewpoint, so stay off the rim
+                cells.append((int(np.clip(rep[0], 2, h - 3)), int(np.clip(rep[1], 2, w - 3))))
 
+        if not cells:
+            return [], np.zeros(0, int)
         unknown = (m == UNKNOWN).ravel()
         gains = np.array([int(unknown[self.visible(c)].sum()) for c in cells])
         keep = list(np.argsort(-gains)[:self.max_nodes])
@@ -171,19 +207,28 @@ class Privileged:
         pos = [(int(p[0]), int(p[1])) for p in env.agent_pos]
         cells = np.argwhere(frontier_mask(env.complete_map))
         stale = self.goals is None or len(cells) == 0
+        why = 'no_goal' if self.goals is None else ('no_frontier' if not len(cells) else None)
         if not stale:
             tree, kept = cKDTree(cells), []
             for g, p in zip(self.goals, pos):
                 d, j = tree.query(tuple(g))
                 if tuple(g) == p or d > self.goal_tol:
                     stale = True
+                    why = 'arrived' if tuple(g) == p else 'frontier_gone'
                     break
+                SOLVE_STATS['resnap_total'] += float(d)
+                SOLVE_STATS['resnap_n'] += 1
                 kept.append((int(cells[j][0]), int(cells[j][1])))
             if not stale:
                 self.goals = kept
         if self.replan and env.num_step - self._solved_step >= self.replan:
             stale = True
+            why = why or 'periodic'
         if stale:
+            # X6.4: why a plan was thrown away. 'periodic' dominating means the replan
+            # cadence, not the world, is driving the churn -- the previous plan was still
+            # valid and was discarded on a timer.
+            SOLVE_STATS['resolves'][why or 'other'] =                 SOLVE_STATS['resolves'].get(why or 'other', 0) + 1
             nodes, gains = self.candidates()
             self.goals = list(pos) if not nodes else self.plan(pos, nodes, gains)
             self._solved_step = env.num_step
@@ -222,10 +267,12 @@ def solve(c, rows, integrality, lo, hi):
         lb.append(low)
         ub.append(up)
     a = sparse.coo_matrix((data, (ri, ci)), shape=(len(rows), len(c))).tocsr()
+    t0 = time.perf_counter()
     res = milp(c=np.asarray(c, float), constraints=LinearConstraint(a, lb, ub),
                integrality=np.asarray(integrality),
                bounds=Bounds(np.asarray(lo, float), np.asarray(hi, float)),
                options={'time_limit': TIME_LIMIT, 'presolve': True})
+    secs = time.perf_counter() - t0
     # Keep HiGHS's verdict. Without this an incumbent returned at TIME_LIMIT is
     # indistinguishable from a proven optimum, so "it is a MILP" was being read as "it is
     # optimal" with nothing recording whether that held. Measured over 385 solves on room,
@@ -233,6 +280,8 @@ def solve(c, rows, integrality, lo, hi):
     # a fact about these instance sizes, not a guarantee -- raising max_nodes or the robot
     # count grows them, so the check stays.
     SOLVE_STATS['solves'] += 1
+    SOLVE_STATS['seconds'] += secs
+    SOLVE_STATS['max_seconds'] = max(SOLVE_STATS['max_seconds'], secs)
     gap = float(res.mip_gap) if res.mip_gap is not None else float('nan')
     if res.status != 0 or (gap == gap and gap > 1e-6):
         SOLVE_STATS['suboptimal'] += 1
@@ -298,9 +347,12 @@ class MtspTeacher(Privileged):
         for k in range(na):
             rows.append(({na + k: 1, k: -m}, -np.inf, 0))           # flow only on used arcs
 
+        SOLVE_STATS['plans'] += 1
+        SOLVE_STATS['cand_total'] += m
         x = solve(list(weight) + [0.0] * na, rows, [1] * na + [0] * na,
                   [0] * (2 * na), [1] * na + [m] * na)
         if x is None:                                               # no feasible split
+            SOLVE_STATS['fallbacks'] += 1
             return self.greedy(pos, nodes, cost, inter)
 
         goals, taken = [], set()
@@ -318,11 +370,24 @@ class MtspTeacher(Privileged):
         end, length, started = list(range(r)), [0.0] * r, [False] * r
         first, left = [None] * r, set(range(m))
         while left:
-            i = min(range(r), key=lambda i: length[i])
             rest = sorted(left)
-            d = [inter[end[i], j] if started[i] else cost[i, j] for j in rest]
-            if not np.isfinite(min(d)):
+            # X6.2: try every robot, shortest route first, and stop only when *no* robot
+            # can reach *any* remaining candidate. The original took the shortest-route
+            # robot alone and broke out if that one robot was blocked, abandoning
+            # candidates another robot could have served -- so one unreachable pairing
+            # truncated the whole route set. Shortest-route-first is kept, so when every
+            # robot can reach something the assignment is identical to before.
+            chosen = None
+            for i in sorted(range(r), key=lambda i: length[i]):
+                d = [inter[end[i], j] if started[i] else cost[i, j] for j in rest]
+                if np.isfinite(min(d)):
+                    chosen = (i, d)
+                    break
+                if not self.fixes:
+                    break          # original behaviour: give up on the first blocked robot
+            if chosen is None:
                 break
+            i, d = chosen
             j = rest[int(np.argmin(d))]
             length[i] += min(d)
             if first[i] is None:
@@ -403,8 +468,11 @@ class MilpCppTeacher(Privileged):
         for (j, i), k in col.items():
             if not np.isfinite(cost[i, j]):
                 hi[k] = 0.0                  # robot i cannot get to viewpoint j
+        SOLVE_STATS['plans'] += 1
+        SOLVE_STATS['cand_total'] += len(usable)
         x = solve(c, rows, [1] * t + [0], [0.0] * (t + 1), hi)
         if x is None:
+            SOLVE_STATS['fallbacks'] += 1
             return self.greedy(pos, nodes, cost, seen, usable)
 
         goals, taken = [], set()
@@ -502,8 +570,44 @@ class GreedyRatioTeacher(Privileged):
                 for i in range(len(pos))]
 
 
+class _Fixed:
+    """Mixin turning on the X6 implementation corrections, and nothing else.
+
+    The objectives, the candidate cap, the replan cadence and the goal tolerance are all
+    untouched, so `mtsp_fix` vs `mtsp` isolates the two code fixes:
+
+      X6.1  a cluster's representative is chosen from its own valid, reachable members
+            rather than produced by clipping a coordinate into range
+      X6.2  the greedy mTSP fallback tries every robot before giving up, instead of
+            abandoning all remaining candidates when the shortest-route robot is blocked
+
+    Both are latent on the maps measured so far -- the clip never produced an invalid cell
+    in 1490 representatives, and the fallback only runs when HiGHS fails, which it did on
+    0 of 6310 solves -- so the honest prior is that these change little or nothing. X6.5
+    measures that rather than assuming it either way.
+    """
+
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('fixes', True)
+        super().__init__(*args, **kwargs)
+
+
+class MtspFixed(_Fixed, MtspTeacher):
+    pass
+
+
+class MilpCppFixed(_Fixed, MilpCppTeacher):
+    pass
+
+
+class GreedyRatioFixed(_Fixed, GreedyRatioTeacher):
+    pass
+
+
 TEACHERS = {'mtsp': MtspTeacher, 'milp_cpp': MilpCppTeacher,
-            'greedy_ratio': GreedyRatioTeacher}
+            'greedy_ratio': GreedyRatioTeacher,
+            'mtsp_fix': MtspFixed, 'milp_cpp_fix': MilpCppFixed,
+            'greedy_ratio_fix': GreedyRatioFixed}
 
 
 def make_teacher(method, env, **kwargs):
