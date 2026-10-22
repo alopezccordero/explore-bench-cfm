@@ -122,3 +122,84 @@ Expect ~30 min training on GPU plus ~3h evaluation.
 
 ===== 2026-10-21 18:03:56  X5 geodesic interpolation (K=64)/142594
 **X5 geodesic** `142594`: training done, `cfm_x5_geodesic.pt` written. Starting 120 evaluations.
+
+===== 2026-10-21 20:26:13  X5 geodesic interpolation (K=64)/142594
+**X5 geodesic - exclude 0 done**
+`results_x5_geodesic.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+cfm/cfm_x5_geodesic       corner               618   618    0  0.330  17.7
+cfm/cfm_x5_geodesic       corridor             415   415    0  0.331  15.2
+cfm/cfm_x5_geodesic       loop                 368   368    0  0.326  22.9
+cfm/cfm_x5_geodesic       loop_with_corridor   664   664    0  0.497  26.6
+cfm/cfm_x5_geodesic       room                 516   516    0  0.373  16.6
+cfm/cfm_x5_geodesic       room_with_corner    1066  1066    0  0.489  19.1
+---------------------------------------------------------------------
+cfm/cfm_x5_geodesic       ALL                  608   608    0  0.391  19.7  sd 275
+```
+
+===== 2026-10-21 20:29:17  X5 linear interpolation (control)/142595
+**X5 linear - exclude 0 done**
+`results_x5_linear.csv` - 60 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+cfm/cfm_x5_linear         corner               758   758    0  0.608  22.8
+cfm/cfm_x5_linear         corridor             458   458    0  0.360  14.5
+cfm/cfm_x5_linear         loop                 391   391    0  0.288  19.5
+cfm/cfm_x5_linear         loop_with_corridor   645   645    0  0.390  29.8
+cfm/cfm_x5_linear         room                 478   478    0  0.394  17.0
+cfm/cfm_x5_linear         room_with_corner    1057  1057    0  0.563  21.0
+---------------------------------------------------------------------
+cfm/cfm_x5_linear         ALL                  631   631    0  0.434  20.8  sd 259
+```
+
+===== 2026-10-21 22:30:14  X5 linear interpolation (control)/142595
+**X5 linear - exclude 35 done**
+`results_x5_linear.csv` - 120 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+cfm/cfm_x5_linear         corner               758   758    0  0.608  22.8
+cfm/cfm_x5_linear         corridor             458   458    0  0.360  14.5
+cfm/cfm_x5_linear         loop                 391   391    0  0.288  19.5
+cfm/cfm_x5_linear         loop_with_corridor   645   645    0  0.390  29.8
+cfm/cfm_x5_linear         room                 478   478    0  0.394  17.0
+cfm/cfm_x5_linear         room_with_corner    1057  1057    0  0.563  21.0
+cfm/cfm_x5_linear e35.0   corner               702   702    0  0.383  20.7
+cfm/cfm_x5_linear e35.0   corridor             403   403    0  0.308  12.2
+cfm/cfm_x5_linear e35.0   loop                 345   345    0  0.054  14.6
+cfm/cfm_x5_linear e35.0   loop_with_corridor   629   629    0  0.260  26.5
+cfm/cfm_x5_linear e35.0   room                 427   427    0  0.287  16.2
+cfm/cfm_x5_linear e35.0   room_with_corner     925   925    0  0.299  20.0
+---------------------------------------------------------------------
+cfm/cfm_x5_linear         ALL                  631   631    0  0.434  20.8  sd 259
+cfm/cfm_x5_linear e35.0   ALL                  572   572    0  0.265  18.4  sd 225
+```
+
+===== 2026-10-21 22:30:15  X5 linear interpolation (control)/142595
+**X5 linear FINAL (control, arc<=160)**
+`results_x5_linear.csv` - 120 runs
+```
+method                    map                  s98  cens fail    ovl  snap
+cfm/cfm_x5_linear         corner               758   758    0  0.608  22.8
+cfm/cfm_x5_linear         corridor             458   458    0  0.360  14.5
+cfm/cfm_x5_linear         loop                 391   391    0  0.288  19.5
+cfm/cfm_x5_linear         loop_with_corridor   645   645    0  0.390  29.8
+cfm/cfm_x5_linear         room                 478   478    0  0.394  17.0
+cfm/cfm_x5_linear         room_with_corner    1057  1057    0  0.563  21.0
+cfm/cfm_x5_linear e35.0   corner               702   702    0  0.383  20.7
+cfm/cfm_x5_linear e35.0   corridor             403   403    0  0.308  12.2
+cfm/cfm_x5_linear e35.0   loop                 345   345    0  0.054  14.6
+cfm/cfm_x5_linear e35.0   loop_with_corridor   629   629    0  0.260  26.5
+cfm/cfm_x5_linear e35.0   room                 427   427    0  0.287  16.2
+cfm/cfm_x5_linear e35.0   room_with_corner     925   925    0  0.299  20.0
+---------------------------------------------------------------------
+cfm/cfm_x5_linear         ALL                  631   631    0  0.434  20.8  sd 259
+cfm/cfm_x5_linear e35.0   ALL                  572   572    0  0.265  18.4  sd 225
+```
+Pair against the other arm once both are done:
+  python merge_results.py results_x5_linear.csv results_x5_geodesic.csv > results_x5.csv
+  python analyse.py results_x5.csv
+
+===== 2026-10-21 22:30:15  X5 linear interpolation (control)/142595
+**X5 linear interpolation (control)** - job `142595` finished normally on `sxm003`
+elapsed 271 min, all stages completed.
