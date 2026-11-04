@@ -1,0 +1,11 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+static,loop,2,41,cfm_x5_linear.pt,508.0,simulated_seconds_provisional,1,0,508,0.95005,0.6654,1016,303,1,0,4,4.0,100.068,27.869,0.0029,38784,0.1123,158.627,193.5278,10,20,1024,0.0,1.0
+static,loop,2,42,cfm_x5_linear.pt,256.0,simulated_seconds_provisional,1,0,256,0.95074,0.0,512,216,1,0,4,4.0,98.735,31.407,0.0,27648,0.1151,81.4305,98.9773,10,20,1024,0.0,1.0
+static,loop,2,43,cfm_x5_linear.pt,243.0,simulated_seconds_provisional,1,0,243,0.95025,0.0,486,195,1,0,4,4.0,114.641,13.739,0.0029,24960,0.0991,108.9344,124.8864,10,20,1024,0.0,1.0
+static,loop,2,44,cfm_x5_linear.pt,493.0,simulated_seconds_provisional,1,0,493,0.95,0.5403,986,295,1,0,4,4.0,105.525,25.18,0.0049,37760,0.1103,122.0558,166.5627,10,20,1024,0.0,1.0
+static,loop,2,45,cfm_x5_linear.pt,391.0,simulated_seconds_provisional,1,0,391,0.95133,0.6029,782,329,1,0,4,4.0,135.112,40.981,0.002,42112,0.1126,171.9791,199.3,10,20,1024,0.0,1.0
+static,loop,2,46,cfm_x5_linear.pt,448.0,simulated_seconds_provisional,1,0,448,0.9526,0.0344,896,249,1,0,4,4.0,109.928,24.387,0.001,31872,0.1148,94.7933,135.1171,10,20,1024,0.0,1.0
+static,loop,2,47,cfm_x5_linear.pt,305.0,simulated_seconds_provisional,1,0,305,0.95285,0.055,610,293,1,0,4,4.0,94.07,20.682,0.0039,37504,0.1104,149.701,171.8905,10,20,1024,0.0,1.0
+static,loop,2,48,cfm_x5_linear.pt,255.0,simulated_seconds_provisional,1,0,255,0.96162,0.0,510,159,1,0,4,4.0,86.871,17.077,0.001,20352,0.102,76.5547,94.4004,10,20,1024,0.0,1.0
+static,loop,2,49,cfm_x5_linear.pt,261.0,simulated_seconds_provisional,1,0,261,0.95118,0.0507,522,184,1,0,6,6.0,99.049,12.72,0.0033,23552,0.2219,88.0254,105.6508,10,20,1024,0.0,1.0
+static,loop,2,50,cfm_x5_linear.pt,228.0,simulated_seconds_provisional,1,0,228,0.96892,0.047,456,226,1,0,2,2.0,116.537,13.895,0.0,28928,0.1635,129.7824,145.2593,10,20,1024,0.0,1.0

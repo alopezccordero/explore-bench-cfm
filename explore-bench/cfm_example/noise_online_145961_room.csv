@@ -1,0 +1,9 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+online,room,2,41,cfm_x5_linear.pt,470.0,simulated_seconds_provisional,1,0,470,0.96096,0.3072,940,267,267,0,0,11.955,50.355,16.668,0.1442,34432,120.9739,246.6059,281.9537,10,20,1024,0.0,1.0
+online,room,2,42,cfm_x5_linear.pt,395.0,simulated_seconds_provisional,1,0,395,0.96503,0.1227,790,272,272,0,0,11.493,40.382,11.669,0.0833,34816,123.8807,252.8283,280.5423,10,20,1024,0.0,1.0
+online,room,2,43,cfm_x5_linear.pt,405.0,simulated_seconds_provisional,1,0,405,0.95024,0.4638,810,258,258,0,0,11.93,50.393,22.444,0.1194,33024,107.8322,220.0204,249.5787,10,20,1024,0.0,1.0
+online,room,2,44,cfm_x5_linear.pt,291.0,simulated_seconds_provisional,1,0,291,0.95943,0.1344,582,218,218,0,0,11.17,31.965,10.265,0.0833,27904,89.7496,183.5532,204.1238,10,20,1024,0.0,1.0
+online,room,2,45,cfm_x5_linear.pt,589.0,simulated_seconds_provisional,1,0,589,0.95046,0.7162,1178,310,310,0,0,11.419,47.552,21.174,0.0452,39680,121.7317,249.2668,291.9246,10,20,1024,0.0,1.0
+online,room,2,46,cfm_x5_linear.pt,433.0,simulated_seconds_provisional,1,0,433,0.95049,0.37,866,238,238,0,0,11.857,43.697,16.928,0.0837,30464,110.9212,225.7555,258.0641,10,20,1024,0.0,1.0
+online,room,2,47,cfm_x5_linear.pt,319.0,simulated_seconds_provisional,1,0,319,0.9732,0.054,638,189,189,0,0,11.968,37.424,11.853,0.0833,24192,84.7595,173.0181,196.0927,10,20,1024,0.0,1.0
+online,room,2,48,cfm_x5_linear.pt,463.0,simulated_seconds_provisional,1,0,463,0.95624,0.2953,926,295,295,0,0,11.424,45.09,14.918,0.0452,37760,119.5724,244.6091,279.0995,10,20,1024,0.0,1.0

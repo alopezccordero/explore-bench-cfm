@@ -1,0 +1,6 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+online,room_with_corner,2,41,cfm_x5_linear.pt,1114.0,simulated_seconds_provisional,1,0,1114,0.95081,0.7896,2228,365,365,0,0,11.901,71.035,21.468,0.0833,46848,207.7396,421.9786,513.8433,10,20,1024,0.0,1.0
+online,room_with_corner,2,42,cfm_x5_linear.pt,590.0,simulated_seconds_provisional,1,0,590,0.95003,0.1798,1180,251,251,0,0,11.462,46.543,16.87,0.0833,32001,133.711,272.5572,311.8968,10,20,1024,0.0,1.0
+online,room_with_corner,2,43,cfm_x5_linear.pt,765.0,simulated_seconds_provisional,1,0,765,0.95181,0.0866,1530,237,237,0,0,9.835,59.807,17.75,0.0833,30336,110.2815,223.9724,291.7882,10,20,1024,0.0,1.0
+online,room_with_corner,2,44,cfm_x5_linear.pt,836.0,simulated_seconds_provisional,1,0,836,0.95634,0.5598,1672,371,371,0,0,10.418,37.029,20.488,0.0833,47488,166.378,340.1514,406.427,10,20,1024,0.0,1.0
+online,room_with_corner,2,45,cfm_x5_linear.pt,874.0,simulated_seconds_provisional,1,0,874,0.95058,0.5106,1748,319,319,0,0,12.0,44.179,17.847,0.0267,40832,146.9895,299.7511,376.4514,10,20,1024,0.0,1.0

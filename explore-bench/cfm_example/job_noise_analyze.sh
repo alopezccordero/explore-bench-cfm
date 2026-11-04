@@ -3,7 +3,7 @@
 # sbatch --dependency=afterok:$INDEPENDENT:$STATIC:$ONLINE job_noise_analyze.sh "$INDEPENDENT" "$STATIC" "$ONLINE"
 #SBATCH --job-name=CFM-noise-analysis
 #SBATCH --partition=kimq,gpua30q,gpul40q
-#SBATCH --time=00:30:00
+#SBATCH --time=12:00:00
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=4G
 #SBATCH --output=noise_analysis_%j.out

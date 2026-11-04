@@ -1,0 +1,11 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+static,corridor,2,41,cfm_x5_linear.pt,177.0,simulated_seconds_provisional,1,0,177,0.95007,0.0,354,168,1,0,1,1.0,67.468,9.126,0.0,168,0.1199,43.7628,56.3821,10,20,1024,0.0,1.0
+static,corridor,2,42,cfm_x5_linear.pt,600.0,simulated_seconds_provisional,1,0,600,0.95035,0.6876,1200,367,1,0,2,2.0,124.53,19.277,0.001,46976,0.1846,151.8011,201.7673,10,20,1024,0.0,1.0
+static,corridor,2,43,cfm_x5_linear.pt,493.0,simulated_seconds_provisional,1,0,493,0.95088,0.7578,986,288,1,0,2,2.0,133.784,14.802,0.0,36864,0.126,123.6554,161.7109,10,20,1024,0.0,1.0
+static,corridor,2,44,cfm_x5_linear.pt,269.0,simulated_seconds_provisional,1,0,269,0.95007,0.0944,538,204,1,0,6,6.0,87.049,5.729,0.0016,26112,0.2378,89.7394,110.5927,10,20,1024,0.0,1.0
+static,corridor,2,45,cfm_x5_linear.pt,359.0,simulated_seconds_provisional,1,0,359,0.95119,0.1928,718,252,1,0,6,6.0,92.229,15.001,0.0033,32256,0.164,105.5907,133.6688,10,20,1024,0.0,1.0
+static,corridor,2,46,cfm_x5_linear.pt,338.0,simulated_seconds_provisional,1,0,338,0.95035,0.207,676,249,1,0,2,2.0,91.724,11.899,0.001,31872,0.1374,106.0822,130.6138,10,20,1024,0.0,1.0
+static,corridor,2,47,cfm_x5_linear.pt,414.0,simulated_seconds_provisional,1,0,414,0.95224,0.4667,828,210,1,0,1,1.0,96.468,18.548,0.0,210,0.1457,92.1307,124.3458,10,20,1024,0.0,1.0
+static,corridor,2,48,cfm_x5_linear.pt,335.0,simulated_seconds_provisional,1,0,335,0.95158,0.0447,670,212,1,0,3,3.0,72.987,12.458,0.0026,27136,0.1397,83.8697,111.9445,10,20,1024,0.0,1.0
+static,corridor,2,49,cfm_x5_linear.pt,188.0,simulated_seconds_provisional,1,0,188,0.95165,0.0,376,178,1,0,2,2.0,74.28,10.399,0.0,22784,0.1245,45.558,59.1835,10,20,1024,0.0,1.0
+static,corridor,2,50,cfm_x5_linear.pt,231.0,simulated_seconds_provisional,1,0,231,0.95091,0.0,462,187,1,0,6,6.0,63.11,5.783,0.0042,23936,0.126,50.3034,68.045,10,20,1024,0.0,1.0

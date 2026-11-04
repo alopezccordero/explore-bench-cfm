@@ -1,0 +1,11 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+static,room_with_corner,2,41,cfm_x5_linear.pt,1215.0,simulated_seconds_provisional,1,0,1215,0.95068,0.9057,2430,363,1,0,9,9.0,108.14,20.657,0.0031,46464,0.1272,216.4047,322.6073,10,20,1024,0.0,1.0
+static,room_with_corner,2,42,cfm_x5_linear.pt,648.0,simulated_seconds_provisional,1,0,648,0.95237,0.2944,1296,263,1,0,1,1.0,111.851,23.09,0.0,263,0.1185,141.1995,195.9402,10,20,1024,0.0,1.0
+static,room_with_corner,2,43,cfm_x5_linear.pt,817.0,simulated_seconds_provisional,1,0,817,0.95,0.3959,1634,264,1,0,9,9.0,105.388,20.918,0.0041,33792,0.1314,142.35,212.9499,10,20,1024,0.0,1.0
+static,room_with_corner,2,44,cfm_x5_linear.pt,1136.0,simulated_seconds_provisional,1,0,1136,0.95133,0.8024,2272,406,1,0,6,6.0,96.258,21.113,0.0033,51968,0.084,204.9356,292.6543,10,20,1024,0.0,1.0
+static,room_with_corner,2,45,cfm_x5_linear.pt,757.0,simulated_seconds_provisional,1,0,757,0.95023,0.2066,1514,300,1,0,12,12.0,92.829,15.622,0.0026,38400,0.1495,152.893,229.5756,10,20,1024,0.0,1.0
+static,room_with_corner,2,46,cfm_x5_linear.pt,715.0,simulated_seconds_provisional,1,0,715,0.9502,0.2712,1430,273,1,0,12,12.0,89.237,19.157,0.0052,34944,0.1488,150.191,209.4521,10,20,1024,0.0,1.0
+static,room_with_corner,2,47,cfm_x5_linear.pt,1048.0,simulated_seconds_provisional,1,0,1048,0.95131,0.6362,2096,344,1,0,4,4.0,85.077,22.996,0.002,44032,0.0978,190.9339,274.5309,10,20,1024,0.0,1.0
+static,room_with_corner,2,48,cfm_x5_linear.pt,773.0,simulated_seconds_provisional,1,0,773,0.95055,0.1895,1546,294,1,0,9,9.0,94.581,17.648,0.0027,37632,0.126,138.9562,218.3137,10,20,1024,0.0,1.0
+static,room_with_corner,2,49,cfm_x5_linear.pt,765.0,simulated_seconds_provisional,1,0,765,0.95008,0.0715,1530,263,1,0,8,8.0,75.541,19.398,0.0029,33664,0.1265,118.9445,194.2062,10,20,1024,0.0,1.0
+static,room_with_corner,2,50,cfm_x5_linear.pt,2000.0,simulated_seconds_provisional,0,1,2000,0.86941,0.368,4000,371,1,0,2,2.0,85.232,18.204,0.002,47488,0.2224,201.0448,426.1627,10,20,1024,0.0,1.0
