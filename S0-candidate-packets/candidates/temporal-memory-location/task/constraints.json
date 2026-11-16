@@ -1,0 +1,24 @@
+{
+  "compute": "ASSUMED envelope, hardware not verified: one ordinary CPU workstation, <=8 CPU-hours total pilot/evaluation, <=8 GB RAM, no GPU training, no HPC, purchases, or provider changes. Per decision initial planned deadline 100 ms on the eventual recorded CPU; identical for all policies. Construction and implementation require later Gate C authorization.",
+  "data": "Minimum uses newly authored synthetic 16x16 corridor/doorway grid families and finite discrete priors; no external dataset download or pretrained weights required. Generator, split manifests and random tapes must be versioned after authorization. Author must choose a release license for new code/data; no present license is invented. SceneSense code/data are not presumed runnable or licensed as a benchmark from paper availability.",
+  "time_budget": "ASSUMED project window 2026-11-23 through 2027-01-15, 6-8 student hours/week, subject to confirmation. Evaluator construction planned 2026-11-23 through 2026-12-04 only after relevant approvals; freeze by 2026-12-07; planned main evaluation 2026-12-08 through 2026-12-18; synthesis and limitations through 2027-01-15. Holiday availability is unverified. If approvals slip, replan explicitly rather than claim completed work.",
+  "approvals_needed": [
+    "Alejandro selects question and confirms window/resources/practical tolerance",
+    "Dr. Enriquez decides Gate A",
+    "Owner/advisor accepts a synthetic mapping mechanism study without essential flow matching",
+    "Subsequent workflow gates including Gate C before implementation/experiments",
+    "Owner confirms new-artifact licensing and eventual release scope"
+  ],
+  "out_of_scope": [
+    "Old elementary evidence-reuse/calibration-primary framing",
+    "Claims of novelty or complete prior-art coverage",
+    "Claims of reproducing deployed SceneSense settings or failures",
+    "Real robots or real-world safety guarantees",
+    "Training a flow-matching model in minimum study",
+    "External benchmark or weight availability assumptions",
+    "HPC/SLURM, cloud spending, configuration/provider changes",
+    "Reference-repository edits, commits, pushes, or state transitions"
+  ],
+  "status": "Conditional research draft only; no evaluator, experiment, or pilot executed. No confirmed power or effect size.",
+  "scope_correction": "2D grid algorithms only. Observation/reveal restrictions are optional declared simulator rules, not physical sensing constraints. Actual simulator API/observability not yet verified; no hardware sensing or 3D requirement."
+}

@@ -1,0 +1,11 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+static,room,2,41,cfm_x5_linear.pt,388.0,simulated_seconds_provisional,1,0,388,0.95039,0.1418,776,255,1,0,9,9.0,84.702,14.641,0.0076,32640,0.1282,116.4408,145.7639,10,20,1024,0.0,1.0
+static,room,2,42,cfm_x5_linear.pt,377.0,simulated_seconds_provisional,1,0,377,0.95084,0.2696,754,268,1,0,6,6.0,113.827,14.247,0.0046,34304,0.2286,129.1965,157.6328,10,20,1024,0.0,1.0
+static,room,2,43,cfm_x5_linear.pt,530.0,simulated_seconds_provisional,1,0,530,0.95006,0.6127,1060,313,1,0,9,9.0,104.325,23.287,0.0031,40064,0.1263,142.8245,181.7628,10,20,1024,0.0,1.0
+static,room,2,44,cfm_x5_linear.pt,284.0,simulated_seconds_provisional,1,0,284,0.95046,0.1311,568,202,1,0,4,4.0,95.935,12.795,0.0,25856,0.126,88.3444,109.1512,10,20,1024,0.0,1.0
+static,room,2,45,cfm_x5_linear.pt,418.0,simulated_seconds_provisional,1,0,418,0.95149,0.384,836,257,1,0,6,6.0,94.505,16.079,0.0036,32896,0.1535,111.1414,143.7639,10,20,1024,0.0,1.0
+static,room,2,46,cfm_x5_linear.pt,343.0,simulated_seconds_provisional,1,0,343,0.95114,0.0781,686,223,1,0,4,4.0,82.235,13.694,0.0049,28544,0.1268,112.2925,138.2117,10,20,1024,0.0,1.0
+static,room,2,47,cfm_x5_linear.pt,317.0,simulated_seconds_provisional,1,0,317,0.95069,0.1099,634,217,1,0,6,6.0,84.238,11.802,0.0026,27776,0.1266,110.2871,134.1249,10,20,1024,0.0,1.0
+static,room,2,48,cfm_x5_linear.pt,338.0,simulated_seconds_provisional,1,0,338,0.96348,0.241,676,252,1,0,9,9.0,95.164,15.367,0.0022,32256,0.1291,105.4205,130.4536,10,20,1024,0.0,1.0
+static,room,2,49,cfm_x5_linear.pt,456.0,simulated_seconds_provisional,1,0,456,0.95011,0.201,912,273,1,0,3,3.0,89.493,17.689,0.0036,34944,0.1171,105.6352,139.7218,10,20,1024,0.0,1.0
+static,room,2,50,cfm_x5_linear.pt,343.0,simulated_seconds_provisional,1,0,343,0.9524,0.3777,686,254,1,0,6,6.0,114.436,14.47,0.0042,32512,0.2484,109.2737,134.7147,10,20,1024,0.0,1.0

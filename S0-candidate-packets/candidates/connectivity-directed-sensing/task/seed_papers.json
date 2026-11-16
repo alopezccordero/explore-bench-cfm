@@ -1,0 +1,79 @@
+{
+  "papers": [
+    {
+      "title": "MapEx: Indoor Structure Exploration with Probabilistic Information Gain from Global Map Predictions",
+      "authors": [
+        "Cherie Ho",
+        "Seungchan Kim",
+        "Brady Moon",
+        "Aditya Parandekar",
+        "Narek Harutyunyan",
+        "Chen Wang",
+        "Katia Sycara",
+        "Graeme Best",
+        "Sebastian Scherer"
+      ],
+      "year": 2024,
+      "arxiv_id": "2409.15590",
+      "doi": "10.1109/ICRA55743.2025.11128862",
+      "semantic_scholar_id": "94981450065222b17cd69025b26975c0fa53637b",
+      "why_seed": "Nearest visibility-times-uncertainty exploration baseline; already evaluates topological A* utility.",
+      "full_text_note": "sources/robotic-mapping/mapex-original/note.md",
+      "resolution_status": "Official metadata/full-text note verified; OpenAlex exact-title match and Semantic Scholar batch identifier resolved 2026-11-16. This verifies metadata lookup, NOT full S1 graph traversal.",
+      "full_text_version_inspected": "2409.15590v3"
+    },
+    {
+      "title": "Flow Matching for Generative Modeling",
+      "authors": [
+        "Yaron Lipman",
+        "Ricky T. Q. Chen",
+        "Heli Ben-Hamu",
+        "Maximilian Nickel",
+        "Matt Le"
+      ],
+      "year": 2022,
+      "arxiv_id": "2210.02747",
+      "doi": "",
+      "semantic_scholar_id": "af68f10ab5078bfc519caae377c90ee6d9c504e9",
+      "why_seed": "Defines the ODE vector-field regression instrument; does not guarantee conditional map calibration.",
+      "full_text_note": "sources/robotic-mapping/flowmatching/note.md",
+      "resolution_status": "Official metadata/full-text note verified; OpenAlex exact-title match and Semantic Scholar batch identifier resolved 2026-11-16. This verifies metadata lookup, NOT full S1 graph traversal.",
+      "full_text_version_inspected": "2210.02747v2"
+    },
+    {
+      "title": "Active sensing for motion planning in uncertain environments via mutual information policies",
+      "authors": [
+        "Ryan A. MacDonald",
+        "Stephen L. Smith"
+      ],
+      "year": 2019,
+      "year_note": "2019 journal issue; 2018 online. Crossref distinguishes both, OpenAlex uses 2018.",
+      "venue": "The International Journal of Robotics Research 38(2\u20133):146\u2013161",
+      "doi": "10.1177/0278364918772024",
+      "arxiv_id": "",
+      "semantic_scholar_id": "8d25fd25b353e29f6752d4c4ddb4fd0f22016934",
+      "why_seed": "Nearest physical active-sensing world-MI/cost policy, reachable observation and exact decision-value comparators; prevents inventing task-aware sensing gap.",
+      "full_text_note": "sources/synthesis-0322/macdonald/note.md",
+      "full_text_version_inspected": "Author-linked editorial manuscript 2017IJRR-Active.pdf, not publisher pagination",
+      "resolution_status": "Crossref direct DOI, OpenAlex direct DOI, S2 batch title/authors matched 2026-11-16; not S1 traversal."
+    },
+    {
+      "title": "Bayesian Active Edge Evaluation on Expensive Graphs",
+      "authors": [
+        "Sanjiban Choudhury",
+        "Siddhartha Srinivasa",
+        "Sebastian Scherer"
+      ],
+      "year": 2017,
+      "year_note": "Inspected arXiv v1 (2017); later IJCAI 2018 DOI found in OpenAlex.",
+      "venue": "arXiv preprint; later IJCAI 2018",
+      "doi": "10.24963/ijcai.2018/679",
+      "arxiv_id": "1711.07329",
+      "semantic_scholar_id": "6c7c37677b0b971562b7fbdefb59c8fa0288d439",
+      "why_seed": "Task/path decision-region identification versus world reconstruction; same-world matrix marginals, structured/null regimes and finite-world fallback already studied.",
+      "full_text_note": "sources/synthesis-0322/bisect/note.md",
+      "full_text_version_inspected": "1711.07329v1",
+      "resolution_status": "Official arXiv version/title/authors and OpenAlex direct lookup, S2 batch title/authors matched 2026-11-16; not S1 traversal."
+    }
+  ]
+}

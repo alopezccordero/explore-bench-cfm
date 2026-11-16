@@ -1,0 +1,11 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+independent,loop_with_corridor,2,41,cfm_x5_linear.pt,461.0,simulated_seconds_provisional,1,0,461,0.95019,0.0,922,345,0,345,0,0,,28.706,,0,0.0,173.3629,208.1814,10,20,1024,0.0,1.0
+independent,loop_with_corridor,2,42,cfm_x5_linear.pt,635.0,simulated_seconds_provisional,1,0,635,0.95016,0.5838,1270,396,0,396,0,0,,27.246,,0,0.0,204.43,251.1417,10,20,1024,0.0,1.0
+independent,loop_with_corridor,2,43,cfm_x5_linear.pt,708.0,simulated_seconds_provisional,1,0,708,0.95131,0.1872,1416,406,0,406,0,0,,29.125,,0,0.0,184.6783,234.4546,10,20,1024,0.0,1.0
+independent,loop_with_corridor,2,44,cfm_x5_linear.pt,506.0,simulated_seconds_provisional,1,0,506,0.95078,0.0,1012,327,0,327,0,0,,23.051,,0,0.0,123.0726,160.9688,10,20,1024,0.0,1.0
+independent,loop_with_corridor,2,45,cfm_x5_linear.pt,654.0,simulated_seconds_provisional,1,0,654,0.95081,0.4629,1308,393,0,393,0,0,,29.066,,0,0.0,254.1288,306.6129,10,20,1024,0.0,1.0
+independent,loop_with_corridor,2,46,cfm_x5_linear.pt,681.0,simulated_seconds_provisional,1,0,681,0.95022,0.5454,1362,334,0,334,0,0,,29.232,,0,0.0,221.8598,282.4657,10,20,1024,0.0,1.0
+independent,loop_with_corridor,2,47,cfm_x5_linear.pt,460.0,simulated_seconds_provisional,1,0,460,0.95112,0.0369,920,273,0,273,0,0,,29.336,,0,0.0,127.118,160.8888,10,20,1024,0.0,1.0
+independent,loop_with_corridor,2,48,cfm_x5_linear.pt,484.0,simulated_seconds_provisional,1,0,484,0.95025,0.0,968,336,0,336,0,0,,29.538,,0,0.0,202.2889,238.3953,10,20,1024,0.0,1.0
+independent,loop_with_corridor,2,49,cfm_x5_linear.pt,658.0,simulated_seconds_provisional,1,0,658,0.95028,0.4738,1316,368,0,368,0,0,,32.434,,0,0.0,181.7714,233.6974,10,20,1024,0.0,1.0
+independent,loop_with_corridor,2,50,cfm_x5_linear.pt,687.0,simulated_seconds_provisional,1,0,687,0.95616,0.6253,1374,425,0,425,0,0,,30.076,,0,0.0,260.4538,313.7743,10,20,1024,0.0,1.0

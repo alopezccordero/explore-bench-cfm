@@ -1,0 +1,17 @@
+{
+  "name": "mean_capped_navigation_cost",
+  "direction": "minimize",
+  "unit": "grid-distance-equivalent cost per episode",
+  "tolerance_policy": "Before final evaluation, use a feasibility pilot only to choose sample count and an absolute smallest meaningful difference with advisor; freeze both. Use paired map-cluster confidence intervals and Monte Carlo error decomposition. No relative tolerance near zero; non-significance is not equivalence. No effect size or power asserted yet.",
+  "operational_definition": "For every common-P episode let L be sensing travel + executed navigation + blocked-path recovery in grid-distance-equivalent units. Freeze a geometry-derived cap H per family before held-out effects. Score L if goal reached with L < H; otherwise H, including equality, disconnected truth, timeout, abstention, invalid/no output and no-route. Use identical H for paired methods. Average episodes within independent map-family instances, then equal-weight cluster means. Primary contrast = joint minus shuffled; negative favors joint. Do not evaluate each policy under its own assumed Q world distribution.",
+  "aggregation": "Paired contrasts on identical held-out map clusters; report stratified regimes and a prespecified pooled estimand. Resample independent map clusters, not individual correlated doors/queries.",
+  "failure_treatment": "Invalid outputs, timeouts, no-route and missing predictions retained in denominator and separately counted. For probability metrics, predeclare deterministic fallback to prior (or 0.5 if appropriate) AND report failure rate; do not hide method failures in a good fallback score. For navigation use fixed finite failure charge. Infrastructure failure distinguished and rerun by a written rule, never outcome-based exclusion.",
+  "secondary_metrics": [
+    "goal success / unsafe accepted rate",
+    "connectivity-event Brier score against held-out truth",
+    "correction latency / decision stability where applicable",
+    "measured end-to-end inference latency",
+    "IoU only as diagnostic, not a replacement primary"
+  ],
+  "_note": "Provisional at S0; if selected and frozen, changing primary is a return to S0."
+}

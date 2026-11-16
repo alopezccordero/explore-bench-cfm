@@ -1,0 +1,11 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+independent,room,2,41,cfm_x5_linear.pt,405.0,simulated_seconds_provisional,1,0,405,0.95074,0.345,810,261,0,261,0,0,,14.178,,0,0.0,115.946,145.9773,10,20,1024,0.0,1.0
+independent,room,2,42,cfm_x5_linear.pt,362.0,simulated_seconds_provisional,1,0,362,0.96817,0.0841,724,271,0,271,0,0,,13.287,,0,0.0,123.0446,148.5362,10,20,1024,0.0,1.0
+independent,room,2,43,cfm_x5_linear.pt,339.0,simulated_seconds_provisional,1,0,339,0.95029,0.1929,678,259,0,259,0,0,,13.302,,0,0.0,117.66,141.7532,10,20,1024,0.0,1.0
+independent,room,2,44,cfm_x5_linear.pt,448.0,simulated_seconds_provisional,1,0,448,0.95119,0.4225,896,300,0,300,0,0,,19.524,,0,0.0,128.8006,160.3016,10,20,1024,0.0,1.0
+independent,room,2,45,cfm_x5_linear.pt,443.0,simulated_seconds_provisional,1,0,443,0.95041,0.3489,886,258,0,258,0,0,,25.427,,0,0.0,105.0841,143.7026,10,20,1024,0.0,1.0
+independent,room,2,46,cfm_x5_linear.pt,296.0,simulated_seconds_provisional,1,0,296,0.95132,0.0363,592,194,0,194,0,0,,10.084,,0,0.0,98.0564,118.9545,10,20,1024,0.0,1.0
+independent,room,2,47,cfm_x5_linear.pt,472.0,simulated_seconds_provisional,1,0,472,0.95079,0.4934,944,287,0,287,0,0,,20.378,,0,0.0,126.2344,161.2499,10,20,1024,0.0,1.0
+independent,room,2,48,cfm_x5_linear.pt,336.0,simulated_seconds_provisional,1,0,336,0.95077,0.249,672,230,0,230,0,0,,15.346,,0,0.0,92.9855,116.3864,10,20,1024,0.0,1.0
+independent,room,2,49,cfm_x5_linear.pt,424.0,simulated_seconds_provisional,1,0,424,0.95072,0.0579,848,249,0,249,0,0,,18.786,,0,0.0,113.4712,145.1603,10,20,1024,0.0,1.0
+independent,room,2,50,cfm_x5_linear.pt,370.0,simulated_seconds_provisional,1,0,370,0.95087,0.2561,740,300,0,300,0,0,,11.427,,0,0.0,129.6337,156.8378,10,20,1024,0.0,1.0

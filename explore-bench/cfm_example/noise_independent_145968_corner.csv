@@ -1,0 +1,11 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+independent,corner,2,41,cfm_x5_linear.pt,684.0,simulated_seconds_provisional,1,0,684,0.95019,0.4147,1368,238,0,238,0,0,,27.17,,0,0.0,149.6379,203.8733,10,20,1024,0.0,1.0
+independent,corner,2,42,cfm_x5_linear.pt,970.0,simulated_seconds_provisional,1,0,970,0.95012,0.8557,1940,354,0,354,0,0,,26.079,,0,0.0,202.2023,275.2546,10,20,1024,0.0,1.0
+independent,corner,2,43,cfm_x5_linear.pt,867.0,simulated_seconds_provisional,1,0,867,0.95194,0.3342,1734,279,0,279,0,0,,21.904,,0,0.0,127.839,196.1098,10,20,1024,0.0,1.0
+independent,corner,2,44,cfm_x5_linear.pt,642.0,simulated_seconds_provisional,1,0,642,0.95012,0.1225,1284,229,0,229,0,0,,18.335,,0,0.0,124.0757,170.9953,10,20,1024,0.0,1.0
+independent,corner,2,45,cfm_x5_linear.pt,551.0,simulated_seconds_provisional,1,0,551,0.95167,0.0485,1102,281,0,281,0,0,,16.644,,0,0.0,170.5642,211.4638,10,20,1024,0.0,1.0
+independent,corner,2,46,cfm_x5_linear.pt,368.0,simulated_seconds_provisional,1,0,368,0.95062,0.1298,736,194,0,194,0,0,,15.374,,0,0.0,110.7246,135.1863,10,20,1024,0.0,1.0
+independent,corner,2,47,cfm_x5_linear.pt,803.0,simulated_seconds_provisional,1,0,803,0.95267,0.5496,1606,270,0,270,0,0,,23.441,,0,0.0,148.3255,210.3359,10,20,1024,0.0,1.0
+independent,corner,2,48,cfm_x5_linear.pt,528.0,simulated_seconds_provisional,1,0,528,0.95055,0.3287,1056,201,0,201,0,0,,18.634,,0,0.0,105.5617,146.7687,10,20,1024,0.0,1.0
+independent,corner,2,49,cfm_x5_linear.pt,652.0,simulated_seconds_provisional,1,0,652,0.95115,0.4766,1304,251,0,251,0,0,,18.316,,0,0.0,109.9856,153.8113,10,20,1024,0.0,1.0
+independent,corner,2,50,cfm_x5_linear.pt,792.0,simulated_seconds_provisional,1,0,792,0.95296,0.5792,1584,278,0,278,0,0,,19.701,,0,0.0,120.3433,185.5018,10,20,1024,0.0,1.0

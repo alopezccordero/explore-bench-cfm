@@ -1,0 +1,11 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+static,loop_with_corridor,2,41,cfm_x5_linear.pt,438.0,simulated_seconds_provisional,1,0,438,0.95069,0.0,876,348,1,0,2,2.0,101.891,29.348,0.0,44544,0.1215,181.0113,214.5383,10,20,1024,0.0,1.0
+static,loop_with_corridor,2,42,cfm_x5_linear.pt,631.0,simulated_seconds_provisional,1,0,631,0.9525,0.5635,1262,372,1,0,6,6.0,143.23,28.864,0.0023,47616,0.1246,204.8228,255.7895,10,20,1024,0.0,1.0
+static,loop_with_corridor,2,43,cfm_x5_linear.pt,520.0,simulated_seconds_provisional,1,0,520,0.95037,0.2804,1040,325,1,0,6,6.0,102.942,22.621,0.0013,41600,0.1232,148.308,189.989,10,20,1024,0.0,1.0
+static,loop_with_corridor,2,44,cfm_x5_linear.pt,328.0,simulated_seconds_provisional,1,0,328,0.95059,0.0,656,280,1,0,3,3.0,118.875,17.858,0.0036,35840,0.1227,90.8593,114.1208,10,20,1024,0.0,1.0
+static,loop_with_corridor,2,45,cfm_x5_linear.pt,543.0,simulated_seconds_provisional,1,0,543,0.956,0.1345,1086,340,1,0,2,2.0,133.811,26.648,0.002,43520,0.1333,201.684,247.554,10,20,1024,0.0,1.0
+static,loop_with_corridor,2,46,cfm_x5_linear.pt,674.0,simulated_seconds_provisional,1,0,674,0.95322,0.4343,1348,336,1,0,6,6.0,151.348,27.754,0.0016,43008,0.1891,214.8297,277.7362,10,20,1024,0.0,1.0
+static,loop_with_corridor,2,47,cfm_x5_linear.pt,441.0,simulated_seconds_provisional,1,0,441,0.95037,0.0016,882,392,1,0,3,3.0,125.944,23.214,0.0036,50176,0.1241,154.4579,184.2163,10,20,1024,0.0,1.0
+static,loop_with_corridor,2,48,cfm_x5_linear.pt,582.0,simulated_seconds_provisional,1,0,582,0.95037,0.3762,1164,371,1,0,6,6.0,137.697,31.189,0.0023,47488,0.1286,221.5232,266.2508,10,20,1024,0.0,1.0
+static,loop_with_corridor,2,49,cfm_x5_linear.pt,578.0,simulated_seconds_provisional,1,0,578,0.95028,0.4547,1156,350,1,0,4,4.0,124.492,30.416,0.0059,44800,0.1257,173.5826,220.706,10,20,1024,0.0,1.0
+static,loop_with_corridor,2,50,cfm_x5_linear.pt,554.0,simulated_seconds_provisional,1,0,554,0.95094,0.4985,1108,417,1,0,2,2.0,137.902,24.37,0.001,53376,0.13,242.1804,285.0341,10,20,1024,0.0,1.0

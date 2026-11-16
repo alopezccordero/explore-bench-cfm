@@ -1,0 +1,11 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+independent,loop,2,41,cfm_x5_linear.pt,256.0,simulated_seconds_provisional,1,0,256,0.95098,0.0404,512,237,0,237,0,0,,16.485,,0,0.0,76.7497,93.4523,10,20,1024,0.0,1.0
+independent,loop,2,42,cfm_x5_linear.pt,268.0,simulated_seconds_provisional,1,0,268,0.95118,0.0,536,205,0,205,0,0,,33.043,,0,0.0,77.7251,95.7674,10,20,1024,0.0,1.0
+independent,loop,2,43,cfm_x5_linear.pt,244.0,simulated_seconds_provisional,1,0,244,0.95123,0.0,488,203,0,203,0,0,,14.582,,0,0.0,111.9572,128.1678,10,20,1024,0.0,1.0
+independent,loop,2,44,cfm_x5_linear.pt,494.0,simulated_seconds_provisional,1,0,494,0.95,0.5434,988,307,0,307,0,0,,24.882,,0,0.0,128.0114,172.4222,10,20,1024,0.0,1.0
+independent,loop,2,45,cfm_x5_linear.pt,399.0,simulated_seconds_provisional,1,0,399,0.95133,0.6245,798,341,0,341,0,0,,39.78,,0,0.0,177.9688,206.4227,10,20,1024,0.0,1.0
+independent,loop,2,46,cfm_x5_linear.pt,448.0,simulated_seconds_provisional,1,0,448,0.9526,0.0344,896,249,0,249,0,0,,24.532,,0,0.0,94.2131,133.7727,10,20,1024,0.0,1.0
+independent,loop,2,47,cfm_x5_linear.pt,310.0,simulated_seconds_provisional,1,0,310,0.95245,0.055,620,285,0,285,0,0,,21.371,,0,0.0,146.5894,168.0186,10,20,1024,0.0,1.0
+independent,loop,2,48,cfm_x5_linear.pt,252.0,simulated_seconds_provisional,1,0,252,0.9528,0.0,504,141,0,141,0,0,,16.435,,0,0.0,61.4088,77.5992,10,20,1024,0.0,1.0
+independent,loop,2,49,cfm_x5_linear.pt,257.0,simulated_seconds_provisional,1,0,257,0.9528,0.0506,514,221,0,221,0,0,,13.76,,0,0.0,120.6734,137.5258,10,20,1024,0.0,1.0
+independent,loop,2,50,cfm_x5_linear.pt,250.0,simulated_seconds_provisional,1,0,250,0.95329,0.0478,500,231,0,231,0,0,,15.682,,0,0.0,133.1134,149.434,10,20,1024,0.0,1.0

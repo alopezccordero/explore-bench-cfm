@@ -1,0 +1,527 @@
+{
+  "timestamp": "2026-11-16T04:47:43.967014-06:00",
+  "method": "Original unchanged structural S0 guards only, on workspace-owned copies; NOT evaluator/test/training execution, attestation or approval.",
+  "candidates": {
+    "connectivity-directed-sensing": {
+      "guards": {
+        "files": {
+          "status": "pass",
+          "detail": "5 artifacts present",
+          "evidence": {}
+        },
+        "seeds_count": {
+          "status": "pass",
+          "detail": "4 items (expected 2-4)",
+          "evidence": {
+            "count": 4
+          }
+        },
+        "seeds_identifiers": {
+          "status": "pass",
+          "detail": "all 4 records complete",
+          "evidence": {}
+        },
+        "direction": {
+          "status": "pass",
+          "detail": "direction = minimize",
+          "evidence": {}
+        }
+      },
+      "original_guard_sha256": {
+        "guards.py": "7f8357b12088dd6d3cb9fa710dee422fa41da9e2e3f94671facc6ca452aec370",
+        "paperlib.py": "4d938961988c2d26a378dc0a7bd1d708e61d5f8449389c64f655b0989c5afb67"
+      },
+      "json_template_keys": "pass",
+      "seed_count": 4,
+      "fulltext_notes": [
+        {
+          "title": "MapEx: Indoor Structure Exploration with Probabilistic Information Gain from Global Map Predictions",
+          "note": "sources/robotic-mapping/mapex-original/note.md",
+          "exists": true
+        },
+        {
+          "title": "Flow Matching for Generative Modeling",
+          "note": "sources/robotic-mapping/flowmatching/note.md",
+          "exists": true
+        },
+        {
+          "title": "Active sensing for motion planning in uncertain environments via mutual information policies",
+          "note": "sources/synthesis-0322/macdonald/note.md",
+          "exists": true
+        },
+        {
+          "title": "Bayesian Active Edge Evaluation on Expensive Graphs",
+          "note": "sources/synthesis-0322/bisect/note.md",
+          "exists": true
+        }
+      ],
+      "all_notes_exist": true,
+      "evaluator": "dated conditional plan only; not run",
+      "gate_A": "pending advisor",
+      "dates": [
+        "2026-11-23",
+        "2027-01-17",
+        "2026-11-23",
+        "2026-12-07",
+        "2026-12-10",
+        "2026-12-14",
+        "2026-12-18"
+      ]
+    },
+    "deadline-verification-allocation": {
+      "guards": {
+        "files": {
+          "status": "pass",
+          "detail": "5 artifacts present",
+          "evidence": {}
+        },
+        "seeds_count": {
+          "status": "pass",
+          "detail": "3 items (expected 2-4)",
+          "evidence": {
+            "count": 3
+          }
+        },
+        "seeds_identifiers": {
+          "status": "pass",
+          "detail": "all 3 records complete",
+          "evidence": {}
+        },
+        "direction": {
+          "status": "pass",
+          "detail": "direction = maximize",
+          "evidence": {}
+        }
+      },
+      "original_guard_sha256": {
+        "guards.py": "7f8357b12088dd6d3cb9fa710dee422fa41da9e2e3f94671facc6ca452aec370",
+        "paperlib.py": "4d938961988c2d26a378dc0a7bd1d708e61d5f8449389c64f655b0989c5afb67"
+      },
+      "json_template_keys": "pass",
+      "seed_count": 3,
+      "fulltext_notes": [
+        {
+          "title": "FlowMP: Learning Motion Fields for Robot Planning with Conditional Flow Matching",
+          "note": "sources/constraints-compute-decisions/planning-agent/SOURCE-NOTES.md",
+          "exists": true
+        },
+        {
+          "title": "Flow Motion Policy: Manipulator Motion Planning with Flow Matching Models",
+          "note": "sources/constraints-compute-decisions/planning-agent/SOURCE-NOTES.md",
+          "exists": true
+        },
+        {
+          "title": "BridgeFlow: Fast and Robust SE(2)-Equivariant Motion Planning with Flow Matching",
+          "note": "sources/constraints-compute-decisions/planning-agent/SOURCE-NOTES.md",
+          "exists": true
+        }
+      ],
+      "all_notes_exist": true,
+      "evaluator": "dated conditional plan only; not run",
+      "gate_A": "pending advisor",
+      "dates": [
+        "2026-11-23",
+        "2027-01-17",
+        "2026-11-23",
+        "2026-12-07",
+        "2026-12-10",
+        "2026-12-14",
+        "2026-12-18"
+      ]
+    },
+    "grid-observation-policy-transfer": {
+      "guards": {
+        "files": {
+          "status": "pass",
+          "detail": "5 artifacts present",
+          "evidence": {}
+        },
+        "seeds_count": {
+          "status": "pass",
+          "detail": "4 items (expected 2-4)",
+          "evidence": {
+            "count": 4
+          }
+        },
+        "seeds_identifiers": {
+          "status": "pass",
+          "detail": "all 4 records complete",
+          "evidence": {}
+        },
+        "direction": {
+          "status": "pass",
+          "detail": "direction = maximize",
+          "evidence": {}
+        }
+      },
+      "original_guard_sha256": {
+        "guards.py": "7f8357b12088dd6d3cb9fa710dee422fa41da9e2e3f94671facc6ca452aec370",
+        "paperlib.py": "4d938961988c2d26a378dc0a7bd1d708e61d5f8449389c64f655b0989c5afb67"
+      },
+      "json_template_keys": "pass",
+      "seed_count": 4,
+      "fulltext_notes": [
+        {
+          "title": "CFMI: Flow Matching for Missing Data Imputation",
+          "note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2506.09258v1/note.md",
+          "exists": true
+        },
+        {
+          "title": "Observation-Aligned Mask Priors for Learning Physical Fields from Authentic Occlusions",
+          "note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2605.16818v2/note.md",
+          "exists": true
+        },
+        {
+          "title": "MissPath-FM: Flow Matching with Structured Priors for Partially Observed Time Series",
+          "note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2610.17715v1/note.md",
+          "exists": true
+        },
+        {
+          "title": "What Do Flow-Based Inverse Solvers Approximate? A Posterior-Transport View",
+          "note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2606.24516v2/note.md",
+          "exists": true
+        }
+      ],
+      "all_notes_exist": true,
+      "evaluator": "dated conditional plan only; not run",
+      "gate_A": "pending advisor",
+      "dates": [
+        "2026-11-23",
+        "2027-01-17",
+        "2026-11-23",
+        "2026-11-26",
+        "2026-12-01",
+        "2026-12-07",
+        "2026-12-08",
+        "2027-01-04",
+        "2026-11-16",
+        "2026-11-16"
+      ]
+    },
+    "joint-map-dependence": {
+      "guards": {
+        "files": {
+          "status": "pass",
+          "detail": "5 artifacts present",
+          "evidence": {}
+        },
+        "seeds_count": {
+          "status": "pass",
+          "detail": "4 items (expected 2-4)",
+          "evidence": {
+            "count": 4
+          }
+        },
+        "seeds_identifiers": {
+          "status": "pass",
+          "detail": "all 4 records complete",
+          "evidence": {}
+        },
+        "direction": {
+          "status": "pass",
+          "detail": "direction = minimize",
+          "evidence": {}
+        }
+      },
+      "original_guard_sha256": {
+        "guards.py": "7f8357b12088dd6d3cb9fa710dee422fa41da9e2e3f94671facc6ca452aec370",
+        "paperlib.py": "4d938961988c2d26a378dc0a7bd1d708e61d5f8449389c64f655b0989c5afb67"
+      },
+      "json_template_keys": "pass",
+      "seed_count": 4,
+      "fulltext_notes": [
+        {
+          "title": "LAMP: Learning a Motion Policy to Repeatedly Navigate in an Uncertain Environment",
+          "note": "sources/synthesis-0252/lamp/note.md",
+          "exists": true
+        },
+        {
+          "title": "Risk-averse traversal of graphs with stochastic and correlated edge costs for safe global planetary mobility",
+          "note": "sources/synthesis-0252/risk-correlated/note.md",
+          "exists": true
+        },
+        {
+          "title": "MapEx: Indoor Structure Exploration with Probabilistic Information Gain from Global Map Predictions",
+          "note": "sources/robotic-mapping/mapex-original/note.md",
+          "exists": true
+        },
+        {
+          "title": "Stochastic Path Planning in Correlated Obstacle Fields",
+          "note": "sources/synthesis-0440/scos/note.md",
+          "exists": true
+        }
+      ],
+      "all_notes_exist": true,
+      "evaluator": "dated conditional plan only; not run",
+      "gate_A": "pending advisor",
+      "dates": [
+        "2026-11-23",
+        "2027-01-17",
+        "2026-11-23",
+        "2026-12-07",
+        "2026-12-10",
+        "2026-12-14",
+        "2026-12-18",
+        "2026-11-16",
+        "2026-12-07"
+      ]
+    },
+    "map-conditioning-verifier-audit": {
+      "guards": {
+        "files": {
+          "status": "pass",
+          "detail": "5 artifacts present",
+          "evidence": {}
+        },
+        "seeds_count": {
+          "status": "pass",
+          "detail": "3 items (expected 2-4)",
+          "evidence": {
+            "count": 3
+          }
+        },
+        "seeds_identifiers": {
+          "status": "pass",
+          "detail": "all 3 records complete",
+          "evidence": {}
+        },
+        "direction": {
+          "status": "pass",
+          "detail": "direction = maximize",
+          "evidence": {}
+        }
+      },
+      "original_guard_sha256": {
+        "guards.py": "7f8357b12088dd6d3cb9fa710dee422fa41da9e2e3f94671facc6ca452aec370",
+        "paperlib.py": "4d938961988c2d26a378dc0a7bd1d708e61d5f8449389c64f655b0989c5afb67"
+      },
+      "json_template_keys": "pass",
+      "seed_count": 3,
+      "fulltext_notes": [
+        {
+          "title": "BridgeFlow: Fast and Robust SE(2)-Equivariant Motion Planning with Flow Matching",
+          "note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/evidence_notes.md",
+          "exists": true
+        },
+        {
+          "title": "Flow Motion Policy: Manipulator Motion Planning with Flow Matching Models",
+          "note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/evidence_notes.md",
+          "exists": true
+        },
+        {
+          "title": "Auditing Grasp Feasibility Predictors with Planner-Verified Counterfactuals",
+          "note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/evidence_notes.md",
+          "exists": true
+        }
+      ],
+      "all_notes_exist": true,
+      "evaluator": "dated conditional plan only; not run",
+      "gate_A": "pending advisor",
+      "dates": [
+        "2026-11-23",
+        "2027-01-03",
+        "2026-11-23",
+        "2026-11-27",
+        "2026-11-30",
+        "2026-12-04",
+        "2026-12-07",
+        "2026-12-14",
+        "2026-12-21",
+        "2027-01-03",
+        "2026-11-16"
+      ]
+    },
+    "noise-aware-map-conditioning": {
+      "guards": {
+        "files": {
+          "status": "pass",
+          "detail": "5 artifacts present",
+          "evidence": {}
+        },
+        "seeds_count": {
+          "status": "pass",
+          "detail": "3 items (expected 2-4)",
+          "evidence": {
+            "count": 3
+          }
+        },
+        "seeds_identifiers": {
+          "status": "pass",
+          "detail": "all 3 records complete",
+          "evidence": {}
+        },
+        "direction": {
+          "status": "pass",
+          "detail": "direction = minimize",
+          "evidence": {}
+        }
+      },
+      "original_guard_sha256": {
+        "guards.py": "7f8357b12088dd6d3cb9fa710dee422fa41da9e2e3f94671facc6ca452aec370",
+        "paperlib.py": "4d938961988c2d26a378dc0a7bd1d708e61d5f8449389c64f655b0989c5afb67"
+      },
+      "json_template_keys": "pass",
+      "seed_count": 3,
+      "fulltext_notes": [
+        {
+          "title": "Robust Robotic Exploration and Mapping Using Generative Occupancy Map Synthesis",
+          "note": "sources/synthesis-001/note.md",
+          "exists": true
+        },
+        {
+          "title": "Flow Matching for Generative Modeling",
+          "note": "sources/robotic-mapping/flowmatching/note.md",
+          "exists": true
+        },
+        {
+          "title": "MapEx: Indoor Structure Exploration with Probabilistic Information Gain from Global Map Predictions",
+          "note": "sources/robotic-mapping/mapex-original/note.md",
+          "exists": true
+        }
+      ],
+      "all_notes_exist": true,
+      "evaluator": "dated conditional plan only; not run",
+      "gate_A": "pending advisor",
+      "dates": [
+        "2026-11-23",
+        "2027-01-17",
+        "2026-11-23",
+        "2026-12-07",
+        "2026-12-10",
+        "2026-12-14",
+        "2026-12-18"
+      ]
+    },
+    "prediction-evidence-provenance": {
+      "guards": {
+        "files": {
+          "status": "pass",
+          "detail": "5 artifacts present",
+          "evidence": {}
+        },
+        "seeds_count": {
+          "status": "pass",
+          "detail": "3 items (expected 2-4)",
+          "evidence": {
+            "count": 3
+          }
+        },
+        "seeds_identifiers": {
+          "status": "pass",
+          "detail": "all 3 records complete",
+          "evidence": {}
+        },
+        "direction": {
+          "status": "pass",
+          "detail": "direction = minimize",
+          "evidence": {}
+        }
+      },
+      "original_guard_sha256": {
+        "guards.py": "7f8357b12088dd6d3cb9fa710dee422fa41da9e2e3f94671facc6ca452aec370",
+        "paperlib.py": "4d938961988c2d26a378dc0a7bd1d708e61d5f8449389c64f655b0989c5afb67"
+      },
+      "json_template_keys": "pass",
+      "seed_count": 3,
+      "fulltext_notes": [
+        {
+          "title": "Robust Robotic Exploration and Mapping Using Generative Occupancy Map Synthesis",
+          "note": "sources/synthesis-001/note.md",
+          "exists": true
+        },
+        {
+          "title": "OctoMap: an efficient probabilistic 3D mapping framework based on octrees",
+          "note": "sources/synthesis-001/note.md",
+          "exists": true
+        },
+        {
+          "title": "Not All Agreement Counts as Corroboration: Provenance-Conserving Multi-View Fusion for Typed Action Admission in Human-Robot Collaboration",
+          "note": "sources/synthesis-0348/pact/note.md",
+          "exists": true
+        }
+      ],
+      "all_notes_exist": true,
+      "evaluator": "dated conditional plan only; not run",
+      "gate_A": "pending advisor",
+      "dates": [
+        "2026-11-23",
+        "2027-01-17",
+        "2026-11-23",
+        "2026-12-07",
+        "2026-12-10",
+        "2026-12-14",
+        "2026-12-18"
+      ]
+    },
+    "temporal-memory-location": {
+      "guards": {
+        "files": {
+          "status": "pass",
+          "detail": "5 artifacts present",
+          "evidence": {}
+        },
+        "seeds_count": {
+          "status": "pass",
+          "detail": "3 items (expected 2-4)",
+          "evidence": {
+            "count": 3
+          }
+        },
+        "seeds_identifiers": {
+          "status": "pass",
+          "detail": "all 3 records complete",
+          "evidence": {}
+        },
+        "direction": {
+          "status": "pass",
+          "detail": "direction = minimize",
+          "evidence": {}
+        }
+      },
+      "original_guard_sha256": {
+        "guards.py": "7f8357b12088dd6d3cb9fa710dee422fa41da9e2e3f94671facc6ca452aec370",
+        "paperlib.py": "4d938961988c2d26a378dc0a7bd1d708e61d5f8449389c64f655b0989c5afb67"
+      },
+      "json_template_keys": "pass",
+      "seed_count": 3,
+      "fulltext_notes": [
+        {
+          "title": "Robust Robotic Exploration and Mapping Using Generative Occupancy Map Synthesis",
+          "note": "/home/sircordero/research/s0-overnight-2026-11-16/sources/synthesis-001/note.md",
+          "exists": true
+        },
+        {
+          "title": "OctoMap: An Efficient Probabilistic 3D Mapping Framework Based on Octrees",
+          "note": "/home/sircordero/research/s0-overnight-2026-11-16/sources/synthesis-001/note.md",
+          "exists": true
+        },
+        {
+          "title": "Not All Agreement Counts as Corroboration: Provenance-Conserving Multi-View Fusion for Typed Action Admission in Human\u2013Robot Collaboration",
+          "note": "/home/sircordero/research/s0-overnight-2026-11-16/sources/synthesis-0348/pact/note.md",
+          "exists": true
+        }
+      ],
+      "all_notes_exist": true,
+      "evaluator": "dated conditional plan only; not run",
+      "gate_A": "pending advisor",
+      "dates": [
+        "2026-11-23",
+        "2027-01-15",
+        "2026-11-23",
+        "2026-11-25",
+        "2026-11-26",
+        "2026-11-30",
+        "2026-12-01",
+        "2026-12-04",
+        "2026-12-04",
+        "2026-12-07",
+        "2026-12-08",
+        "2026-12-18",
+        "2027-01-04",
+        "2027-01-15",
+        "2026-11-16"
+      ]
+    }
+  },
+  "search_log_jsonl": "parses"
+}

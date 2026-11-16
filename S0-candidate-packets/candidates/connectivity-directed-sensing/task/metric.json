@@ -1,0 +1,18 @@
+{
+  "name": "mean_capped_navigation_cost",
+  "direction": "minimize",
+  "unit": "grid-distance-equivalent cost per episode",
+  "tolerance_policy": "Before final evaluation, use a feasibility pilot only to choose sample count and an absolute smallest meaningful difference with advisor; freeze both. Use paired map-cluster confidence intervals and Monte Carlo error decomposition. No relative tolerance near zero; non-significance is not equivalence. No effect size or power asserted yet.",
+  "operational_definition": "Fix common episode cap H in grid-distance-equivalent movement/backtracking/sensing units before final outcomes. Successful goal reaching by H is charged total incurred cost; every unsuccessful or >H episode is charged H, including impossible goal and failed fallback. Average nested worlds/contexts/seeds within independent template instances with frozen weights, then equally across instances in a prespecified regime mixture. Paired primary contrast connectivity-MI minus visibility-weighted variance; no survivor-only distance.",
+  "aggregation": "Paired contrasts on identical held-out map clusters; report stratified regimes and a prespecified pooled estimand. Resample independent map clusters, not individual correlated doors/queries.",
+  "failure_treatment": "Invalid outputs and scoring timeouts invoke a common frozen feasible default/fallback; failed episodes score H. Empty probe set uses common no-probe fallback. All remain in denominator; separately count cause and zero-score ties. Infrastructure reruns follow a frozen outcome-independent rule.",
+  "secondary_metrics": [
+    "goal-success fraction",
+    "whole-world MI and same-prior expected-cost acquisition contrasts",
+    "zero-connectivity-information tie fraction",
+    "scoring/sample-generation latency",
+    "MC score variability",
+    "connectivity-event Brier score as diagnostic only"
+  ],
+  "_note": "Provisional at S0; if selected and frozen, changing primary is a return to S0."
+}

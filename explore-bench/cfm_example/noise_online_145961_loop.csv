@@ -1,0 +1,4 @@
+variant,map,robots,seed,ckpt,time_to_95_percent_coverage,unit,reached_95,capped,steps_to_95_or_cap,coverage,overlap,team_path,replans,bank_builds,bank_fallbacks,initial_modes,mean_modes,mean_mode_to_goal_cells,mean_snap_cells,max_mass_error,noise_draws,bank_seconds,planning_seconds,evaluation_wall_seconds,replan_period,flow_steps,bank_size,exclusion_cells,step_seconds
+online,loop,2,41,cfm_x5_linear.pt,512.0,simulated_seconds_provisional,1,0,512,0.95005,0.6685,1024,309,309,0,0,3.333,44.39,27.061,0.0107,39552,153.3729,316.2398,350.6836,10,20,1024,0.0,1.0
+online,loop,2,42,cfm_x5_linear.pt,254.0,simulated_seconds_provisional,1,0,254,0.95054,0.0,508,204,204,0,0,3.765,28.566,22.97,0.0068,26112,61.1543,127.9004,144.7617,10,20,1024,0.0,1.0
+online,loop,2,43,cfm_x5_linear.pt,243.0,simulated_seconds_provisional,1,0,243,0.95025,0.0,486,194,194,0,0,2.351,20.686,13.154,0.0088,24832,103.4334,212.6555,228.7958,10,20,1024,0.0,1.0

@@ -1,0 +1,15 @@
+# LAMP — full-text counterevidence to D
+
+Retrieved 2026-11-16 about 02:54–02:57 America/Chicago. **LAMP: Learning a Motion Policy to Repeatedly Navigate in an Uncertain Environment**. Florence Tsang, Tristan Walker, Ryan A. MacDonald, Armin Sadeghi, Stephen L. Smith. Inspected arXiv **2012.02271v1**, dated 3 December 2020; https://arxiv.org/abs/2012.02271v1 ; retrieved PDF https://arxiv.org/pdf/2012.02271 has that exact version banner. Journal DOI **10.1109/TRO.2021.3109414**; OpenAlex DOI record publication_year=2021; S2 preprint record year=2020, DBLP journal key ends in 22. Do not silently collapse online/journal/preprint dates.
+
+Saved PDF/text: `sources/synthesis-0252/lamp.pdf`, `lamp.txt` (page markers); official metadata `lamp-abs.raw`, OpenAlex `lamp-doi.raw`, successful exact-identifier S2 `s2-batch.json`. S2 ID ba65944970ba7c586e347679bb43202a569ac551. All author names/title matched in both scholarly records. Read pp.1–3 introduction/problem, p.11 and beginning p.12 comparison/failure analysis, pp.14–15 references. Other sections downloaded, not fully inspected.
+
+## Precise supported claims
+- p.1 explicitly gives **two doors**, with the right door never open when the left is closed, as motivation for a policy exploiting their relationship. This is unusually close to D's plain-language curiosity and invalidates a generic discovery pitch.
+- p.2 describes earlier CTP algorithms and finite rollouts; LAMP stores observed environment subgraphs to learn **higher-order** edge correlations, unlike a cited pairwise factor-graph method.
+- p.3 formulates repeated-task expected-cost minimization. It is not a flow-matching model and not a controlled fixed-marginal particle-shuffle experiment.
+- p.11 comparison discussion states the factor-graph approach initially underperforms optimistic/UCT policies that ignore correlations, improving after repeated tasks; p.12 notes incomplete-observation suboptimal convergence and an optimistic fallback for unseen environments. Thus even “learned correlations may initially hurt” is **not** a new phenomenon by itself.
+- References identify MacDonald & Smith (2019), *Active sensing for motion planning in uncertain environments via mutual information policies*, and Nardi & Stachniss (2020), *Long-term robot navigation in indoor environments estimating patterns in traversability changes*. These are leads from references, not yet full-text evidence for their particular results.
+
+## Limitations and effect on RQ
+Cannot transplant reported percentage gains to the proposed instrument. Repeated-task learning, planner architecture and information differ in LAMP; its comparisons do not isolate only dependence at identical empirical marginals. That is a justification for a **controlled replication/robustness boundary audit**, not for novelty. A finite map-sample study must identify additional decision-relevant controls (identical marginals, same policy, fixed true population, mode undercoverage, sample budget) and remain useful even if another study exists. D generic question is heavily preempted; provisional lead status must be conditional/downgraded.

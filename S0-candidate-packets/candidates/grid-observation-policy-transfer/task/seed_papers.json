@@ -1,0 +1,86 @@
+{
+  "papers": [
+    {
+      "title": "CFMI: Flow Matching for Missing Data Imputation",
+      "authors": [
+        "Simkus, Vaidotas",
+        "Gutmann, Michael U."
+      ],
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2506.09258",
+      "semantic_scholar_id": "",
+      "why_seed": "Arbitrary-mask conditional flow matching already exists under a MAR premise; motivates a trained-CFM baseline rather than a new generic imputer.",
+      "inspected_version": "2506.09258v1",
+      "url": "https://arxiv.org/abs/2506.09258",
+      "fulltext_path": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2506.09258v1.txt",
+      "fulltext_anchors": "\u00a72.1 line 188; \u00a73 lines 259\u2013282",
+      "source_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2506.09258v1/note.md",
+      "verification_status": "Saved official arXiv metadata and full text inspected; prior Semantic Scholar batch rate-limited, graph resolution incomplete.",
+      "full_text_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2506.09258v1/note.md",
+      "integration_provenance": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/revised-packet/task/seed_papers.json"
+    },
+    {
+      "title": "Observation-Aligned Mask Priors for Learning Physical Fields from Authentic Occlusions",
+      "authors": [
+        "Ma, Chiyuan",
+        "Zhou, Zihan",
+        "Yu, Tianshu"
+      ],
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2605.16818",
+      "semantic_scholar_id": "",
+      "why_seed": "Authentic observation-mask priors already challenge heuristic masking in spatial fields, making this a replication/external-validity audit, not a new mask gap.",
+      "inspected_version": "2605.16818v2",
+      "url": "https://arxiv.org/abs/2605.16818",
+      "fulltext_path": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2605.16818v2.txt",
+      "fulltext_anchors": "\u00a71 lines 220\u2013251; \u00a73 context-query partitioning",
+      "source_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2605.16818v2/note.md",
+      "verification_status": "Saved official arXiv metadata and full text inspected; prior Semantic Scholar batch rate-limited, graph resolution incomplete.",
+      "full_text_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2605.16818v2/note.md",
+      "integration_provenance": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/revised-packet/task/seed_papers.json"
+    },
+    {
+      "title": "MissPath-FM: Flow Matching with Structured Priors for Partially Observed Time Series",
+      "authors": [
+        "Zhang, Genpei"
+      ],
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2610.17715",
+      "semantic_scholar_id": "",
+      "why_seed": "Structured-mask flow matching already evaluates probabilistic metrics and noisy-observation locking; directly rejects the old generic noise/reversal novelty pitch.",
+      "inspected_version": "2610.17715v1",
+      "url": "https://arxiv.org/abs/2610.17715",
+      "fulltext_path": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2610.17715v1.txt",
+      "fulltext_anchors": "Appendix F lines 2088\u20132304; Appendix K.5 lines 2814\u20132819",
+      "source_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2610.17715v1/note.md",
+      "verification_status": "Saved official arXiv metadata and full text inspected; prior Semantic Scholar batch rate-limited, graph resolution incomplete.",
+      "full_text_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2610.17715v1/note.md",
+      "integration_provenance": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/revised-packet/task/seed_papers.json"
+    },
+    {
+      "title": "What Do Flow-Based Inverse Solvers Approximate? A Posterior-Transport View",
+      "authors": [
+        "Xu, Jian",
+        "Zeng, Delu",
+        "Paisley, John",
+        "Zhao, Qibin"
+      ],
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2606.24516",
+      "semantic_scholar_id": "",
+      "why_seed": "Exact posterior and mode-weight audits already diagnose flow inverse-solver errors; establishes nearest answer and prevents claiming oracle comparison itself as new.",
+      "inspected_version": "2606.24516v2",
+      "url": "https://arxiv.org/abs/2606.24516",
+      "fulltext_path": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2606.24516v2.txt",
+      "fulltext_anchors": "\u00a71 lines 237\u2013269; \u00a75 closed-form posterior study",
+      "source_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2606.24516v2/note.md",
+      "verification_status": "Saved official arXiv metadata and full text inspected; prior Semantic Scholar batch rate-limited, graph resolution incomplete.",
+      "full_text_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/sources/2606.24516v2/note.md",
+      "integration_provenance": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/C/revised-packet/task/seed_papers.json"
+    }
+  ]
+}
