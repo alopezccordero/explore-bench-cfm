@@ -1,0 +1,21 @@
+# PACT — independent round-004 full-text audit
+
+Retrieved 2026-11-16 03:49–03:52 America/Chicago. Canonical inspected version: https://arxiv.org/html/2609.01662v2 (saved `full.html`, stdlib-extracted `full.txt`). Metadata: https://arxiv.org/abs/2609.01662v2 (`abs.html`, `abs.txt`).
+
+**Exact title:** Not All Agreement Counts as Corroboration: Provenance-Conserving Multi-View Fusion for Typed Action Admission in Human-Robot Collaboration.
+**Authors:** Zekai Jin; Hanrong Zhang; Yihong Tang; Fei Hu; Zhen Dong; Yi Shao.
+**Year:** 2026; v1 submitted 2026-08-31; inspected v2 revised 2026-09-16. **Persistent IDs:** arXiv:2609.01662v2; official arXiv/DataCite DOI 10.48550/arXiv.2609.01662. Preprint, not represented as peer-reviewed publication.
+
+## Inspected sections and bounded support
+- Introduction and related-work discussion (`full.txt` 245–400): repeatedly processing one observation can improve prediction without adding evidential origins; acquisition provenance cannot generally be recovered from equal local numerical outputs. The work explicitly situates this in prior cumulative-versus-averaging fusion distinctions. Thus generic “new generation is not new sensing” is not an unoccupied contribution.
+- §3.2 discussion near lines 1350–1360: within-component meet is an accounting requirement under stated axioms, NOT predictive optimality; separate-component budgets require additional assumptions. Components do not certify statistical independence (related-work lines 398–399). **Do not substitute this meet for a correct Bayesian occupancy posterior or treat independently seeded CFM draws as literal copies.**
+- §5.1, lines 2610–2725: explicit within-parent duplication and between-parent reassignment, near-copy insertion, max-versus-meet and representative-selection controls. Invariance of selected action, posterior and selective ordering are distinct. These are the authors' reported results, not results of this commission. No need to repeat exact reported effect sizes to establish the competing premise.
+- §§7.2–7.3 and conclusion, lines 4030–4101: repeated model inference, acquisition versus model-family grouping, temporal availability, and predictive score versus admission distinction are explicit. The HRC evaluation is **offline reference-action agreement**, not physical navigation success. No zero-risk claim follows from observed zero inconsistent admissions. Provenance is constructed or observed; application evidence scales and action costs require validation.
+
+## Relationship to B and decision
+This independently confirms the recovery review's strongest nearest-answer objection. B's calibration-primary/frozen-context framing should be archived as rejected for recommendation: accounting semantics plus elementary finite posterior error are insufficient question value. PACT does **not** directly answer persistent occupancy-map correction latency or route hysteresis under genuine contradictory physical measurements. A possible persistence-location comparison (map-probability state versus planner hysteresis) remains only a conditional replacement hypothesis, not an accepted finalist or an established novel gap. It requires a task-utility primary and an approved new S0 framing; retaining posterior MSE primary while advertising navigation utility would be misaligned.
+
+## Metadata resolution and limitations
+Individual S2 lookup and batch retry both HTTP429 (`s2.json`, `s2-batch.json`); this is unresolved S2 metadata, not absence of a paper. OpenAlex direct lookup succeeded (`openalex.json`, W7207734626), exact title and arXiv primary location match. **OpenAlex's canonical DOI is a different ResearchGate DOI, 10.13140/rg.2.2.24501.03047.** Do not silently replace the official arXiv-issued DOI with it; record cross-index mismatch. Official metadata establishes authors and version.
+
+Full HTML retrieval succeeded; initial extraction failed because bs4 was unavailable. Recovered using stdlib HTMLParser without installation; formula duplication in extracted text means equations are not independently validated. No source code execution, evaluator, training, or physical robot study was performed. No claim this single paper exhausts nearest literature.

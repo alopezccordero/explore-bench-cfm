@@ -1,0 +1,51 @@
+{
+  "papers": [
+    {
+      "title": "LAMP: Learning a Motion Policy to Repeatedly Navigate in an Uncertain Environment",
+      "authors": ["Florence Tsang", "Tristan Walker", "Ryan A. MacDonald", "Armin Sadeghi", "Stephen L. Smith"],
+      "year": 2020,
+      "arxiv_id": "2012.02271",
+      "doi": "10.1109/TRO.2021.3109414",
+      "semantic_scholar_id": "ba65944970ba7c586e347679bb43202a569ac551",
+      "why_seed": "Closest door-correlation navigation premise and counterevidence: higher-order learned correlations and initial underperformance of correlation models are established. Requires a controlled finite-particle robustness audit rather than rediscovering the mechanism.",
+      "full_text_note": "sources/synthesis-0252/lamp/note.md",
+      "full_text_version_inspected": "2012.02271v1",
+      "resolution_status": "Official versioned arXiv metadata and PDF verified; OpenAlex journal DOI/title/authors matched and Semantic Scholar exact arXiv batch resolved 2026-11-16. Year field is preprint 2020; OpenAlex journal online year=2021, journal issue may differ. Not completed S1 citation traversal."
+    },
+    {
+      "title": "Risk-averse traversal of graphs with stochastic and correlated edge costs for safe global planetary mobility",
+      "authors": ["Olivier Lamarre", "Jonathan Kelly"],
+      "year": 2025,
+      "arxiv_id": "2505.13674",
+      "doi": "10.1007/s10514-025-10240-5",
+      "semantic_scholar_id": "4720061ddde0275684a387b694e83095f219f9ff",
+      "why_seed": "Nearest exact correlated-graph and paid-information answer; section 5.2.3 already compares initial-marginal-fixed traversal and shows same-policy boundary. Supplies exact-search context, not a ready evaluator for imperfect map particles.",
+      "full_text_note": "sources/synthesis-0252/risk-correlated/note.md",
+      "full_text_version_inspected": "2505.13674v2",
+      "resolution_status": "Official versioned arXiv metadata/PDF verified; OpenAlex DOI/title/authors matched and Semantic Scholar exact identifier batch resolved 2026-11-16. Year is initial preprint 2025; inspected v2 dated 2026-05-07 and OpenAlex journal year=2026. PDF/S2 names Jonathan Kelly; OpenAlex expands Jonathan W. Kelly. Not completed S1 citation traversal."
+    },
+    {
+      "title": "MapEx: Indoor Structure Exploration with Probabilistic Information Gain from Global Map Predictions",
+      "authors": ["Cherie Ho", "Seungchan Kim", "Brady Moon", "Aditya Parandekar", "Narek Harutyunyan", "Chen Wang", "Katia Sycara", "Graeme Best", "Sebastian Scherer"],
+      "year": 2024,
+      "arxiv_id": "2409.15590",
+      "doi": "10.1109/ICRA55743.2025.11128862",
+      "semantic_scholar_id": "94981450065222b17cd69025b26975c0fa53637b",
+      "why_seed": "Grounds finite global-map hypotheses in indoor robotic mapping and the nearest visibility-weighted exploration baseline; does not establish calibration of joint particles.",
+      "full_text_note": "sources/robotic-mapping/mapex-original/note.md",
+      "resolution_status": "Official metadata/full-text note verified; OpenAlex exact-title match and Semantic Scholar batch identifier resolved in round 001. Metadata lookup, not full S1 traversal.",
+      "full_text_version_inspected": "2409.15590v3"
+    },
+    {
+      "title": "Stochastic Path Planning in Correlated Obstacle Fields",
+      "authors": ["Li Zhou", "Elvan Ceyhan"],
+      "year": 2025,
+      "arxiv_id": "2509.19559",
+      "doi": "10.48550/arXiv.2509.19559",
+      "why_seed": "Nearest 2D-grid correlation-aware navigation and theoretical coarsening dominance answer; A3 distinguishes coarsening the exact posterior from updating an independent prior. Forces finite-N/wrong-Q question and explicit conditioning/shuffling order; generic correlation gain is already known.",
+      "full_text_note": "sources/synthesis-0440/scos/note.md",
+      "resolution_status": "Official versioned arXiv title/authors/HTML/PDF verified; OpenAlex direct DOI W7083308684 title/authors/2025 matched 2026-11-16. Semantic Scholar batch HTTP429 at04:43 CST, unresolved not nonexistent; no full S1 traversal. Replaces optional generic FM seed because minimum D is not FM-central.",
+      "full_text_version_inspected": "2509.19559v2"
+    }
+  ]
+}

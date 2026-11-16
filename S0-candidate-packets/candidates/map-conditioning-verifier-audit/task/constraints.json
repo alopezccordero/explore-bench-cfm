@@ -1,0 +1,23 @@
+{
+  "compute": "Assumption, not verified allocation: existing local CPU with 16 GB RAM; optional single already-owned GPU only if approved. No HPC, purchases or overnight training. Proposed tiny model <=2 million parameters; construction smoke checks CPU-first; separately approved training capped at 8 GPU-hours total with no guarantee of competence. If cap fails, stop rather than silently scale.",
+  "data": "Proposed self-generated 64x64 synthetic occupancy maps with analytic/grid path labels and no external private datasets. Code, weights, dependency and data licenses must be checked separately. No licensed usable map-conditioned checkpoint has been verified. FlowMP's inspected 2-D implementation is not an eligible occupancy-conditioned instrument; BridgeFlow paper is methodological evidence, not an available checkpoint.",
+  "time_budget": "Assumed six-week window 2026-11-23 through 2027-01-03 at 8 student hours/week, not an actual deadline or approval. Conditional construction milestone 2026-12-04. Calendar starts only if gates/permissions are obtained; otherwise dates are rescheduled explicitly and candidate stays blocked.",
+  "approvals_needed": [
+    "Alejandro selects the question and confirms time/compute envelope",
+    "Dr. Enriquez decides Gate A and accepts FM proposal auditing as mapping scope",
+    "Later Gate C and explicit approval before implementation or training",
+    "Verified code/dependency/data/weight licensing plus accessible map-conditioned checkpoint, OR explicit approval for clean-room tiny-model training",
+    "Approve edit certificates, primary metric and practical tolerance before freezing",
+    "Confirm nontrivial held-out base competence without selecting on intervention results"
+  ],
+  "out_of_scope": [
+    "Any experiments, training or implementation during this research commission",
+    "Changes to the read-only reference repository or global candidates",
+    "Samples/NFE/deadline optimization as the research contribution",
+    "WAM-Flow driving deployment or assuming its upstream terms suffice",
+    "New architecture/benchmark scaling, robot hardware, real-world safety certification",
+    "Claims of novelty, power, advisor approval or formal S0 passage"
+  ],
+  "stop_rule": "If no lawful accessible occupancy-conditioned instrument or separately approved feasible tiny-training path by 2026-11-27, park/reject the conditional candidate. Do not replace it with map-blind FlowMP and preserve the same scientific claim.",
+  "scope_correction": "2D grid algorithms only. Observation/reveal restrictions are optional declared simulator rules, not physical sensing constraints. Actual simulator API/observability not yet verified; no hardware sensing or 3D requirement."
+}

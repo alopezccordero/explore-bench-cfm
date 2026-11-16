@@ -1,0 +1,17 @@
+{
+  "compute": "ASSUMPTION requiring confirmation: one existing laptop/desktop CPU, <=16 GB RAM; optional already-owned single GPU only for a tiny later CFM extension. No HPC, new paid cloud, large 3D training or claimed hardware access. Overnight work is documents/literature only.",
+  "data": "Self-generated finite 2D world library with no external personal data for minimum. Generator and split construction are planned, not implemented. Any public code/data/checkpoint reuse requires independent license/access review; code licenses do not license source maps or weights.",
+  "time_budget": "ASSUMED project window 2026-11-23 through 2027-01-17, at 8\u201310 student hours/week; NOT confirmed. Dated evaluator milestones below are conditional on this window and Gate C; redate explicitly if approval or window changes.",
+  "approvals_needed": [
+    "Alejandro confirms project window, hours, compute and whether FM must be central",
+    "Dr. Enriquez alone decides Gate A, later gates B/C before implementation",
+    "Confirm code/data/checkpoint license and access before reuse"
+  ],
+  "out_of_scope": [
+    "Any overnight training, pilot, benchmark or implementation",
+    "Reference-repository changes or state transitions",
+    "3D SLAM, physical robot deployment, pose uncertainty, dynamic obstacles",
+    "New generative architecture and large model training",
+    "Universal safety guarantees or novelty guarantees"
+  ]
+}

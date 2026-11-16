@@ -1,0 +1,68 @@
+{
+  "papers": [
+    {
+      "title": "Robust Robotic Exploration and Mapping Using Generative Occupancy Map Synthesis",
+      "authors": [
+        "Lorin Achey",
+        "Alec Reed",
+        "Brendan Crowe",
+        "Bradley Hayes",
+        "Christoffer Heckman"
+      ],
+      "year": 2025,
+      "doi": "10.1007/s10514-025-10229-0",
+      "arxiv_id": "2506.20049",
+      "full_text_note": "/home/sircordero/research/s0-overnight-2026-11-16/sources/synthesis-001/note.md",
+      "semantic_scholar_id": "",
+      "why_seed": "Section 6 explicitly motivates persistent prediction fusion by trajectory oscillation under replacement, supplying the concrete mechanism to interrogate rather than a generic calibration wish.",
+      "version_read": "2506.20049v2; 2025 preprint, 2026 journal reference recorded in existing source note",
+      "fulltext_path": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/B/sources/scenesense/paper.txt",
+      "sections_verified": "Section 6, lines 804-839, Eq. 7; metadata cross-checked against existing NOTE-01-scenesense.md",
+      "verification_status": "Saved full HTML-derived text directly inspected. arXiv identifier/version present in text at line 204. Journal DOI recorded in prior source note; no new DOI request during consolidation.",
+      "integration_provenance": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/B/revised-packet/task/seed_papers.json"
+    },
+    {
+      "title": "OctoMap: An Efficient Probabilistic 3D Mapping Framework Based on Octrees",
+      "authors": [
+        "Armin Hornung",
+        "Kai M. Wurm",
+        "Maren Bennewitz",
+        "Cyrill Stachniss",
+        "Wolfram Burgard"
+      ],
+      "year": 2013,
+      "doi": "10.1007/s10514-012-9321-0",
+      "full_text_note": "/home/sircordero/research/s0-overnight-2026-11-16/sources/synthesis-001/note.md",
+      "arxiv_id": "",
+      "semantic_scholar_id": "",
+      "why_seed": "Section 3.2 already bounds accumulated confidence through clamping to retain adaptation, making clamped rather than unbounded accumulation the scientifically necessary comparator.",
+      "fulltext_path": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/B/sources/octomap/paper.txt",
+      "sections_verified": "PDF pages 5-6, Section 3.2, lines 379-455 and Eq. 4; title/authors/DOI lines 3-9",
+      "verification_status": "Saved complete PDF extraction directly inspected; DOI printed in full-text header. No fresh citation-graph traversal claimed.",
+      "integration_provenance": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/B/revised-packet/task/seed_papers.json"
+    },
+    {
+      "title": "Not All Agreement Counts as Corroboration: Provenance-Conserving Multi-View Fusion for Typed Action Admission in Human\u2013Robot Collaboration",
+      "authors": [
+        "Zekai Jin",
+        "Hanrong Zhang",
+        "Yihong Tang",
+        "Fei Hu",
+        "Zhen Dong",
+        "Yi Shao"
+      ],
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2609.01662",
+      "full_text_note": "/home/sircordero/research/s0-overnight-2026-11-16/sources/synthesis-0348/pact/note.md",
+      "semantic_scholar_id": "",
+      "why_seed": "The abstract and introduction already separate computational replication from acquired evidence and probability scoring from downstream admission, forcing rejection of the old elementary provenance question and constraining the residual to temporal-memory placement.",
+      "version_read": "2609.01662v2",
+      "fulltext_path": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/B/sources/modern-provenance/paper.txt",
+      "sections_verified": "PDF pages 1-3, abstract and Sections 1-2, lines 3-62 and 135-173",
+      "verification_status": "Saved 35-page PDF extraction directly inspected for stated claims; identifier/version/date printed at line 62. Offline HRC admission is not a closed-loop navigation result.",
+      "integration_provenance": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/B/revised-packet/task/seed_papers.json"
+    }
+  ],
+  "resolution_disclosure": "Three full-text-inspected seeds with persistent identifiers present in saved primary sources. Existing retrieval and resolution attempts are recorded in recovery_reviews/B/search_log.jsonl and the mission's earlier source notes. No completed Semantic Scholar graph traversal, new database resolution, or comprehensive novelty search is claimed by this consolidation."
+}

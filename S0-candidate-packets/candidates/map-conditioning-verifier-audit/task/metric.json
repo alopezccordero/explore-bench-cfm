@@ -1,0 +1,11 @@
+{
+  "name": "task_selective_conditioning_gain_pp",
+  "direction": "maximize",
+  "unit": "percentage points",
+  "tolerance_policy": "Report paired map-cluster 95% bootstrap intervals and Monte Carlo repeat variability across at least 5 evaluation seeds. Proposed practical band is +/-5 percentage points, requiring owner/advisor approval before freezing; non-significance is not equivalence. No relative-error rule at a near-zero mean.",
+  "operational_definition": "D=100*mean_base[(V(correct_condition,T)-V(stale_condition,T))-(V(correct_condition,I)-V(stale_condition,I))]. Every V is measured on its own true edited map, includes all requested raw proposals, and uses the same latent bank across conditions. T closes a route while preserving fallback; I edits an inaccessible region with matched occupied-cell change.",
+  "aggregation": "Average within base-map family over latent/evaluation repeats, then equally across base-map families; bootstrap base families with all paired arms together. Stratify ID-like versus held-out topology layouts descriptively without switching the primary population.",
+  "failure_treatment": "NaN, endpoint failure, boundary violation, segment collision, truncated trajectory and missing requested proposal are invalid. Report run-level software failures separately; never drop a bad arm or pool only accepted paths. No verifier-selected-path outcome substitutes for D.",
+  "secondary_metrics": ["True-map validity of first verifier-selected path; no accepted path counts as failure", "Raw base-map competence", "Route-channel occupancy of proposals", "Correct-versus-stale verifier selection masking", "Descriptive inference and checking cost"],
+  "_note": "Conditional S0 proposal, not frozen or empirically validated. A signed diagnostic maximized for useful selectivity is not a metric of all planning quality."
+}

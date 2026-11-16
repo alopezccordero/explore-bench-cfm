@@ -1,0 +1,11 @@
+{
+  "name": "mean_capped_navigation_cost",
+  "direction": "minimize",
+  "unit": "action-equivalent cost per episode",
+  "tolerance_policy": "Prespecified practical interval of +/- 5 action-equivalent units for the paired mean difference; report a paired map-family-cluster bootstrap 95% interval and variability across at least five evaluator random seeds. Non-significance is not equivalence. Threshold is an assumed decision tolerance requiring owner confirmation before implementation, not a power claim.",
+  "operational_definition": "Each valid grid move or sense-in-place action costs 1. Attempted movement into an occupied cell costs 11 including the attempted step, leaves pose unchanged, and reveals that cell. A route-label change alone has no artificial cost; any movement wasted by reversal counts naturally. Stop at goal or when cumulative cost reaches 512. Every non-goal termination (timeout, planning-deadline failure without valid fallback, numerical error, unavailable route, or safety stop) receives total episode cost 512. Successful costs are capped at 512. All prespecified episodes remain in denominator.",
+  "aggregation": "Average episode costs within each map family, then equally across held-out families and prespecified regime strata. Headline contrast is paired replacement-plus-hysteresis minus validation-selected safeguarded accumulation under identical episode inputs; lower is better.",
+  "secondary_diagnostics": ["route-switch count", "cost after first genuine contradictory observation", "goal attainment", "collision attempts", "planning wall time and deadline misses", "occupancy Brier score, diagnostic only"],
+  "failure_treatment": "No failed episodes dropped. Shared invalid-map generator defects are logged and the entire paired family is quarantined under a frozen rule before unblinding. Method-specific failures cost 512.",
+  "_note": "Draft S0 metric; owner acceptance pending. Once adopted, changes require return to S0. No results or evaluator executions exist."
+}

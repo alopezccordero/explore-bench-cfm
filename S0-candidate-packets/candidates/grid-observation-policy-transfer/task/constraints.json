@@ -1,0 +1,26 @@
+{
+  "compute": "ASSUMPTION requiring confirmation: one existing local accelerator with about 8 GB memory, maximum 12 total device-hours for the minimum ten small CFM trainings plus evaluation; no HPC/cloud purchase. CPU-only instrument construction. If unavailable or development timing cannot fit, reject/reframe before final runs, not an undocumented model-size escalation. No compute or experiment authorized by this packet.",
+  "data": "New synthetic 64-world 8x8 catalog and transparent observation simulator to be authored after permission; no external data or pretrained weights required. Catalog/map family are fully known to both arms. Use independent training/development/final RNG streams with shared final records across methods. Code and generated-data release licenses need owner approval; do not copy unlicensed CFMI code. Saved sources are research evidence, not a runnable evaluator.",
+  "time_budget": "ASSUMED project window 2026-11-23 through 2027-01-17, approximately 8 student hours per week, reduced holiday availability to be confirmed. Instrument construction planned 2026-11-23 through 2026-12-04; feasibility decision 2026-12-07; final runs only after approval, by 2026-12-18; analysis and report through 2027-01-17. This is not a supplied deadline or a claim that work has begun.",
+  "approvals_needed": [
+    "Alejandro chooses whether finite-world external-validity replication is worth pursuing",
+    "Dr. Enriquez Gate A approval; no formal S0 transition implied",
+    "Confirm assumed dates, holiday availability, local hardware and budget",
+    "All later implementation/training requires applicable Gate C authorization",
+    "Owner agrees to exact synthetic-world scope, practical tolerance and release licenses",
+    "Resolve scholarly graph access: saved S2 batch attempt was rate-limited; arXiv metadata is verified but S2 traversal remains pending"
+  ],
+  "out_of_scope": [
+    "Generic noise-versus-locking novelty claim, explicitly rejected",
+    "Noisy observations without a complete return-and-selection likelihood",
+    "Real-robot deployment, SLAM and navigation utility",
+    "Unseen-world or real-building generalization",
+    "Attributing effects exclusively to mask geometry, MNAR, or FM versus all generative methods",
+    "A new sampler or learned mask-prior method",
+    "Large architecture sweeps or HPC",
+    "Claiming model bias from finite-K discrepancy alone",
+    "Oracle-only study substituted for actual trained CFM",
+    "Repository edits, commits, pushes, provider changes or experiments during this research commission"
+  ],
+  "scope_correction": "2D grid algorithms only. Observation/reveal restrictions are optional declared simulator rules, not physical sensing constraints. Actual simulator API/observability not yet verified; no hardware sensing or 3D requirement."
+}

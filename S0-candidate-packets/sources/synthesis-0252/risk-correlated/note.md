@@ -1,0 +1,19 @@
+# Correlated CVaR-CTP — strongest modern near-answer to D
+
+Retrieved 2026-11-16 about 02:54–02:57 America/Chicago. **Risk-Averse Traversal of Graphs with Stochastic and Correlated Edge Costs for Safe Global Planetary Mobility**. **Olivier Lamarre and Jonathan Kelly** (PDF names; OpenAlex expands Jonathan W. Kelly). Inspected **arXiv:2505.13674v2**, banner 7 May 2026; https://arxiv.org/abs/2505.13674v2 ; journal DOI **10.1007/s10514-025-10240-5**. OpenAlex DOI record publication_year=2026; S2 preprint year=2025. Cite arXiv version/date separately rather than assume DOI suffix or S2 preprint year is journal date.
+
+Saved `sources/synthesis-0252/risk-correlated.pdf`, page-marked `risk-correlated.txt`, `risk-abs.raw`, `risk-doi.raw`, and successful S2 `s2-batch.json`. S2 ID **4720061ddde0275684a387b694e83095f219f9ff**. Official title/authors verified, DOI and title matched through OpenAlex. Read pp.1–3 introduction/related work, pp.6–7 AO* mechanism, pp.13–16 results/Value of Information, p.16 conclusion. Not all proofs inspected.
+
+## Supported evidence
+- pp.1–2 introduces correlated stochastic traversability, observations updating beliefs about other edges, and risk-minimizing information-seeking detours. This directly preempts a generic joint-map-dependence or correlation-guided-probe story.
+- pp.6–7 reviews exact expected-cost AO* (before CVaR extension), including drive-observe actions and exponential search growth. A very small finite-world one-step reference is scientifically plausible; no need to invent a new planner.
+- **Section 5.2.3, pp.15–16, Value of Information** explicitly contrasts a correlated experiment with an “uncorrelated” case that keeps every initial edge traversability probability fixed throughout traversal. At α=1.0, 0.5 and 0.4 their uncorrelated policy tree is identical across risk levels, while correlated cases differ. At α=0.3 both yield the **same deterministic worst-case policy**. Thus an informative null/boundary already exists in a real near-answer; D must not sell “correlation sometimes helps and sometimes does not” as an unexplored question.
+- p.13 explains a probe detour emerging without an explicit information-gain objective. Important for A: entropy reduction and decision value are not interchangeable.
+- p.15 representation functions are generated using a GP classifier tuned on synthetic traversability assumptions. “Real orbital map” does **not** mean empirically measured true traversal distributions.
+- p.2 footnote advertises https://github.com/utiasSTARS/qgis-planetary-graph-tool . This is a **paper-advertised URL only in this round**, not an independently inspected runnable evaluator/license.
+
+## What this does NOT show
+Their cost-distribution entropy and tree-size comparison is not proof of lower mean true-world cost for a fixed-marginal shuffle intervention. Different models may imply different evaluation distributions. Do NOT use smaller entropy alone as a correctness metric or transplant the results. Their chosen scope is exact CVaR planning under stipulated traversability beliefs, not an audit of imperfect conditional flow-map particles at fixed marginal quality. This distinction supports only a possible controlled approximation/robustness replication, not a verified open gap.
+
+## Candidate consequence
+Demote D's broad formulation. A defensible residual is: under a **common fixed true joint world distribution**, finite samples and explicitly wrong dependence with exactly matched marginals, when does retaining joint particles improve or hurt actual one-probe capped navigation cost? Separate (a) correct exact dependence ceiling, (b) finite-MC error, (c) joint-mode misspecification, (d) policy capacity. Do not change the world distribution when shuffling the belief. No implementation/experiment occurred.

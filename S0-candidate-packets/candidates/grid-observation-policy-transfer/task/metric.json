@@ -1,0 +1,21 @@
+{
+  "name": "matched_training_joint_posterior_advantage",
+  "direction": "maximize",
+  "unit": "dimensionless mixed-kernel squared-MMD difference",
+  "tolerance_policy": "No accepted equivalence margin yet. Proposed provisional planning band +/-0.01 on the NEW mixed-kernel squared-MMD scale requires owner/advisor approval and development-only reference contrasts before freezing. The old smooth-only kernel/band failed an analytic sensitivity anchor; see sources/synthesis-0410/analytic-instrument-audit.md. Report raw paired-seed effects, two-sided 95% paired-seed t interval and nested-record sensitivity; five seeds do not establish power. No practical-insensitivity conclusion from a narrow interval until the margin is justified; non-significance is not equivalence.",
+  "_note": "Conditional S0 draft, freeze only after owner/advisor selection. Changing the primary afterward requires reframing.",
+  "estimand": "Delta=E_seed,O[MMD_mix^2(Q_random(.|O),P(.|O))-MMD_mix^2(Q_matched(.|O),P(.|O))] on the SAME stipulated test observation population. Positive favors matched-policy training; maximize expresses benefit orientation, NOT absolute model competence.",
+  "kernel": "k(x,y)=0.5*1[x=y]+0.5*exp(-Hamming(x,y)/64) on valid decoded binary maps. Equality term makes joint mode-mass differences directly visible; mixed kernel is characteristic. No catalog snapping. Failure-token extension remains as below.",
+  "operational_definition": "For K=128 iid decoded learned samples X_a and exact catalog posterior weights p_j on worlds w_j, Dhat = sum_{a!=b} k(X_a,X_b)/(K*(K-1)) - 2*sum_{a,j}p_j*k(X_a,w_j)/K + sum_{i,j}p_i*p_j*k(w_i,w_j). No clipping of negative unbiased estimates. Per record subtract matched-arm Dhat from random-arm Dhat; mean over 512 shared test records then five paired seeds. Exact reference sums remove oracle-reference Monte Carlo error but learned-sample uncertainty remains.",
+  "failure_treatment": "Each requested invalid/nonfinite/timeout learned draw is replaced by one fixed reserved nonbinary failure token whose kernel against every valid map is zero and against itself is one; this extends the kernel and charges rather than drops failure mass. The same failed-draw rule applies to both arms, including 128 tokens on total record timeout. Whole training failures produce failure-token predictions for all records and remain in the primary mean. A broken evaluator/oracle is an invalid study requiring repair, not a method failure to score.",
+  "secondary_only": [
+    "each arm's absolute MMD squared",
+    "hidden-cell Brier, explicitly marginal",
+    "mass outside catalog",
+    "failure rate",
+    "wall time and number of field evaluations",
+    "posterior entropy strata fixed on development records"
+  ],
+  "uncertainty_limitations": "Five training seeds are a minimum planning allocation, not established power; t intervals can be unstable and must be shown with raw seed contrasts. Sampling floor controls and repeated sample-draw diagnostics do not establish model bias from a single finite sample. No outcome has been measured.",
+  "revision_rationale": "New packet before owner selection, not an outcome-driven primary swap. Smooth-only exp(-Hamming/64) assigns 0.00006009 to a severe perfect-correlation versus independent-marginal error on two ambiguous cells. Equality/smooth mixture assigns 0.125030045. Analytic check only; no evaluator implementation or empirical result."
+}

@@ -1,0 +1,59 @@
+{
+  "papers": [
+    {
+      "title": "BridgeFlow: Fast and Robust SE(2)-Equivariant Motion Planning with Flow Matching",
+      "authors": [
+        "Xinzhe Zhou",
+        "Xuyang Wang",
+        "Xiaoming Duan",
+        "Jianping He"
+      ],
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2607.14725",
+      "semantic_scholar_id": "d84422bf51b25009729e67cd2792ca4858fff71e",
+      "why_seed": "Establishes occupancy-conditioned FM and environment-aware CFG, and already tests unseen environments; the proposed paired relevance/verifier audit must exceed this existing generalization claim.",
+      "fulltext_url": "https://arxiv.org/html/2607.14725v1",
+      "local_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/evidence_notes.md#bridgeflow",
+      "full_text_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/evidence_notes.md",
+      "verification": "Saved official arXiv full text inspected, especially III-A, III-D, IV-A and IV-B2. Semantic Scholar batch lookup succeeded 2026-11-16; see ../../seed_resolution_attempt.json. This is identifier/metadata resolution, not citation-graph traversal. Author spellings here follow the paper full text; database author disambiguation differs.",
+      "integration_provenance": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/task/seed_papers.json"
+    },
+    {
+      "title": "Flow Motion Policy: Manipulator Motion Planning with Flow Matching Models",
+      "authors": [
+        "Davood Soleymanzadeh",
+        "Xiao Liang",
+        "Minghui Zheng"
+      ],
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2604.07084",
+      "semantic_scholar_id": "ce0ec5163fbfed3f1564874532f0ed995cc9bbd4",
+      "why_seed": "Establishes checked best-of-N FM proposals and prior count/integration sweeps, motivating separation of raw geometry dependence from verifier-selected success rather than another budget sweep.",
+      "fulltext_url": "https://arxiv.org/html/2604.07084v2",
+      "local_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/evidence_notes.md#fmp",
+      "full_text_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/evidence_notes.md",
+      "verification": "Saved official arXiv v2 full text inspected, III-C and IV-C, Figs.7 and 9-13.",
+      "integration_provenance": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/task/seed_papers.json"
+    },
+    {
+      "title": "Auditing Grasp Feasibility Predictors with Planner-Verified Counterfactuals",
+      "authors": [
+        "Sajid Ansari",
+        "Antony Thomas",
+        "Girish Varma"
+      ],
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2611.09130",
+      "semantic_scholar_id": "2399ed172ea85269515bbfc9c6b5a4e67bcd0dc6",
+      "why_seed": "Provides the closest controlled geometry-audit premise and negative-control methodology; extension here concerns stochastic FM trajectory banks and independently varied verifier geometry, not discovery that predictors can ignore obstacles.",
+      "fulltext_url": "https://arxiv.org/html/2611.09130v1",
+      "local_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/evidence_notes.md#grasp-audit",
+      "full_text_note": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/evidence_notes.md",
+      "verification": "Saved official arXiv full text inspected, introduction, section 3 and section 4.1; matched negative controls are explicit in section 3. Appendix F is listed but not independently inspected in this consolidation.",
+      "integration_provenance": "/home/sircordero/research/s0-overnight-2026-11-16/recovery_reviews/E/revised-packet/task/seed_papers.json"
+    }
+  ]
+}
